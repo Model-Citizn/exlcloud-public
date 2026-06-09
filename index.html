@@ -3,8 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EXL Cloud — Keep Excel, leverage the cloud. From Xero to Excel in 8 clicks." />
-  <title>EXL Cloud — Keep Excel, Leverage the Cloud</title>
+  <meta name="description" content="EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. Pull live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions." />
+  <meta name="keywords" content="EXL Cloud, Excel add-in, Xero to Excel, financial modelling, 3-way model, Power BI, accounting software, board pack, financial reporting" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <title>EXL Cloud — Keep Excel, Leverage the Cloud | Xero to Excel in 8 Clicks</title>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EXL Cloud Pty Ltd",
+    "url": "https://exlcloud.io",
+    "description": "EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks, enabling world-class financial reports, dashboards, and models.",
+    "address": { "@type": "PostalAddress", "streetAddress": "80 Market Street", "addressLocality": "South Melbourne", "addressRegion": "VIC", "postalCode": "3205", "addressCountry": "AU" },
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+61-405-329-098", "email": "info@exlcloud.io", "contactType": "customer service" },
+    "founder": { "@type": "Person", "name": "Lance Rubin", "jobTitle": "Chief Excel Officer" },
+    "sameAs": ["https://www.linkedin.com/company/exl-cloud", "https://www.facebook.com/EXLCloud", "https://x.com/exl_cloud"]
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "EXL Cloud",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Windows",
+    "description": "Excel add-in connecting Microsoft Excel to Xero accounting software. Pulls live data including trial balance, profit and loss, balance sheet, journals, and account transactions in 8 clicks.",
+    "offers": [
+      { "@type": "Offer", "name": "Data Pull Plan", "price": "50.00", "priceCurrency": "AUD", "billingDuration": "P1M", "description": "Xero data pull and push. Includes 5 Xero connections." },
+      { "@type": "Offer", "name": "Advanced Content Plan", "price": "125.00", "priceCurrency": "AUD", "billingDuration": "P1M", "description": "All Data Pull features plus financial models, dashboards, reports, Power BI integration, 15 AI skills. Includes 5 Xero connections." }
+    ],
+    "featureList": "Xero data pull, Xero data push, 3-Way Financial Model, Performance Reports, Cash Flow Scenario Model, Power BI integration, HTML Board Packs, 15 AI Skills, Dynamic Arrays, LAMBDAs"
+  }
+  </script>
+
+  <!-- JSON-LD: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lance Rubin",
+    "jobTitle": "Chief Excel Officer",
+    "worksFor": { "@type": "Organization", "name": "EXL Cloud Pty Ltd" },
+    "alumniOf": [{"@type": "Organization", "name": "PwC"}, {"@type": "Organization", "name": "KPMG"}, {"@type": "Organization", "name": "Investec Bank"}, {"@type": "Organization", "name": "National Australia Bank"}],
+    "description": "Lance Rubin is a Chartered Accountant who worked at PwC, KPMG, Investec Bank, and National Australia Bank. He is an FMI approved financial modelling trainer, CA ANZ financial modelling study guide co-author, and founder of Model Citizn.",
+    "knowsAbout": ["Financial Modelling", "Excel", "Xero", "Power BI", "3-Way Financial Models", "SaaS Metrics"]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A3C2E'/><text x='16' y='22' text-anchor='middle' font-size='14' font-weight='800' fill='%2374C69D' font-family='system-ui'>EXL</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,14 +80,36 @@
     }
     html { scroll-behavior: smooth; }
     ::selection { background: rgba(116,198,157,0.3); }
+    @keyframes heroFadeIn { from { opacity: 0; } to { opacity: 0.2; } }
+    /* Article content styles */
+    .article-body h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 22px; font-weight: 700; color: #1A3C2E; margin: 32px 0 14px; }
+    .article-body h4 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; font-weight: 700; color: #2D6A4F; margin: 24px 0 10px; }
+    .article-body p { font-size: 16px; line-height: 1.85; color: #374151; margin: 0 0 18px; }
+    .article-body ul, .article-body ol { margin: 0 0 18px 20px; }
+    .article-body li { font-size: 15px; line-height: 1.75; color: #374151; margin-bottom: 6px; }
+    .article-body a { color: #2D6A4F; text-decoration: underline; text-underline-offset: 3px; }
+    .article-body blockquote { border-left: 3px solid #2D6A4F; padding: 12px 20px; margin: 18px 0; background: #F0FFF4; border-radius: 0 8px 8px 0; }
+    .article-body strong { color: #1A2E24; }
+    .article-body hr { border: none; border-top: 1px solid #E5E7EB; margin: 32px 0; }
   </style>
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- AEO: Pre-rendered content for AI crawlers -->
+  <div id="aeo-content" style="display:none" aria-hidden="true">
+    <h1>EXL Cloud — Keep Excel, Leverage the Cloud</h1>
+    <p>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. It pulls live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions. EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable in Microsoft Excel.</p>
+    <p>EXL Cloud offers two plans: Data Pull at $50 AUD per month and Advanced Content at $125 AUD per month. Both include 5 Xero connections. The Advanced Content plan includes 3-Way Financial Models, Performance Reports, Cash Flow Scenario Models, Power BI integration, 15 AI-powered skills, and HTML Board Packs.</p>
+    <p>Founded by Lance Rubin, a Chartered Accountant with experience at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ study guide co-author.</p>
+    <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: info@exlcloud.io. Phone: +61 405 329 098.</p>
+  </div>
   <div id="root"></div>
+  <script type="text/babel" src="articles-data.jsx"></script>
   <script type="text/babel">
+
+
 
 
 
@@ -79,18 +149,18 @@ const SBarChart = ({ data, keys, colors, labels, height = 180, labelKey, labelCo
 const SAreaChart = ({ data, dataKey, fill, stroke, height = 180, labelKey, labelColor = "#999" }) => {
   const vals = data.map((d) => d[dataKey]);
   const mx = Math.max(...vals);const mn = Math.min(...vals.filter((v) => v >= 0));
-  const w = 400;const h = height - 30;const pad = 10;
-  const pts = vals.map((v, i) => [pad + i / (vals.length - 1) * (w - pad * 2), h - (v - mn * 0.8) / (mx - mn * 0.8) * (h - pad)]);
+  const w = 600;const h = height;const padL = 16;const padR = 40;
+  const pts = vals.map((v, i) => [padL + i / (vals.length - 1) * (w - padL - padR), h - 24 - (v - mn * 0.8) / (mx - mn * 0.8) * (h - 50)]);
   const line = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
-  const area = `${line} L${pts[pts.length - 1][0]},${h} L${pts[0][0]},${h} Z`;
+  const area = `${line} L${pts[pts.length - 1][0]},${h - 24} L${pts[0][0]},${h - 24} Z`;
   return (
-    <div style={{ height }}>
-      <svg viewBox={`0 0 ${w} ${h + 24}`} width="100%" height={height} preserveAspectRatio="none">
-        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={pad} y1={h * f} x2={w - pad} y2={h * f} stroke="#eee" strokeWidth="1" />)}
+    <div>
+      <svg viewBox={`0 0 ${w} ${h}`} width="100%" style={{ display: 'block' }}>
+        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={padL} y1={(h - 50) * f + 16} x2={w - padR} y2={(h - 50) * f + 16} stroke="#eee" strokeWidth="1" />)}
         <path d={area} fill={fill} opacity="0.3" />
         <path d={line} fill="none" stroke={stroke} strokeWidth="2.5" strokeLinejoin="round" />
-        {pts.map((p, i) => <circle key={i} cx={p[0]} cy={p[1]} r="3.5" fill={stroke} />)}
-        {labelKey && data.map((d, i) => <text key={i} x={pts[i][0]} y={h + 16} textAnchor="middle" fontSize="10" fill={labelColor} fontFamily={F}>{d[labelKey]}</text>)}
+        {pts.map((p, i) => <React.Fragment key={i}><circle cx={p[0]} cy={p[1]} r="4" fill={stroke} /><text x={p[0]} y={p[1] - 10} textAnchor="middle" fontSize="11" fill={stroke} fontWeight="600" fontFamily={F}>{parseFloat(vals[i]).toFixed(1)}</text></React.Fragment>)}
+        {labelKey && data.map((d, i) => <text key={i} x={pts[i][0]} y={h - 6} textAnchor="middle" fontSize="11" fill={labelColor} fontFamily={F}>{d[labelKey]}</text>)}
       </svg>
     </div>);
 
@@ -98,17 +168,17 @@ const SAreaChart = ({ data, dataKey, fill, stroke, height = 180, labelKey, label
 const SLineChart = ({ data, lines, height = 180, labelKey, domain }) => {
   const allVals = data.flatMap((d) => lines.map((l) => parseFloat(d[l.key]) || 0));
   const mn = domain ? domain[0] : Math.min(...allVals);const mx = domain ? domain[1] : Math.max(...allVals);
-  const w = 400;const h = height - 30;const pad = 10;
+  const w = 600;const h = height;const padL = 16;const padR = 40;
   return (
-    <div style={{ height }}>
-      <svg viewBox={`0 0 ${w} ${h + 24}`} width="100%" height={height} preserveAspectRatio="none">
-        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={pad} y1={h * f} x2={w - pad} y2={h * f} stroke="#eee" strokeWidth="1" />)}
+    <div>
+      <svg viewBox={`0 0 ${w} ${h}`} width="100%" style={{ display: 'block' }}>
+        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={padL} y1={(h - 50) * f + 16} x2={w - padR} y2={(h - 50) * f + 16} stroke="#eee" strokeWidth="1" />)}
         {lines.map((ln) => {
-          const pts = data.map((d, i) => [pad + i / (data.length - 1) * (w - pad * 2), h - (parseFloat(d[ln.key]) - mn) / (mx - mn) * (h - pad * 2)]);
+          const pts = data.map((d, i) => [padL + i / (data.length - 1) * (w - padL - padR), h - 24 - (parseFloat(d[ln.key]) - mn) / (mx - mn) * (h - 50)]);
           const path = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
-          return <React.Fragment key={ln.key}><path d={path} fill="none" stroke={ln.color} strokeWidth="2.5" strokeLinejoin="round" />{pts.map((p, i) => <circle key={i} cx={p[0]} cy={p[1]} r="4" fill={ln.color} />)}</React.Fragment>;
+          return <React.Fragment key={ln.key}><path d={path} fill="none" stroke={ln.color} strokeWidth="2.5" strokeLinejoin="round" />{pts.map((p, i) => <React.Fragment key={i}><circle cx={p[0]} cy={p[1]} r="4" fill={ln.color} /><text x={p[0]} y={p[1] - 10} textAnchor="middle" fontSize="11" fill={ln.color} fontWeight="600" fontFamily={F}>{parseFloat(data[i][ln.key]).toFixed(1)}</text></React.Fragment>)}</React.Fragment>;
         })}
-        {labelKey && data.map((d, i) => <text key={i} x={pad + i / (data.length - 1) * (w - pad * 2)} y={h + 16} textAnchor="middle" fontSize="10" fill="#999" fontFamily={F}>{d[labelKey]}</text>)}
+        {labelKey && data.map((d, i) => <text key={i} x={padL + i / (data.length - 1) * (w - padL - padR)} y={h - 6} textAnchor="middle" fontSize="11" fill="#999" fontFamily={F}>{d[labelKey]}</text>)}
       </svg>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", marginTop: 4 }}>
         {lines.map((ln) => <div key={ln.key} style={{ display: "flex", alignItems: "center", gap: 5 }}><div style={{ width: 12, height: 3, borderRadius: 2, background: ln.color }} /><span style={{ fontFamily: F, fontSize: 11, color: "#666" }}>{ln.name}</span></div>)}
@@ -188,6 +258,42 @@ const Counter = ({ end, suffix = "", duration = 2000 }) => {
 };
 
 /* ═══ SHARED BUTTON ═══ */
+
+/* ═══ AEO: DIRECT ANSWER BLOCK ═══ */
+const DAB = ({ children }) =>
+<div style={{ background: C.w, borderRadius: R.xl, border: `1px solid ${C.gL}`, textAlign: "center", padding: "36px 40px", margin: "0 auto 48px" }}>
+    <div style={{ width: 52, height: 52, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><circle cx="7" cy="14" r="4.5" stroke={C.priA} strokeWidth="1.5" /><circle cx="17" cy="14" r="4.5" stroke={C.priA} strokeWidth="1.5" /><path d="M11.5 14h1" stroke={C.priA} strokeWidth="1.5" strokeLinecap="round" /><path d="M2.5 14H2m20 0h-.5" stroke={C.priA} strokeWidth="1.5" strokeLinecap="round" /><path d="M7 9.5V7M17 9.5V7" stroke={C.priA} strokeWidth="1.5" strokeLinecap="round" /></svg>
+    </div>
+    <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, margin: "0 0 12px" }}>Overview</h3>
+    <p style={{ fontFamily: F, color: C.g, lineHeight: 1.7, margin: 0, fontSize: "20px" }}>{children}</p>
+  </div>;
+
+
+/* ═══ AEO: FAQ SECTION ═══ */
+const FAQSection = ({ items }) => {
+  const [open, setOpen] = React.useState(null);
+  return (
+    <div itemScope itemType="https://schema.org/FAQPage">
+      <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.dark, margin: "0 0 28px" }}>Frequently Asked Questions</h3>
+      {items.map((item, i) =>
+      <div key={i} itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{ borderBottom: `1px solid ${C.gL}`, padding: "18px 0" }}>
+          <button onClick={() => setOpen(open === i ? null : i)} itemProp="name"
+        style={{ background: "none", border: "none", width: "100%", textAlign: "left", cursor: "pointer", fontFamily: F, fontSize: 16, fontWeight: 600, color: C.dark, padding: 0, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
+            {item.q}
+            <span style={{ color: C.priA, fontSize: 22, lineHeight: 1, flexShrink: 0, transition: "transform 0.3s", transform: open === i ? "rotate(45deg)" : "none" }}>+</span>
+          </button>
+          {open === i &&
+        <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer" style={{ marginTop: 12, fontFamily: F, fontSize: 15, color: C.g, lineHeight: 1.75 }}>
+              <div itemProp="text">{item.a}</div>
+            </div>
+        }
+        </div>
+      )}
+    </div>);
+
+};
+
 const Btn = ({ children, onClick, variant = "primary", href, style: s = {} }) => {
   const base = {
     fontFamily: F, fontSize: 15, fontWeight: 600, border: "none", cursor: "pointer",
@@ -266,7 +372,7 @@ const Nav = ({ page, go }) => {
     window.addEventListener("scroll", h, { passive: true });
     return () => window.removeEventListener("scroll", h);
   }, []);
-  const links = [["Home", "home"], ["About", "about"], ["Features", "features"], ["What's New", "gen2"], ["Pricing", "pricing"], ["Support", "support"], ["Future", "future"], ["Contact", "contact"]];
+  const links = [["Home", "home"], ["About", "about"], ["Features", "features"], ["Articles", "articles"], ["What's New", "gen2"], ["Pricing", "pricing"], ["Support", "support"], ["Future", "future"], ["Contact", "contact"]];
   return (
     <nav style={{
       position: "sticky", top: 0, zIndex: 100,
@@ -322,7 +428,7 @@ const Footer = ({ go }) =>
 <footer style={{ background: C.dark, padding: "80px 24px 36px", color: "rgba(255,255,255,0.6)" }}>
     <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 40 }}>
       <div>
-        <div onClick={(e) => { if (e.ctrlKey && e.shiftKey) go("admin"); }} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18, cursor: "default" }}>
+        <div onClick={(e) => {if (e.ctrlKey && e.shiftKey) go("admin");}} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18, cursor: "default" }}>
           <div style={{ width: 32, height: 32, borderRadius: R.sm, background: `linear-gradient(135deg, ${C.mint}, ${C.priL})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{ color: C.w, fontWeight: 800, fontSize: 10, fontFamily: F }}>EXL</span>
           </div>
@@ -334,7 +440,7 @@ const Footer = ({ go }) =>
       </div>
       <div>
         <div style={{ color: C.w, fontFamily: F, fontWeight: 600, fontSize: 13, marginBottom: 18, letterSpacing: 0.3 }}>Navigate</div>
-        {[["About", "about"], ["Features", "features"], ["What's New", "gen2"], ["Pricing", "pricing"], ["Future", "future"], ["Contact", "contact"]].map(([l, p]) =>
+        {[["About", "about"], ["Features", "features"], ["Articles", "articles"], ["What's New", "gen2"], ["Pricing", "pricing"], ["Future", "future"], ["Contact", "contact"]].map(([l, p]) =>
       <div key={p}><button onClick={() => go(p)} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.45)", fontFamily: F, fontSize: 13, padding: "5px 0", cursor: "pointer", transition: "color 0.2s" }}>{l}</button></div>
       )}
       </div>
@@ -456,7 +562,7 @@ const BoardPackDemo = () => {
 /* ═══ PRODUCT CAROUSEL ═══ */
 const products = [
 { name: "Performance Report", desc: "Board-ready performance analysis from Xero data in minutes. Variance analysis, KPI tiles, and trend charts.", color: "#2D6A4F", tag: "GEN 2" },
-{ name: "3-Way Financial Model", desc: "Fully integrated Income Statement, Balance Sheet, and Cash Flow Statement. Driver-based with LAMBDAs and Dynamic Arrays.", color: "#1A3C2E", tag: "FLAGSHIP" },
+{ name: "3-Way Financial Model", desc: "Fully integrated Income Statement, Balance Sheet, and Cash Flow Statement. Driver-based with LAMBDAs and Dynamic Arrays.", color: "#52B788", tag: "FLAGSHIP" },
 { name: "Cash Flow Scenario Model", desc: "Scenario-driven cash flow forecasting with base, optimistic, and conservative cases. Decision-ready output.", color: "#40916C", tag: "GEN 2" },
 { name: "HTML Board Pack", desc: "Interactive single-file HTML board packs with Chart.js charts, sticky nav, KPI tiles — no Excel needed for the reader.", color: "#7C3AED", tag: "NEW" },
 { name: "Profit Performance Model", desc: "1-way profit performance with scenario comparison dashboards. Wired to Xero for live data refresh.", color: "#2563EB", tag: "GEN 2" }];
@@ -513,11 +619,41 @@ const ProductCarousel = () => {
 
 };
 
+/* ═══ HERO BACKGROUND VIDEO (lazy-loaded) ═══ */
+const HeroVideo = () => {
+  const [loaded, setLoaded] = React.useState(false);
+  const videoRef = React.useRef(null);
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+  React.useEffect(() => {
+    if (loaded && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [loaded]);
+  if (!loaded) return null;
+  return (
+    <video ref={videoRef} muted loop playsInline
+      style={{
+        position: "absolute", inset: 0, width: "100%", height: "100%",
+        objectFit: "cover", opacity: 0.2, zIndex: 0,
+        animation: "heroFadeIn 2s ease forwards",
+      }}>
+      <source src="images/hero-video.mp4" type="video/mp4" />
+    </video>
+  );
+};
+
 /* ═══ HOME PAGE ═══ */
 const Home = ({ go }) =>
 <>
     {/* Hero */}
     <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), radial-gradient(ellipse at 80% 100%, ${C.priA}15, transparent 50%), linear-gradient(170deg, ${C.dark} 0%, #0D2818 35%, ${C.pri} 100%)`, padding: "100px 24px 80px", position: "relative", overflow: "hidden" }}>
+      {/* Background video — lazy loaded */}
+      <HeroVideo />
       {/* Subtle grid */}
       <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
       <div style={{ maxWidth: 1120, margin: "0 auto", position: "relative", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }} className="prod-grid">
@@ -560,7 +696,7 @@ const Home = ({ go }) =>
               {/* Chart bars */}
               <div style={{ display: "flex", alignItems: "flex-end", gap: 8, height: 100, padding: "0 8px" }}>
                 {[35, 52, 44, 68, 58, 82, 75, 95].map((h, i) =>
-              <div key={i} style={{ flex: 1, height: `${h}%`, background: `linear-gradient(to top, ${C.priA}, ${C.mint})`, borderRadius: "4px 4px 0 0", opacity: 0.6 + i * 0.05, transition: "height 0.5s ease" }}></div>
+              <div key={i} style={{ flex: 1, height: `${h}%`, background: `linear-gradient(to top, ${C.mint}90, ${C.mint})`, borderRadius: "4px 4px 0 0", opacity: 0.7 + i * 0.04, transition: "height 0.5s ease" }}></div>
               )}
               </div>
               {/* KPI row */}
@@ -576,11 +712,11 @@ const Home = ({ go }) =>
             {/* Team faces */}
             <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
               <div style={{ display: "flex" }}>
-                {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) => (
-                  <div key={i} style={{ width: 40, height: 40, borderRadius: "50%", border: "2.5px solid rgba(0,0,0,0.25)", marginLeft: i > 0 ? -10 : 0, position: "relative", zIndex: 3 - i, overflow: "hidden" }}>
+                {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) =>
+              <div key={i} style={{ width: 40, height: 40, borderRadius: "50%", border: "2.5px solid rgba(0,0,0,0.25)", marginLeft: i > 0 ? -10 : 0, position: "relative", zIndex: 3 - i, overflow: "hidden" }}>
                     <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
                   </div>
-                ))}
+              )}
               </div>
               <div>
                 <div style={{ fontFamily: F, fontSize: 13, fontWeight: 600, color: C.w }}>Trusted by finance teams</div>
@@ -590,14 +726,14 @@ const Home = ({ go }) =>
           </div>
           {/* Video CTA overlay */}
           <div style={{ position: "absolute", bottom: 20, left: 20, right: 20 }}>
-            <a href="#" onClick={(e) => { e.preventDefault(); go("support"); }}
+            <a href="#" onClick={(e) => {e.preventDefault();go("support");}}
           style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", background: "rgba(0,0,0,0.55)", backdropFilter: "blur(12px)", borderRadius: R.lg, padding: "12px 16px" }}>
               <div style={{ display: "flex", flexShrink: 0 }}>
-                {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) => (
-                  <div key={i} style={{ width: 36, height: 36, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)", marginLeft: i > 0 ? -8 : 0, position: "relative", zIndex: 3 - i, overflow: "hidden" }}>
+                {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) =>
+              <div key={i} style={{ width: 36, height: 36, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)", marginLeft: i > 0 ? -8 : 0, position: "relative", zIndex: 3 - i, overflow: "hidden" }}>
                     <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
                   </div>
-                ))}
+              )}
               </div>
               <div>
                 <div style={{ fontFamily: F, fontSize: 13, fontWeight: 600, color: C.w }}>Watch the 2-minute intro</div>
@@ -608,6 +744,11 @@ const Home = ({ go }) =>
         </div>
       </div>
     </section>
+
+    {/* AEO: Direct Answer Block */}
+    <Sec>
+      <DAB>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero with a cash flow model in 8 clicks.<br /><br />It pulls and pushes live accounting data including trial balance, profit and loss, balance sheet,<br />journals, invoices and account transactions.<br /><br />EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable<br />in Microsoft Excel on your desktop.<br /><br />We bring cloud accounting data from Xero to Excel, so you don't have to fetch it the hard way<br />by going to the cloud.</DAB>
+    </Sec>
 
     {/* Product Carousel */}
     <section style={{ background: `linear-gradient(180deg, ${C.pri}, ${C.dark})`, padding: "80px 24px 100px" }}>
@@ -745,6 +886,17 @@ const Home = ({ go }) =>
       </div>
     </section>
 
+    {/* AEO: Home FAQ */}
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "What is EXL Cloud?", a: "EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero accounting software. It pulls live data including trial balance, profit and loss, balance sheet, journals, and account transactions in 8 clicks. It also includes world-class financial models, reports, dashboards, and an AI skills library." },
+    { q: "How does EXL Cloud differ from other Xero-to-Excel tools?", a: "EXL Cloud provides full formula transparency — every calculation is visible and editable in Excel. Unlike CSV exports, it includes driver-based financial models, HTML board packs, Power BI integration, 15 AI-powered skills, and Dynamic Array formulas. Other tools export flat data; EXL Cloud delivers ready-made analysis." },
+    { q: "Does EXL Cloud work on Mac?", a: "EXL Cloud requires Microsoft Excel on Windows. Mac users can run it via Boot Camp or Parallels Desktop." },
+    { q: "How many Xero connections are included?", a: "Both plans include 5 Xero connections. Additional connections are available with volume discounts — from $6.00/connection/month at 21+ on the Data Pull plan." },
+    { q: "Is there a free trial?", a: "Yes. EXL Cloud offers a 7-day free trial with no credit card required. Cancel anytime during the trial period." }]
+    } />
+    </Sec>
+
     {/* CTA */}
     <Sec>
       <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto" }}>
@@ -765,6 +917,7 @@ const About = () =>
       </div>
     </section>
     <Sec>
+      <DAB>EXL Cloud was founded by Lance Rubin, a Chartered Accountant who worked at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ financial modelling study guide co-author.</DAB>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
         {[
       { n: "Lance Rubin", r: "Chief Excel Officer", b: "Two decades across PwC, KPMG, Investec, NAB. FMI approved trainer. CA ANZ financial modelling study guide co-author. Founder of Model Citizn and the AI-Powered Accountant program.", c: C.priL, img: "uploads/Lance-2b191b48.webp" },
@@ -781,6 +934,13 @@ const About = () =>
       )}
       </div>
     </Sec>
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "Who founded EXL Cloud?", a: "EXL Cloud was founded by Lance Rubin, a Chartered Accountant with 20+ years of experience at PwC, KPMG, Investec Bank, and National Australia Bank. He is also the founder of Model Citizn and an FMI approved financial modelling trainer." },
+    { q: "Where is EXL Cloud based?", a: "EXL Cloud Pty Ltd is based at 80 Market Street, South Melbourne VIC 3205, Australia." },
+    { q: "What is the relationship between EXL Cloud and Model Citizn?", a: "Model Citizn is the parent consultancy founded by Lance Rubin. EXL Cloud is the technology product arm that delivers the Excel add-in and financial modelling content. The AI-Powered Accountant training program bridges both." }]
+    } />
+    </Sec>
   </>;
 
 
@@ -793,6 +953,7 @@ const Features = ({ go }) =>
       </div>
     </section>
     <Sec>
+      <DAB>EXL Cloud offers two product tiers: Data Pull ($50 AUD/month) for Xero data extraction and push, and Advanced Content ($125 AUD/month) which adds world-class financial models, performance reports, HTML board packs, Power BI integration, and 15 AI-powered skills. Both include 5 Xero connections.</DAB>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
         {[
       ["eye", "Transparent Logic", "Full formula transparency. No black boxes."],
@@ -935,6 +1096,14 @@ const Features = ({ go }) =>
       <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 28px" }}>See what driver-based modelling looks like with our interactive 3-way scenario demo.</p>
       <Btn onClick={() => go("future")}>Try the Interactive Model →</Btn>
     </Sec>
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "What data can EXL Cloud pull from Xero?", a: "EXL Cloud pulls trial balance, profit and loss, balance sheet, account transactions, FX rates, named budgets, chart of accounts, journals, invoices, and bills." },
+    { q: "Can EXL Cloud push data back to Xero?", a: "Yes. With the Data Push feature, you can push manual journals, bank transactions, invoices, bills, and chart of accounts updates from Excel back to Xero." },
+    { q: "What financial models are included?", a: "The Advanced Content plan includes a 3-Way Driver-Based Financial Model, Performance Report, 1-Way Cash Flow Scenario Model, 1-Way Profit Performance Model, Positions & Returns, Human Capital Model, R&D Template, and more." },
+    { q: "Does EXL Cloud integrate with Power BI?", a: "Yes. EXL Cloud workbooks use Dynamic Arrays and structured tables that connect directly with Power BI for interactive dashboards and data visualisation." }]
+    } />
+    </Sec>
   </>;
 
 
@@ -966,6 +1135,7 @@ const Gen2 = () => {
 
       {/* Gen 2 Workbook Upgrade */}
       <Sec>
+        <DAB>The Gen 2 upgrade rebuilds every EXL Cloud workbook with dedicated Instructions sheets, improved navigation, consistent formatting, and plain-English formula notes. Combined with 15 purpose-built Claude AI skills and updated pricing from 1 July 2026.</DAB>
         <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 6 }}>UPDATE 1 OF 3</div>
         <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: "0 0 32px" }}>Gen 2 Workbook Upgrade</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
@@ -1065,8 +1235,8 @@ const Pricing = () =>
       </div>
     </section>
     <Sec>
+      <DAB>EXL Cloud offers two plans: Data Pull at $50 AUD per month and Advanced Content at $125 AUD per month. Both include 5 Xero connections with volume discounts for additional connections.<br />Pricing increases from 1 July 2026 to $70 and $170 respectively.</DAB>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 28 }}>
-        {/* Data Pull */}
         <div style={{ background: C.w, borderRadius: R.xl, padding: 36, border: `1px solid ${C.gL}` }}>
           <h3 style={{ fontFamily: F, fontSize: 22, fontWeight: 700, margin: "0 0 6px" }}>Data Pull Plan</h3>
           <p style={{ fontFamily: F, fontSize: 13, color: C.g, margin: "0 0 16px", lineHeight: 1.6 }}>Quick and easy way to pull and push data directly from Xero into Excel. Perfect if you've been impacted by deprecated data pull services.</p>
@@ -1127,6 +1297,14 @@ const Pricing = () =>
       <div style={{ textAlign: "center", marginTop: 28 }}>
         <p style={{ fontFamily: F, fontSize: 12, color: C.g }}>Mac users: Parallels required to run EXL Cloud.</p>
       </div>
+    </Sec>
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "What is the difference between Data Pull and Advanced Content?", a: "Data Pull ($50/month) covers Xero data extraction and push capabilities — P&L, BS, TB, transactions, journals. Advanced Content ($125/month) includes everything in Data Pull plus world-class financial models, performance reports, scenario models, HTML board packs, Power BI integration, 15 AI skills, and a 45% discount on the AI-Powered Accountant program." },
+    { q: "How much do additional Xero connections cost?", a: "Data Pull: 6-10 at $7.50/ea, 11-20 at $6.80/ea, 21+ at $6.00/ea. Advanced Content: 6-20 at $16.25/ea, 21+ at $12.70/ea. Enterprise pricing is available on application." },
+    { q: "Are prices in AUD or USD?", a: "All prices are in Australian Dollars (AUD)." },
+    { q: "When does the price increase take effect?", a: "Current pricing ($50 Data Pull, $125 Advanced Content) applies until 30 June 2026. From 1 July 2026, pricing increases to $70 and $170 respectively." }]
+    } />
     </Sec>
   </>;
 
@@ -1292,6 +1470,7 @@ const Future = () => {
           </div>
           <div>
             {/* KPI tiles */}
+            <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.g, marginBottom: 8, letterSpacing: 0.5 }}>FY32 KEY METRICS</div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 12, marginBottom: 28 }}>
               {[["Revenue", `$${(fy32.r / 1000).toFixed(1)}M`], ["GP Margin", `${fy32.gpm}%`], ["NPAT", `$${fy32.np}K`], ["FCF", `$${fy32.fcf}K`], ["Cash", `$${(fy32.cash / 1000).toFixed(1)}M`]].map(([l, v]) =>
               <div key={l} style={{ background: C.w, borderRadius: R.lg, padding: 18, border: `1px solid ${C.gL}`, textAlign: "center" }}>
@@ -1512,7 +1691,7 @@ const Legal = ({ type }) =>
 
             <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>What is Personal Information and why do we collect it?</h3>
             <p>Personal Information is information or an opinion that identifies an individual. Examples of Personal Information we collect include names, addresses, email addresses and phone numbers.</p>
-            <p style={{ marginTop: 18 }}>This Personal Information is obtained in many ways including interviews, correspondence, by telephone, by email, via our website www.exlcloud.io, from your website, from media and publications, from other publicly available sources, from cookies and from third parties. We do not guarantee website links or policy of authorised third parties.</p>
+            <p style={{ marginTop: 18 }}>This Personal Information is obtained in many ways including interviews, correspondence, by telephone, by email, via our website exlcloud.io, from your website, from media and publications, from other publicly available sources, from cookies and from third parties. We do not guarantee website links or policy of authorised third parties.</p>
             <p style={{ marginTop: 18 }}>We collect your Personal Information for the primary purpose of providing our services to you, providing information to our clients and marketing. We may also use your Personal Information for secondary purposes closely related to the primary purpose, in circumstances where you would reasonably expect such use or disclosure. You may unsubscribe from our mailing/marketing lists at any time by contacting us in writing.</p>
             <p style={{ marginTop: 18 }}>When we collect Personal Information, we will, where appropriate and where possible, explain to you why we are collecting the information and how we plan to use it.</p>
 
@@ -1621,7 +1800,7 @@ const Legal = ({ type }) =>
             <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Contact Us</h3>
             <p>If you have any questions about this Agreement, You can contact Us:</p>
             <ul style={{ marginTop: 12, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 8 }}>
-              <li>By visiting: <a href="https://www.exlcloud.io" target="_blank" rel="noopener noreferrer" style={{ color: C.priA }}>www.exlcloud.io</a></li>
+              <li>By visiting: <a href="https://exlcloud.io" target="_blank" rel="noopener noreferrer" style={{ color: C.priA }}>exlcloud.io</a></li>
               <li>By email: <a href="mailto:info@exlcloud.io" style={{ color: C.priA }}>info@exlcloud.io</a></li>
             </ul>
           </>
@@ -1631,12 +1810,150 @@ const Legal = ({ type }) =>
   </>;
 
 
+/* ═══ ARTICLE HERO (SVG) ═══ */
+const ArticleHero = ({ slug }) => {
+  const colors = {
+    "excel-is-dead": "#74C69D", "error-checks-for-excel-and-financial-modelling": "#60A5FA",
+    "saas-financial-modelling": "#52B788", "fundamentals-of-3-way-cashflow-modelling": "#22D3EE",
+    "how-dynamic-arrays-are-revolutionising-financial-modelling": "#818CF8",
+    "virtual-cfo-the-good-bad-and-the-ugly": "#FBBF24", "financial-modelling-diamonds-in-the-rough": "#A78BFA",
+    "forecasting-skills-doesnt-guarantee-modelling-skills": "#F472B6",
+    "inside-the-mind-of-a-spreadsheeter-vs-a-financial-modeler": "#34D399",
+    "need-help-searching": "#38BDF8", "not-all-datadear-replacements-are-created-equally": "#74C69D",
+    "the-demand-for-financial-modelling-skills-reaches-new-heights": "#52B788",
+    "why-being-a-1-manwomen-vcfo-business-is-a-really-bad-idea": "#F59E0B",
+    "why-financial-modelling-skills-will-be-a-career-door-opener": "#74C69D",
+    "why-vlookup-vs-indexmatch-shows-your-lack-of-embracing-change-innovation-and-better-excel-skills": "#60A5FA"
+  };
+  const accent = colors[slug] || "#74C69D";
+  const hasImg = typeof document !== "undefined";
+  return (
+    <div style={{ width: "100%", aspectRatio: "16/9", background: `linear-gradient(135deg, #1A3C2E, #0F1F17)`, borderRadius: R.lg, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(circle at 1px 1px, ${accent}08 1px, transparent 0)`, backgroundSize: "24px 24px" }} />
+      <img src={`images/articles/${slug}.png`} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} onError={(e) => {e.target.style.display = "none";}} />
+    </div>);
+
+};
+
+/* ═══ ARTICLES INDEX ═══ */
+const ArticlesIndex = ({ go }) => {
+  const [filter, setFilter] = React.useState("All");
+  const articles = window.ARTICLES || [];
+  const allTags = ["All", ...new Set(articles.flatMap((a) => a.tags))];
+  const filtered = filter === "All" ? articles : articles.filter((a) => a.tags.includes(filter));
+  const fmtDate = (d) => new Date(d).toLocaleDateString("en-AU", { year: "numeric", month: "long", day: "numeric" });
+  return (
+    <>
+      <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <SectionHead tag="Knowledge Hub" title="Articles" desc="Expert articles on financial modelling, Excel best practices, advisory tools, and the future of finance — by practitioners, for practitioners." light />
+        </div>
+      </section>
+      <Sec>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 40 }}>
+          {allTags.map((tag) =>
+          <button key={tag} onClick={() => setFilter(tag)} style={{
+            fontFamily: F, fontSize: 13, fontWeight: 500, padding: "8px 20px", borderRadius: R.full,
+            cursor: "pointer", border: "none", transition: "all 0.2s",
+            background: filter === tag ? C.priL : C.warmBg, color: filter === tag ? C.w : C.gD,
+            boxShadow: filter === tag ? `0 2px 10px ${C.priL}30` : "none"
+          }}>{tag}</button>
+          )}
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: 24 }} className="prod-grid">
+          {filtered.map((article) =>
+          <button key={article.slug} onClick={() => go("article:" + article.slug)}
+          style={{ background: C.w, borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}`, cursor: "pointer", textAlign: "left", transition: "box-shadow 0.3s, transform 0.3s", display: "flex", flexDirection: "column" }}
+          onMouseEnter={(e) => {e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.08)";e.currentTarget.style.transform = "translateY(-2px)";}}
+          onMouseLeave={(e) => {e.currentTarget.style.boxShadow = "none";e.currentTarget.style.transform = "none";}}>
+              <ArticleHero slug={article.slug} />
+              <div style={{ padding: "24px 24px 28px", flex: 1, display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 12 }}>
+                  {article.tags.map((tag) =>
+                <span key={tag} style={{ fontFamily: F, fontSize: 10, fontWeight: 600, color: C.priA, letterSpacing: 0.5, padding: "3px 10px", borderRadius: R.full, background: C.pale }}>{tag}</span>
+                )}
+                </div>
+                <h3 style={{ fontFamily: F, fontSize: 18, fontWeight: 700, color: C.dark, margin: "0 0 10px", lineHeight: 1.3 }}>{article.title}</h3>
+                <p style={{ fontFamily: F, fontSize: 14, color: C.g, lineHeight: 1.65, margin: "0 0 16px", flex: 1 }}>{article.excerpt.substring(0, 160)}...</p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: 14, borderTop: `1px solid ${C.gL}` }}>
+                  <span style={{ fontFamily: F, fontSize: 12, color: C.g }}>{article.author}{article.coauthor ? ` & ${article.coauthor}` : ""}</span>
+                  <span style={{ fontFamily: F, fontSize: 12, color: C.g }}>{fmtDate(article.date)}</span>
+                </div>
+              </div>
+            </button>
+          )}
+        </div>
+      </Sec>
+    </>);
+
+};
+
+/* ═══ ARTICLE PAGE ═══ */
+const ArticlePage = ({ slug, go }) => {
+  const article = (window.ARTICLES || []).find((a) => a.slug === slug);
+  if (!article) return <Sec><p>Article not found.</p></Sec>;
+  const fmtDate = (d) => new Date(d).toLocaleDateString("en-AU", { year: "numeric", month: "long", day: "numeric" });
+  const related = (window.ARTICLES || []).filter((a) => a.slug !== slug && a.tags.some((t) => article.tags.includes(t))).slice(0, 3);
+  return (
+    <>
+      <section style={{ background: `linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "80px 24px 50px" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <button onClick={() => go("articles")} style={{ background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, color: C.mint, display: "flex", alignItems: "center", gap: 8, marginBottom: 28, padding: 0 }}>← Back to Articles</button>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+            {article.tags.map((tag) => <span key={tag} style={{ fontFamily: F, fontSize: 11, fontWeight: 600, color: C.mint, padding: "4px 12px", borderRadius: R.full, background: "rgba(116,198,157,0.15)" }}>{tag}</span>)}
+          </div>
+          <h1 style={{ fontFamily: F, fontSize: 40, fontWeight: 800, color: C.w, lineHeight: 1.15, margin: "0 0 20px" }}>{article.title}</h1>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <PersonPlaceholder size={44} gradient={`linear-gradient(135deg, ${C.priL}, ${C.mint})`} />
+            <div>
+              <div style={{ fontFamily: F, fontSize: 15, fontWeight: 600, color: C.w }}>{article.author}{article.coauthor ? ` & ${article.coauthor}` : ""}</div>
+              <div style={{ fontFamily: F, fontSize: 13, color: "rgba(255,255,255,0.5)" }}>{fmtDate(article.date)}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Sec>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ background: C.pale, borderLeft: `4px solid ${C.priA}`, borderRadius: "0 12px 12px 0", padding: "20px 24px", marginBottom: 36 }}>
+            <div style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: C.priA, letterSpacing: 2, marginBottom: 6, textTransform: "uppercase" }}>Key Takeaway</div>
+            <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.7, margin: 0 }}>{article.excerpt}</p>
+          </div>
+          <div className="article-body" dangerouslySetInnerHTML={{ __html: article.content }} />
+        </div>
+      </Sec>
+      {related.length > 0 &&
+      <Sec bg={C.warmBg}>
+          <SectionHead tag="Related Reading" title="More articles you might enjoy" />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 24 }}>
+            {related.map((rel) =>
+          <button key={rel.slug} onClick={() => go("article:" + rel.slug)} style={{ background: C.w, borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}`, cursor: "pointer", textAlign: "left", padding: 24 }}>
+                <h4 style={{ fontFamily: F, fontSize: 17, fontWeight: 700, color: C.dark, margin: "0 0 8px", lineHeight: 1.3 }}>{rel.title}</h4>
+                <div style={{ fontFamily: F, fontSize: 12, color: C.g }}>{rel.author} · {fmtDate(rel.date)}</div>
+              </button>
+          )}
+          </div>
+        </Sec>
+      }
+      <Sec>
+        <div style={{ background: `linear-gradient(135deg, ${C.pri}, ${C.priL})`, borderRadius: R.xl, padding: 48, textAlign: "center" }}>
+          <h3 style={{ fontFamily: F, fontSize: 24, fontWeight: 700, color: C.w, margin: "0 0 14px" }}>Put these insights into practice</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.65)", margin: "0 auto 28px", maxWidth: 480, lineHeight: 1.65 }}>EXL Cloud gives you the financial models, reports, and tools discussed in these articles — directly in Excel, connected to Xero.</p>
+          <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Start Free Trial</Btn>
+        </div>
+      </Sec>
+    </>);
+
+};
+
 /* ═══ MAIN APP ═══ */
 const App = () => {
   const [page, setPage] = React.useState("home");
   const go = React.useCallback((p) => {setPage(p);window.scrollTo({ top: 0, behavior: "smooth" });}, []);
+  const isArticle = page.startsWith("article:");
+  const articleSlug = isArticle ? page.split(":")[1] : null;
   const pages = {
     home: <Home go={go} />, about: <About />, features: <Features go={go} />,
+    articles: <ArticlesIndex go={go} />,
     gen2: <Gen2 />, pricing: <Pricing />, support: <Support />,
     contact: <Contact />, future: <Future />,
     privacy: <Legal type="privacy" />, eula: <Legal type="eula" />,
@@ -1647,8 +1964,8 @@ const App = () => {
   };
   return (
     <div style={{ fontFamily: F, background: C.w, minHeight: "100vh" }}>
-      <Nav page={page} go={go} />
-      {pages[page]}
+      <Nav page={isArticle ? "articles" : page} go={go} />
+      {isArticle ? <ArticlePage slug={articleSlug} go={go} /> : pages[page] || pages.home}
       <Footer go={go} />
     </div>);
 
