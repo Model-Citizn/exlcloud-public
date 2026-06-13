@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. Pull live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions." />
+  <meta name="keywords" content="EXL Cloud, Excel add-in, Xero to Excel, financial modelling, 3-way model, Power BI, accounting software, board pack, financial reporting" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <title>EXL Cloud — Keep Excel, Leverage the Cloud | Xero to Excel in 8 Clicks</title>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EXL Cloud Pty Ltd",
+    "url": "https://exlcloud.io",
+    "description": "EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks, enabling world-class financial reports, dashboards, and models.",
+    "address": { "@type": "PostalAddress", "streetAddress": "80 Market Street", "addressLocality": "South Melbourne", "addressRegion": "VIC", "postalCode": "3205", "addressCountry": "AU" },
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+61-405-329-098", "email": "info@exlcloud.io", "contactType": "customer service" },
+    "founder": { "@type": "Person", "name": "Lance Rubin", "jobTitle": "Chief Excel Officer" },
+    "sameAs": ["https://www.linkedin.com/company/exl-cloud", "https://www.facebook.com/EXLCloud", "https://x.com/exl_cloud"]
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "EXL Cloud",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Windows",
+    "description": "Excel add-in connecting Microsoft Excel to Xero accounting software. Pulls live data including trial balance, profit and loss, balance sheet, journals, and account transactions in 8 clicks.",
+    "offers": [
+      { "@type": "Offer", "name": "Data Pull Plan", "price": "50.00", "priceCurrency": "AUD", "billingDuration": "P1M", "description": "Xero data pull and push. Includes 5 Xero connections." },
+      { "@type": "Offer", "name": "Advanced Content Plan", "price": "125.00", "priceCurrency": "AUD", "billingDuration": "P1M", "description": "All Data Pull features plus financial models, dashboards, reports, Power BI integration, 15 AI skills. Includes 5 Xero connections." }
+    ],
+    "featureList": "Xero data pull, Xero data push, 3-Way Financial Model, Performance Reports, Cash Flow Scenario Model, Power BI integration, HTML Board Packs, 15 AI Skills, Dynamic Arrays, LAMBDAs"
+  }
+  </script>
+
+  <!-- JSON-LD: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lance Rubin",
+    "jobTitle": "Chief Excel Officer",
+    "worksFor": { "@type": "Organization", "name": "EXL Cloud Pty Ltd" },
+    "alumniOf": [{"@type": "Organization", "name": "PwC"}, {"@type": "Organization", "name": "KPMG"}, {"@type": "Organization", "name": "Investec Bank"}, {"@type": "Organization", "name": "National Australia Bank"}],
+    "description": "Lance Rubin is a Chartered Accountant who worked at PwC, KPMG, Investec Bank, and National Australia Bank. He is an FMI approved financial modelling trainer, CA ANZ financial modelling study guide co-author, and founder of Model Citizn.",
+    "knowsAbout": ["Financial Modelling", "Excel", "Xero", "Power BI", "3-Way Financial Models", "SaaS Metrics"]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A3C2E'/><text x='16' y='22' text-anchor='middle' font-size='14' font-weight='800' fill='%2374C69D' font-family='system-ui'>EXL</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; overflow-x: hidden; font-family: 'DM Sans', system-ui, -apple-system, sans-serif; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.88; }
+    button { font-family: inherit; cursor: pointer; transition: all 0.2s; }
+    button:hover { opacity: 0.92; }
+    img { display: block; max-width: 100%; }
+    input[type=range] { -webkit-appearance: none; appearance: none; background: #E5E7EB; border-radius: 6px; outline: none; height: 6px; width: 100%; }
+    input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #2D6A4F; cursor: pointer; border: 2.5px solid white; box-shadow: 0 2px 6px rgba(0,0,0,.18); }
+    .driver-panel { position: sticky; top: 80px; }
+    @media (max-width: 768px) {
+      h1 { font-size: 32px !important; }
+      h2 { font-size: 24px !important; }
+      .prod-grid, .model-grid, .bp-grid, .bp-grid2 { grid-template-columns: 1fr !important; }
+      .driver-panel { position: static !important; }
+    }
+    @media (max-width: 900px) {
+      .dnav { display: none !important; }
+      .mtog { display: flex !important; }
+    }
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(116,198,157,0.3); }
+    @keyframes heroFadeIn { from { opacity: 0; } to { opacity: 0.2; } }
+    /* Article content styles */
+    .article-body h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 22px; font-weight: 700; color: #1A3C2E; margin: 32px 0 14px; }
+    .article-body h4 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; font-weight: 700; color: #2D6A4F; margin: 24px 0 10px; }
+    .article-body p { font-size: 16px; line-height: 1.85; color: #374151; margin: 0 0 18px; }
+    .article-body ul, .article-body ol { margin: 0 0 18px 20px; }
+    .article-body li { font-size: 15px; line-height: 1.75; color: #374151; margin-bottom: 6px; }
+    .article-body a { color: #2D6A4F; text-decoration: underline; text-underline-offset: 3px; }
+    .article-body blockquote { border-left: 3px solid #2D6A4F; padding: 12px 20px; margin: 18px 0; background: #F0FFF4; border-radius: 0 8px 8px 0; }
+    .article-body strong { color: #1A2E24; }
+    .article-body hr { border: none; border-top: 1px solid #E5E7EB; margin: 32px 0; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- AEO: Pre-rendered content for AI crawlers -->
+  <div id="aeo-content" style="display:none" aria-hidden="true">
+    <h1>EXL Cloud — Keep Excel, Leverage the Cloud</h1>
+    <p>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. It pulls live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions. EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable in Microsoft Excel.</p>
+    <p>EXL Cloud offers two plans: Data Pull at $50 AUD per month and Advanced Content at $125 AUD per month. Both include 5 Xero connections. The Advanced Content plan includes 3-Way Financial Models, Performance Reports, Cash Flow Scenario Models, Power BI integration, 15 AI-powered skills, and HTML Board Packs.</p>
+    <p>Founded by Lance Rubin, a Chartered Accountant with experience at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ study guide co-author.</p>
+    <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: info@exlcloud.io. Phone: +61 405 329 098.</p>
+  </div>
+  <div id="root"></div>
+  <script type="text/babel" src="articles-data.jsx"></script>
+  <script type="text/babel">
+
+
+
+
+
+/* ═══ EXL CLOUD — DESIGN TOKENS ═══ */
+const C = {
+  pri: "#1A3C2E", priL: "#2D6A4F", priA: "#40916C", mint: "#74C69D",
+  pale: "#D8F3DC", cream: "#F7FAF8", warmBg: "#FAFCFB", w: "#FFFFFF",
+  dark: "#0B1F17", darkCard: "#132A1F",
+  g: "#6B7280", gL: "#E8ECE9", gD: "#374151", blue: "#2563EB",
+  acc: "#F59E0B", red: "#EF4444", purple: "#7C3AED"
+};
+const F = "'DM Sans', system-ui, -apple-system, sans-serif";
+const R = { sm: 12, md: 20, lg: 28, xl: 36, full: 9999 };
+
+/* ═══ SIMPLE SVG CHARTS (no Recharts dependency) ═══ */
+const SBarChart = ({ data, keys, colors, labels, height = 180, labelKey, labelColor = "#999" }) => {
+  const allVals = data.flatMap((d) => keys.map((k) => Math.abs(d[k] || 0)));
+  const mx = Math.max(...allVals);
+  const bw = keys.length;
+  return (
+    <div style={{ height }}>
+      <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: height - 28, padding: "0 2px" }}>
+        {data.map((d, i) =>
+        <div key={i} style={{ flex: 1, display: "flex", gap: 2, alignItems: "flex-end", height: "100%" }}>
+            {keys.map((k, ki) =>
+          <div key={ki} style={{ flex: 1, height: `${Math.max(2, Math.abs(d[k]) / mx * 100)}%`, background: colors[ki], borderRadius: "4px 4px 0 0", transition: "height 0.5s ease", minHeight: 2 }} />
+          )}
+          </div>
+        )}
+      </div>
+      {labelKey && <div style={{ display: "flex", gap: 6, marginTop: 6, padding: "0 2px" }}>
+        {data.map((d, i) => <div key={i} style={{ flex: 1, textAlign: "center", fontFamily: F, fontSize: 10, color: labelColor }}>{d[labelKey]}</div>)}
+      </div>}
+    </div>);
+
+};
+const SAreaChart = ({ data, dataKey, fill, stroke, height = 180, labelKey, labelColor = "#999" }) => {
+  const vals = data.map((d) => d[dataKey]);
+  const mx = Math.max(...vals);const mn = Math.min(...vals.filter((v) => v >= 0));
+  const w = 600;const h = height;const padL = 16;const padR = 40;
+  const pts = vals.map((v, i) => [padL + i / (vals.length - 1) * (w - padL - padR), h - 24 - (v - mn * 0.8) / (mx - mn * 0.8) * (h - 50)]);
+  const line = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+  const area = `${line} L${pts[pts.length - 1][0]},${h - 24} L${pts[0][0]},${h - 24} Z`;
+  return (
+    <div>
+      <svg viewBox={`0 0 ${w} ${h}`} width="100%" style={{ display: 'block' }}>
+        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={padL} y1={(h - 50) * f + 16} x2={w - padR} y2={(h - 50) * f + 16} stroke="#eee" strokeWidth="1" />)}
+        <path d={area} fill={fill} opacity="0.3" />
+        <path d={line} fill="none" stroke={stroke} strokeWidth="2.5" strokeLinejoin="round" />
+        {pts.map((p, i) => <React.Fragment key={i}><circle cx={p[0]} cy={p[1]} r="4" fill={stroke} /><text x={p[0]} y={p[1] - 10} textAnchor="middle" fontSize="11" fill={stroke} fontWeight="600" fontFamily={F}>{parseFloat(vals[i]).toFixed(1)}</text></React.Fragment>)}
+        {labelKey && data.map((d, i) => <text key={i} x={pts[i][0]} y={h - 6} textAnchor="middle" fontSize="11" fill={labelColor} fontFamily={F}>{d[labelKey]}</text>)}
+      </svg>
+    </div>);
+
+};
+const SLineChart = ({ data, lines, height = 180, labelKey, domain }) => {
+  const allVals = data.flatMap((d) => lines.map((l) => parseFloat(d[l.key]) || 0));
+  const mn = domain ? domain[0] : Math.min(...allVals);const mx = domain ? domain[1] : Math.max(...allVals);
+  const w = 600;const h = height;const padL = 16;const padR = 40;
+  return (
+    <div>
+      <svg viewBox={`0 0 ${w} ${h}`} width="100%" style={{ display: 'block' }}>
+        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={padL} y1={(h - 50) * f + 16} x2={w - padR} y2={(h - 50) * f + 16} stroke="#eee" strokeWidth="1" />)}
+        {lines.map((ln) => {
+          const pts = data.map((d, i) => [padL + i / (data.length - 1) * (w - padL - padR), h - 24 - (parseFloat(d[ln.key]) - mn) / (mx - mn) * (h - 50)]);
+          const path = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+          return <React.Fragment key={ln.key}><path d={path} fill="none" stroke={ln.color} strokeWidth="2.5" strokeLinejoin="round" />{pts.map((p, i) => <React.Fragment key={i}><circle cx={p[0]} cy={p[1]} r="4" fill={ln.color} /><text x={p[0]} y={p[1] - 10} textAnchor="middle" fontSize="11" fill={ln.color} fontWeight="600" fontFamily={F}>{parseFloat(data[i][ln.key]).toFixed(1)}</text></React.Fragment>)}</React.Fragment>;
+        })}
+        {labelKey && data.map((d, i) => <text key={i} x={padL + i / (data.length - 1) * (w - padL - padR)} y={h - 6} textAnchor="middle" fontSize="11" fill="#999" fontFamily={F}>{d[labelKey]}</text>)}
+      </svg>
+      <div style={{ display: "flex", gap: 16, justifyContent: "center", marginTop: 4 }}>
+        {lines.map((ln) => <div key={ln.key} style={{ display: "flex", alignItems: "center", gap: 5 }}><div style={{ width: 12, height: 3, borderRadius: 2, background: ln.color }} /><span style={{ fontFamily: F, fontSize: 11, color: "#666" }}>{ln.name}</span></div>)}
+      </div>
+    </div>);
+
+};
+const SPieChart = ({ data, size = 120 }) => {
+  const total = data.reduce((s, d) => s + d.value, 0);
+  let cum = 0;const r = size / 2;const ir = r * 0.65;
+  const arcs = data.map((d) => {
+    const start = cum / total * Math.PI * 2 - Math.PI / 2;
+    cum += d.value;
+    const end = cum / total * Math.PI * 2 - Math.PI / 2;
+    const lg = d.value / total > 0.5 ? 1 : 0;
+    return { ...d, d: `M${r + ir * Math.cos(start)},${r + ir * Math.sin(start)} A${ir},${ir} 0 ${lg} 1 ${r + ir * Math.cos(end)},${r + ir * Math.sin(end)} L${r + r * 0.95 * Math.cos(end)},${r + r * 0.95 * Math.sin(end)} A${r * 0.95},${r * 0.95} 0 ${lg} 0 ${r + r * 0.95 * Math.cos(start)},${r + r * 0.95 * Math.sin(start)} Z` };
+  });
+  return <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size}>{arcs.map((a, i) => <path key={i} d={a.d} fill={a.color} />)}</svg>;
+};
+const SHBarChart = ({ data, dataKey, labelKey, fill, height = 200 }) => {
+  const mx = Math.max(...data.map((d) => d[dataKey]));
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 8, height }}>
+      {data.map((d, i) =>
+      <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, flex: 1 }}>
+          <span style={{ fontFamily: F, fontSize: 12, color: "#555", width: 80, textAlign: "right", flexShrink: 0 }}>{d[labelKey]}</span>
+          <div style={{ flex: 1, height: "70%", background: "#f0f0f0", borderRadius: 6, overflow: "hidden" }}>
+            <div style={{ width: `${d[dataKey] / mx * 100}%`, height: "100%", background: fill, borderRadius: 6, transition: "width 0.5s ease" }} />
+          </div>
+          <span style={{ fontFamily: F, fontSize: 11, color: "#888", width: 35, flexShrink: 0 }}>{d[dataKey]}</span>
+        </div>
+      )}
+    </div>);
+
+};
+
+/* ═══ SVG ICONS ═══ */
+const Icon = ({ name, size = 24, color = C.priA }) => {
+  const icons = {
+    eye: <><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" fill="none" stroke={color} strokeWidth="1.5" /></>,
+    plug: <><path d="M12 2v6m-4-2v4m8-4v4M8 10h8v4a4 4 0 01-8 0v-4z" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" /><path d="M12 18v4" stroke={color} strokeWidth="1.5" /></>,
+    grid: <><rect x="3" y="3" width="7" height="7" rx="1.5" fill="none" stroke={color} strokeWidth="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" fill="none" stroke={color} strokeWidth="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" fill="none" stroke={color} strokeWidth="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" fill="none" stroke={color} strokeWidth="1.5" /></>,
+    chart: <><path d="M3 3v18h18" stroke={color} strokeWidth="1.5" strokeLinecap="round" /><path d="M7 17l4-6 4 4 5-8" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></>,
+    bolt: <><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke={color} strokeWidth="1.5" strokeLinejoin="round" /></>,
+    shield: <><path d="M12 2l8 4v5c0 5.25-3.5 9.75-8 11-4.5-1.25-8-5.75-8-11V6l8-4z" fill="none" stroke={color} strokeWidth="1.5" /><path d="M9 12l2 2 4-4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></>,
+    doc: <><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="none" stroke={color} strokeWidth="1.5" /><path d="M14 2v6h6M8 13h8M8 17h5" stroke={color} strokeWidth="1.5" strokeLinecap="round" /></>,
+    ai: <><circle cx="12" cy="12" r="3" fill="none" stroke={color} strokeWidth="1.5" /><path d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.07-7.07l-2.83 2.83m-4.48 4.48l-2.83 2.83m0-10.14l2.83 2.83m4.48 4.48l2.83 2.83" stroke={color} strokeWidth="1.5" strokeLinecap="round" /></>,
+    play: <><polygon points="5,3 19,12 5,21" fill={color} /></>,
+    arrow: <><path d="M5 12h14m-7-7l7 7-7 7" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></>,
+    mail: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke={color} strokeWidth="1.5" /><path d="M22 6l-10 7L2 6" fill="none" stroke={color} strokeWidth="1.5" /></>,
+    users: <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" fill="none" stroke={color} strokeWidth="1.5" /><circle cx="9" cy="7" r="4" fill="none" stroke={color} strokeWidth="1.5" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" fill="none" stroke={color} strokeWidth="1.5" /></>,
+    download: <><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></>,
+    check: <><path d="M20 6L9 17l-5-5" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></>,
+    heart: <><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" fill="none" stroke={color} strokeWidth="1.5" /></>,
+    star: <><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="none" stroke={color} strokeWidth="1.5" strokeLinejoin="round" /></>
+  };
+  return <svg viewBox="0 0 24 24" width={size} height={size} fill="none">{icons[name]}</svg>;
+};
+
+/* ═══ ANIMATED COUNTER ═══ */
+const Counter = ({ end, suffix = "", duration = 2000 }) => {
+  const [val, setVal] = React.useState(0);
+  const ref = React.useRef(null);
+  const [started, setStarted] = React.useState(false);
+  React.useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => {if (e.isIntersecting && !started) setStarted(true);}, { threshold: 0.3 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [started]);
+  React.useEffect(() => {
+    if (!started) return;
+    let s = 0;const step = end / (duration / 16);
+    const t = setInterval(() => {s += step;if (s >= end) {setVal(end);clearInterval(t);} else setVal(Math.round(s));}, 16);
+    return () => clearInterval(t);
+  }, [started, end, duration]);
+  return <span ref={ref}>{val.toLocaleString()}{suffix}</span>;
+};
+
+/* ═══ SHARED BUTTON ═══ */
+
+/* ═══ AEO: DIRECT ANSWER BLOCK ═══ */
+const DAB = ({ children }) =>
+<div style={{ background: C.w, borderRadius: R.xl, border: `1px solid ${C.gL}`, textAlign: "center", padding: "36px 40px", margin: "0 auto 48px" }}>
+    <div style={{ width: 52, height: 52, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><circle cx="7" cy="14" r="4.5" stroke={C.priA} strokeWidth="1.5" /><circle cx="17" cy="14" r="4.5" stroke={C.priA} strokeWidth="1.5" /><path d="M11.5 14h1" stroke={C.priA} strokeWidth="1.5" strokeLinecap="round" /><path d="M2.5 14H2m20 0h-.5" stroke={C.priA} strokeWidth="1.5" strokeLinecap="round" /><path d="M7 9.5V7M17 9.5V7" stroke={C.priA} strokeWidth="1.5" strokeLinecap="round" /></svg>
+    </div>
+    <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, margin: "0 0 12px" }}>Overview</h3>
+    <p style={{ fontFamily: F, color: C.g, lineHeight: 1.7, margin: 0, fontSize: "20px" }}>{children}</p>
+  </div>;
+
+
+/* ═══ AEO: FAQ SECTION ═══ */
+const FAQSection = ({ items }) => {
+  const [open, setOpen] = React.useState(null);
+  return (
+    <div itemScope itemType="https://schema.org/FAQPage">
+      <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.dark, margin: "0 0 28px" }}>Frequently Asked Questions</h3>
+      {items.map((item, i) =>
+      <div key={i} itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{ borderBottom: `1px solid ${C.gL}`, padding: "18px 0" }}>
+          <button onClick={() => setOpen(open === i ? null : i)} itemProp="name"
+        style={{ background: "none", border: "none", width: "100%", textAlign: "left", cursor: "pointer", fontFamily: F, fontSize: 16, fontWeight: 600, color: C.dark, padding: 0, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
+            {item.q}
+            <span style={{ color: C.priA, fontSize: 22, lineHeight: 1, flexShrink: 0, transition: "transform 0.3s", transform: open === i ? "rotate(45deg)" : "none" }}>+</span>
+          </button>
+          {open === i &&
+        <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer" style={{ marginTop: 12, fontFamily: F, fontSize: 15, color: C.g, lineHeight: 1.75 }}>
+              <div itemProp="text">{item.a}</div>
+            </div>
+        }
+        </div>
+      )}
+    </div>);
+
+};
+
+const Btn = ({ children, onClick, variant = "primary", href, style: s = {} }) => {
+  const base = {
+    fontFamily: F, fontSize: 15, fontWeight: 600, border: "none", cursor: "pointer",
+    borderRadius: R.xl, padding: "14px 32px", letterSpacing: 0.2, transition: "all 0.3s ease",
+    textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center",
+    gap: 8, textAlign: "center", ...s
+  };
+  const v = {
+    primary: { ...base, background: `linear-gradient(135deg, ${C.mint}, #52B788)`, color: C.dark, boxShadow: "0 4px 14px rgba(116,198,157,0.35)" },
+    outline: { ...base, background: "rgba(255,255,255,0.08)", color: C.w, border: "1.5px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" },
+    dark: { ...base, background: C.pri, color: C.w, boxShadow: "0 4px 14px rgba(26,60,46,0.25)" },
+    ghost: { ...base, background: "transparent", color: C.priA, padding: "8px 0", boxShadow: "none" },
+    soft: { ...base, background: C.pale, color: C.priL, boxShadow: "none" }
+  };
+  if (href) return <a href={href} target="_blank" rel="noopener noreferrer" style={v[variant]}>{children}</a>;
+  return <button onClick={onClick} style={v[variant]}>{children}</button>;
+};
+
+/* ═══ SECTION WRAPPER ═══ */
+const Sec = ({ children, bg = C.w, style: s = {} }) =>
+<section style={{ background: bg, padding: "100px 24px", ...s }}>
+    <div style={{ maxWidth: 1120, margin: "0 auto" }}>{children}</div>
+  </section>;
+
+
+/* ═══ SECTION HEADER ═══ */
+const SectionHead = ({ tag, title, desc, center = false, light = false }) =>
+<div style={{ textAlign: center ? "center" : "left", marginBottom: 48, maxWidth: center ? 640 : "none", margin: center ? "0 auto 48px" : "0 0 48px" }}>
+    {tag && <div style={{ fontFamily: F, fontWeight: 700, color: light ? C.mint : C.priA, letterSpacing: 3, marginBottom: 12, textTransform: "uppercase", fontSize: 25 }}>{tag}</div>}
+    <h2 style={{ fontFamily: F, fontSize: 36, fontWeight: 800, color: light ? C.w : C.dark, lineHeight: 1.15, margin: "0 0 12px", textWrap: "pretty" }}>{title}</h2>
+    {desc && <p style={{ fontFamily: F, fontSize: 17, color: light ? "rgba(255,255,255,0.65)" : C.g, lineHeight: 1.65, margin: 0, textWrap: "pretty" }}>{desc}</p>}
+  </div>;
+
+
+/* ═══ VIDEO EMBED ═══ */
+const Video = ({ id, title }) =>
+<a href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noopener noreferrer"
+style={{ display: "block", borderRadius: R.lg, overflow: "hidden", background: C.dark, position: "relative", aspectRatio: "16/9", textDecoration: "none", boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }}>
+    <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg,${C.dark},${C.pri})`, position: "relative" }}>
+      <img src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`} alt={title}
+    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.45 }}
+    onError={(e) => {e.target.style.display = "none";}} />
+      <div style={{ width: 72, height: 72, borderRadius: "50%", background: "rgba(255,255,255,0.15)", backdropFilter: "blur(12px)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(255,255,255,0.3)", zIndex: 1, transition: "transform 0.3s" }}>
+        <Icon name="play" size={24} color={C.w} />
+      </div>
+      <div style={{ position: "absolute", bottom: 16, left: 18, right: 18, zIndex: 1 }}>
+        <div style={{ fontFamily: F, fontSize: 14, color: C.w, fontWeight: 600 }}>{title}</div>
+        <div style={{ fontFamily: F, fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 3 }}>Watch on YouTube ↗</div>
+      </div>
+    </div>
+  </a>;
+
+
+/* ═══ VIDEO MODAL (LOCAL MP4) ═══ */
+const VideoModal = ({ open, onClose }) => {
+  const vRef = React.useRef(null);
+  React.useEffect(() => {
+    if (open && vRef.current) { vRef.current.currentTime = 0; vRef.current.play().catch(() => {}); }
+    else if (!open && vRef.current) { vRef.current.pause(); }
+  }, [open]);
+  React.useEffect(() => {
+    const h = (e) => { if (e.key === "Escape") onClose(); };
+    if (open) document.addEventListener("keydown", h);
+    return () => document.removeEventListener("keydown", h);
+  }, [open, onClose]);
+  if (!open) return null;
+  return (
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.9)", display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", maxWidth: 960, position: "relative" }}>
+        <button onClick={onClose} style={{ position: "absolute", top: -44, right: 0, background: "none", border: "none", color: "white", fontSize: 32, cursor: "pointer", lineHeight: 1, opacity: 0.8, fontFamily: "system-ui" }}>✕</button>
+        <video ref={vRef} src="uploads/Full explainer low - 2 min introduction.mp4" controls style={{ width: "100%", borderRadius: 12, display: "block", background: "#000" }} />
+      </div>
+    </div>
+  );
+};
+
+/* ═══ LOCAL VIDEO CARD ═══ */
+const VideoLocal = ({ title = "2-Minute Introduction", onOpen }) =>
+  <button onClick={onOpen}
+    style={{ display: "block", borderRadius: R.lg, overflow: "hidden", background: C.dark, position: "relative", aspectRatio: "16/9", border: "none", cursor: "pointer", boxShadow: "0 8px 30px rgba(0,0,0,0.12)", width: "100%", padding: 0 }}>
+    <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg,${C.pri} 0%,${C.priA} 100%)`, position: "relative" }}>
+      <div style={{ width: 72, height: 72, borderRadius: "50%", background: "rgba(255,255,255,0.15)", backdropFilter: "blur(12px)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(255,255,255,0.35)", zIndex: 1 }}>
+        <Icon name="play" size={24} color={C.w} />
+      </div>
+      <div style={{ position: "absolute", top: 12, left: 14, zIndex: 1 }}>
+        <span style={{ fontFamily: F, fontSize: 10, fontWeight: 700, color: C.mint, letterSpacing: 2, background: "rgba(0,0,0,0.4)", padding: "3px 8px", borderRadius: R.full }}>EXPLAINER</span>
+      </div>
+      <div style={{ position: "absolute", bottom: 16, left: 18, right: 18, zIndex: 1, textAlign: "left" }}>
+        <div style={{ fontFamily: F, fontSize: 14, color: C.w, fontWeight: 600 }}>{title}</div>
+        <div style={{ fontFamily: F, fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 3 }}>2 min · Play now ▶</div>
+      </div>
+    </div>
+  </button>;
+
+/* ═══ PERSON PLACEHOLDER ═══ */
+const PersonPlaceholder = ({ initials, name, size = 72, gradient }) =>
+<div style={{
+  width: size, height: size, borderRadius: "50%", overflow: "hidden",
+  background: gradient || `linear-gradient(135deg, ${C.priL}, ${C.mint})`,
+  display: "flex", alignItems: "center", justifyContent: "center",
+  boxShadow: "0 4px 16px rgba(0,0,0,0.12)", flexShrink: 0
+}}>
+    {/* Warm silhouette placeholder */}
+    <svg viewBox="0 0 80 80" width={size * 0.75} height={size * 0.75}>
+      <circle cx="40" cy="28" r="14" fill="rgba(255,255,255,0.85)" />
+      <ellipse cx="40" cy="62" rx="22" ry="16" fill="rgba(255,255,255,0.85)" />
+    </svg>
+  </div>;
+
+
+/* ═══ NAVIGATION ═══ */
+const Nav = ({ page, go }) => {
+  const [open, setOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const h = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", h, { passive: true });
+    return () => window.removeEventListener("scroll", h);
+  }, []);
+  const links = [["Home", "home"], ["About", "about"], ["Features", "features"], ["Articles", "articles"], ["What's New", "gen2"], ["Pricing", "pricing"], ["Support", "support"], ["Future", "future"], ["Contact", "contact"]];
+  return (
+    <nav style={{
+      position: "sticky", top: 0, zIndex: 100,
+      background: scrolled ? "rgba(11,31,23,0.97)" : "rgba(11,31,23,0.85)",
+      backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+      borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
+      transition: "all 0.3s ease"
+    }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
+        <button onClick={() => go("home")} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ width: 36, height: 36, borderRadius: R.md, background: `linear-gradient(135deg, ${C.mint}, ${C.priL})`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(116,198,157,0.3)" }}>
+            <span style={{ color: C.w, fontWeight: 800, fontSize: 12, fontFamily: F, letterSpacing: 0.5 }}>EXL</span>
+          </div>
+          <span style={{ color: C.w, fontFamily: F, fontWeight: 700, fontSize: 18, letterSpacing: -0.3 }}>EXL Cloud</span>
+        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }} className="dnav">
+          {links.map(([l, p]) =>
+          <button key={p} onClick={() => go(p)} style={{
+            background: page === p ? "rgba(116,198,157,0.12)" : "none",
+            border: "none", cursor: "pointer", fontFamily: F, fontSize: 13.5, fontWeight: 500,
+            color: page === p ? C.mint : "rgba(255,255,255,0.7)",
+            padding: "7px 14px", borderRadius: R.full, transition: "all 0.2s"
+          }}>{l}</button>
+          )}
+          <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1"
+          style={{ padding: "9px 22px", fontSize: 13, marginLeft: 8 }}>Get Started</Btn>
+        </div>
+        <button onClick={() => setOpen(!open)} className="mtog"
+        style={{ background: "none", border: "none", cursor: "pointer", color: C.w, fontSize: 24, display: "none", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: R.md }}>
+          {open ? "✕" : "☰"}
+        </button>
+      </div>
+      {open &&
+      <div style={{ background: C.dark, padding: "16px 24px 24px", display: "flex", flexDirection: "column", gap: 4, borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+          {links.map(([l, p]) =>
+        <button key={p} onClick={() => {go(p);setOpen(false);}}
+        style={{ background: page === p ? "rgba(116,198,157,0.1)" : "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 15, color: page === p ? C.mint : "rgba(255,255,255,0.8)", textAlign: "left", padding: "12px 16px", borderRadius: R.md }}>
+              {l}
+            </button>
+        )}
+          <div style={{ marginTop: 8 }}>
+            <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1"
+          style={{ width: "100%", padding: "14px 24px" }}>Get Started</Btn>
+          </div>
+        </div>
+      }
+    </nav>);
+
+};
+
+/* ═══ FOOTER ═══ */
+const Footer = ({ go }) =>
+<footer style={{ background: C.dark, padding: "80px 24px 36px", color: "rgba(255,255,255,0.6)" }}>
+    <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 40 }}>
+      <div>
+        <div onClick={(e) => {if (e.ctrlKey && e.shiftKey) go("admin");}} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18, cursor: "default" }}>
+          <div style={{ width: 32, height: 32, borderRadius: R.sm, background: `linear-gradient(135deg, ${C.mint}, ${C.priL})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <span style={{ color: C.w, fontWeight: 800, fontSize: 10, fontFamily: F }}>EXL</span>
+          </div>
+          <span style={{ color: C.w, fontFamily: F, fontWeight: 700, fontSize: 17 }}>EXL Cloud</span>
+        </div>
+        <p style={{ fontFamily: F, fontSize: 13, lineHeight: 1.9, margin: 0, color: "rgba(255,255,255,0.45)" }}>
+          Keep Excel. Leverage the cloud.<br />80 Market Street<br />South Melbourne VIC 3205<br />+61 405 329 098<br />info@exlcloud.io
+        </p>
+      </div>
+      <div>
+        <div style={{ color: C.w, fontFamily: F, fontWeight: 600, fontSize: 13, marginBottom: 18, letterSpacing: 0.3 }}>Navigate</div>
+        {[["About", "about"], ["Features", "features"], ["Articles", "articles"], ["What's New", "gen2"], ["Pricing", "pricing"], ["Future", "future"], ["Contact", "contact"]].map(([l, p]) =>
+      <div key={p}><button onClick={() => go(p)} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.45)", fontFamily: F, fontSize: 13, padding: "5px 0", cursor: "pointer", transition: "color 0.2s" }}>{l}</button></div>
+      )}
+      </div>
+      <div>
+        <div style={{ color: C.w, fontFamily: F, fontWeight: 600, fontSize: 13, marginBottom: 18, letterSpacing: 0.3 }}>Resources</div>
+        {[["Knowledge Base", "http://docs.xlconnect.net"], ["Support Ticket", "https://exlcloud.atlassian.net/servicedesk/customer/portal/1"], ["Member Login", "https://account.xlconnect.net"], ["Maven Courses", "https://maven.com/modelcitizn"], ["Podcast", "https://open.spotify.com/show/0WRSzeb3Z0UbHmXLz5qgpQ"], ["Knowledge Hub", "https://www.modelcitizn.com/knowledge-hub/"]].map(([l, u]) =>
+      <div key={l}><a href={u} target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.45)", fontFamily: F, fontSize: 13, textDecoration: "none", display: "block", padding: "5px 0" }}>{l}</a></div>
+      )}
+      </div>
+      <div>
+        <div style={{ color: C.w, fontFamily: F, fontWeight: 600, fontSize: 13, marginBottom: 18, letterSpacing: 0.3 }}>Connect</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          {[["LinkedIn", "https://www.linkedin.com/company/exl-cloud"], ["Facebook", "https://www.facebook.com/EXLCloud"], ["X / Twitter", "https://x.com/exl_cloud"]].map(([l, u]) =>
+        <a key={l} href={u} target="_blank" rel="noopener noreferrer"
+        style={{ color: "rgba(255,255,255,0.4)", fontFamily: F, fontSize: 12, textDecoration: "none", padding: "7px 14px", border: "1px solid rgba(255,255,255,0.1)", borderRadius: R.full, transition: "all 0.2s" }}>{l}</a>
+        )}
+        </div>
+      </div>
+    </div>
+    <div style={{ maxWidth: 1120, margin: "48px auto 0", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 24, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
+      <span style={{ fontFamily: F, fontSize: 12, color: "rgba(255,255,255,0.25)" }}>© 2026 EXL Cloud by XLC. All rights reserved.</span>
+      <div style={{ display: "flex", gap: 20 }}>
+        <button onClick={() => go("privacy")} style={{ background: "none", border: "none", fontFamily: F, fontSize: 12, color: "rgba(255,255,255,0.25)", cursor: "pointer" }}>Privacy Policy</button>
+        <button onClick={() => go("eula")} style={{ background: "none", border: "none", fontFamily: F, fontSize: 12, color: "rgba(255,255,255,0.25)", cursor: "pointer" }}>EULA</button>
+      </div>
+    </div>
+  </footer>;
+
+
+/* ═══ BOARD PACK INTERACTIVE DEMO ═══ */
+const BoardPackDemo = () => {
+  const { useState: us } = React;
+  const [tab, setTab] = us("overview");
+  const revData = [{ m: "Jul", r: 180, e: 140 }, { m: "Aug", r: 195, e: 148 }, { m: "Sep", r: 210, e: 152 }, { m: "Oct", r: 230, e: 158 }, { m: "Nov", r: 250, e: 162 }, { m: "Dec", r: 275, e: 168 }];
+  const pieData = [{ name: "Subscriptions", value: 62, color: C.priL }, { name: "Advisory", value: 24, color: C.mint }, { name: "Training", value: 14, color: C.acc }];
+  return (
+    <div style={{ background: C.w, borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}`, boxShadow: "0 24px 80px rgba(0,0,0,0.06)" }}>
+      {/* Browser chrome */}
+      <div style={{ background: "#F5F6F7", padding: "12px 18px", display: "flex", alignItems: "center", gap: 10, borderBottom: `1px solid ${C.gL}` }}>
+        <div style={{ display: "flex", gap: 6 }}>
+          <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#EF4444" }}></div>
+          <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#F59E0B" }}></div>
+          <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#22C55E" }}></div>
+        </div>
+        <div style={{ flex: 1, background: C.w, borderRadius: R.full, padding: "5px 14px", fontFamily: F, fontSize: 12, color: C.g }}>board-pack-q4-2026.html</div>
+      </div>
+      {/* Header */}
+      <div style={{ background: C.pri, padding: "14px 20px", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+          <span style={{ fontFamily: F, fontSize: 15, fontWeight: 700, color: C.w, whiteSpace: "nowrap" }}>Q4 2026 Board Pack</span>
+          <span style={{ fontFamily: F, fontSize: 11, color: C.mint, fontWeight: 500 }}>EXL Cloud</span>
+        </div>
+        <div style={{ display: "flex", gap: 3 }}>
+          {["overview", "revenue", "expenses"].map((t) =>
+          <button key={t} onClick={() => setTab(t)} style={{
+            padding: "5px 14px", borderRadius: R.full, border: "none", cursor: "pointer", fontFamily: F, fontSize: 11, fontWeight: 600,
+            background: tab === t ? "rgba(255,255,255,0.18)" : "transparent",
+            color: tab === t ? C.w : "rgba(255,255,255,0.55)", textTransform: "capitalize"
+          }}>{t}</button>
+          )}
+        </div>
+      </div>
+      {/* Content */}
+      <div style={{ padding: 28 }}>
+        {tab === "overview" &&
+        <div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 14, marginBottom: 28 }}>
+              {[["Revenue", "$1.34M", "↑ 18%", C.priL], ["EBITDA", "$420K", "↑ 24%", C.priA], ["Net Profit", "$285K", "↑ 15%", C.blue], ["Cash", "$890K", "↑ 32%", C.mint]].map(([l, v, d, c]) =>
+            <div key={l} style={{ background: `${c}08`, borderLeft: `3px solid ${c}`, borderRadius: R.md, padding: 16 }}>
+                  <div style={{ fontFamily: F, fontSize: 11, color: C.g, fontWeight: 600, letterSpacing: 0.5 }}>{l}</div>
+                  <div style={{ fontFamily: F, fontSize: 22, fontWeight: 800, color: C.dark, marginTop: 2 }}>{v}</div>
+                  <div style={{ fontFamily: F, fontSize: 12, color: c, fontWeight: 600, marginTop: 2 }}>{d}</div>
+                </div>
+            )}
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 18 }} className="bp-grid2">
+              <div style={{ background: C.warmBg, borderRadius: R.md, padding: 20 }}>
+                <div style={{ fontFamily: F, fontSize: 13, fontWeight: 700, color: C.dark, marginBottom: 14 }}>Revenue vs Expenses ($K)</div>
+                <SBarChart data={revData} keys={["r", "e"]} colors={[C.priL, C.gL]} height={170} labelKey="m" />
+              </div>
+              <div style={{ background: C.warmBg, borderRadius: R.md, padding: 20 }}>
+                <div style={{ fontFamily: F, fontSize: 13, fontWeight: 700, color: C.dark, marginBottom: 14 }}>Revenue Mix</div>
+                <div style={{ display: "flex", justifyContent: "center", padding: "10px 0" }}><SPieChart data={pieData} size={116} /></div>
+                <div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 6 }}>
+                  {pieData.map((d) =>
+                <div key={d.name} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                      <div style={{ width: 8, height: 8, borderRadius: 3, background: d.color }}></div>
+                      <span style={{ fontFamily: F, fontSize: 10, color: C.g }}>{d.name} {d.value}%</span>
+                    </div>
+                )}
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+        {tab === "revenue" &&
+        <div>
+            <div style={{ fontFamily: F, fontSize: 15, fontWeight: 700, color: C.dark, marginBottom: 18 }}>Monthly Revenue Trend ($K)</div>
+            <SAreaChart data={revData} dataKey="r" fill={C.pale} stroke={C.priL} height={210} labelKey="m" />
+            <div style={{ marginTop: 18, padding: 18, background: C.pale, borderRadius: R.md, borderLeft: `3px solid ${C.priL}` }}>
+              <div style={{ fontFamily: F, fontSize: 13, fontWeight: 700, color: C.priL, marginBottom: 6 }}>Commentary</div>
+              <div style={{ fontFamily: F, fontSize: 14, color: C.gD, lineHeight: 1.65 }}>Revenue grew 53% across H2, driven by 12 new Advanced Content subscriptions and the Weel partnership. December uptick reflects year-end advisory billings.</div>
+            </div>
+          </div>
+        }
+        {tab === "expenses" &&
+        <div>
+            <div style={{ fontFamily: F, fontSize: 15, fontWeight: 700, color: C.dark, marginBottom: 18 }}>Expense Breakdown ($K)</div>
+            <SHBarChart data={[{ c: "Payroll", v: 280 }, { c: "Tech", v: 95 }, { c: "Marketing", v: 65 }, { c: "Overheads", v: 45 }, { c: "Legal", v: 20 }]} dataKey="v" labelKey="c" fill={C.priA} height={210} />
+          </div>
+        }
+      </div>
+    </div>);
+
+};
+
+// Export to window
+
+/* ═══ PRODUCT CAROUSEL ═══ */
+const products = [
+{ name: "Performance Report", desc: "Board-ready performance analysis from Xero data in minutes. Variance analysis, KPI tiles, and trend charts.", color: "#2D6A4F", tag: "GEN 2" },
+{ name: "3-Way Financial Model", desc: "Fully integrated Income Statement, Balance Sheet, and Cash Flow Statement. Driver-based with LAMBDAs and Dynamic Arrays.", color: "#52B788", tag: "FLAGSHIP" },
+{ name: "Cash Flow Scenario Model", desc: "Scenario-driven cash flow forecasting with base, optimistic, and conservative cases. Decision-ready output.", color: "#40916C", tag: "GEN 2" },
+{ name: "HTML Board Pack", desc: "Interactive single-file HTML board packs with Chart.js charts, sticky nav, KPI tiles — no Excel needed for the reader.", color: "#7C3AED", tag: "NEW" },
+{ name: "Profit Performance Model", desc: "1-way profit performance with scenario comparison dashboards. Wired to Xero for live data refresh.", color: "#2563EB", tag: "GEN 2" }];
+
+
+const ProductCarousel = () => {
+  const [idx, setIdx] = React.useState(0);
+  const p = products[idx];
+  React.useEffect(() => {const t = setInterval(() => setIdx((i) => (i + 1) % products.length), 5000);return () => clearInterval(t);}, []);
+  const mockData = [{ m: "Jan", v: 42 }, { m: "Feb", v: 55 }, { m: "Mar", v: 48 }, { m: "Apr", v: 67 }, { m: "May", v: 73 }, { m: "Jun", v: 85 }];
+  return (
+    <div style={{ position: "relative" }}>
+      <div style={{ display: "flex", gap: 8, marginBottom: 28, justifyContent: "center" }}>
+        {products.map((_, i) =>
+        <button key={i} onClick={() => setIdx(i)} style={{ width: i === idx ? 36 : 10, height: 10, borderRadius: R.full, border: "none", cursor: "pointer", background: i === idx ? C.mint : "rgba(255,255,255,0.25)", transition: "all 0.4s ease" }} />
+        )}
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }} className="prod-grid">
+        <div>
+          <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: R.full, background: "rgba(116,198,157,0.15)", color: C.mint, fontFamily: F, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, marginBottom: 18 }}>{p.tag}</span>
+          <h3 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.w, margin: "0 0 14px", lineHeight: 1.15 }}>{p.name}</h3>
+          <p style={{ fontFamily: F, fontSize: 16, color: "rgba(255,255,255,0.65)", lineHeight: 1.65, margin: "0 0 28px" }}>{p.desc}</p>
+          <div style={{ display: "flex", gap: 12 }}>
+            <button onClick={() => setIdx((i) => (i - 1 + products.length) % products.length)} style={{ width: 44, height: 44, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: C.w, cursor: "pointer", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>←</button>
+            <button onClick={() => setIdx((i) => (i + 1) % products.length)} style={{ width: 44, height: 44, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: C.w, cursor: "pointer", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>→</button>
+          </div>
+        </div>
+        {/* Interactive Workbook Mockup */}
+        <div style={{ background: "rgba(255,255,255,0.05)", borderRadius: R.xl, padding: 28, border: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(8px)", transform: "perspective(800px) rotateY(-2deg)", transition: "all 0.6s ease" }}>
+          <div style={{ display: "flex", gap: 6, marginBottom: 18, alignItems: "center" }}>
+            <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#EF4444" }}></div>
+            <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#F59E0B" }}></div>
+            <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#22C55E" }}></div>
+            <span style={{ fontFamily: F, fontSize: 11, color: "rgba(255,255,255,0.4)", marginLeft: 10 }}>{p.name}.xlsx</span>
+          </div>
+          <div style={{ display: "flex", gap: 3, marginBottom: 14 }}>
+            {["Dashboard", "Data", "Scenarios"].map((t, i) =>
+            <div key={t} style={{ padding: "5px 14px", borderRadius: `${R.sm}px ${R.sm}px 0 0`, background: i === 0 ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.04)", fontFamily: F, fontSize: 11, color: i === 0 ? C.mint : "rgba(255,255,255,0.35)", fontWeight: i === 0 ? 600 : 400 }}>{t}</div>
+            )}
+          </div>
+          <SBarChart data={mockData.map((d, i) => ({ ...d, v: d.v * (1 + idx * 0.15 + i * 0.05) }))} keys={["v"]} colors={[p.color]} height={165} labelKey="m" labelColor="rgba(255,255,255,0.35)" />
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginTop: 12 }}>
+            {[["Revenue", "$1.2M", "↑ 15%"], ["GP Margin", "65%", "↑ 3pp"], ["FCF", "$340K", "↑ 22%"]].map(([l, v, d]) =>
+            <div key={l} style={{ background: "rgba(255,255,255,0.05)", borderRadius: R.md, padding: "10px 12px", textAlign: "center" }}>
+                <div style={{ fontFamily: F, fontSize: 9, color: "rgba(255,255,255,0.35)", letterSpacing: 0.5 }}>{l}</div>
+                <div style={{ fontFamily: F, fontSize: 16, fontWeight: 700, color: C.w, marginTop: 2 }}>{v}</div>
+                <div style={{ fontFamily: F, fontSize: 10, color: C.mint, marginTop: 1 }}>{d}</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>);
+
+};
+
+/* ═══ HERO BACKGROUND VIDEO (lazy-loaded) ═══ */
+const HeroVideo = () => {
+  const [loaded, setLoaded] = React.useState(false);
+  const videoRef = React.useRef(null);
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+  React.useEffect(() => {
+    if (loaded && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [loaded]);
+  if (!loaded) return null;
+  return (
+    <video ref={videoRef} muted loop playsInline
+      style={{
+        position: "absolute", inset: 0, width: "100%", height: "100%",
+        objectFit: "cover", opacity: 0.2, zIndex: 0,
+        animation: "heroFadeIn 2s ease forwards",
+      }}>
+      <source src="images/hero-video.mp4" type="video/mp4" />
+    </video>
+  );
+};
+
+/* ═══ HOME PAGE ═══ */
+const Home = ({ go }) =>
+<>
+    {/* Hero */}
+    <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), radial-gradient(ellipse at 80% 100%, ${C.priA}15, transparent 50%), linear-gradient(170deg, ${C.dark} 0%, #0D2818 35%, ${C.pri} 100%)`, padding: "100px 24px 80px", position: "relative", overflow: "hidden" }}>
+      {/* Background video — lazy loaded */}
+      <HeroVideo />
+      {/* Subtle grid */}
+      <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
+      <div style={{ maxWidth: 1120, margin: "0 auto", position: "relative", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }} className="prod-grid">
+        <div>
+          <div style={{ fontFamily: F, fontWeight: 600, color: C.mint, letterSpacing: 3, marginBottom: 24, display: "flex", alignItems: "center", gap: 10, fontSize: "25px" }}>
+            <span style={{ width: 32, height: 1, background: C.mint, display: "inline-block" }}></span>
+            XERO → EXCEL → POWER BI
+          </div>
+          <h1 style={{ fontFamily: F, fontSize: 54, fontWeight: 800, color: C.w, lineHeight: 1.06, margin: "0 0 24px", letterSpacing: -1 }}>
+            Keep Excel.<br />
+            <span style={{ background: `linear-gradient(90deg, ${C.mint}, #95D5B2)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Leverage the cloud.</span>
+          </h1>
+          <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, margin: "0 0 36px", maxWidth: 480 }}>
+            World-class reports, dashboards, and financial models — fully customisable in Microsoft Excel. From Xero data to board-ready output in 8 clicks.
+          </p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 48 }}>
+            <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Start 7-Day Free Trial</Btn>
+            <Btn onClick={() => go("features")} variant="outline">Explore Features</Btn>
+          </div>
+          <div style={{ display: "flex", gap: 48, flexWrap: "wrap" }}>
+            {[["20+", "Years of Excel mastery"], ["15", "AI-powered skills"], ["8", "Clicks to action"]].map(([n, l]) =>
+          <div key={l}>
+                <div style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.mint, lineHeight: 1 }}><Counter end={parseInt(n)} suffix={n.includes("+") ? "+" : ""} /></div>
+                <div style={{ fontFamily: F, fontSize: 13, color: "rgba(255,255,255,0.45)", marginTop: 6 }}>{l}</div>
+              </div>
+          )}
+          </div>
+        </div>
+        {/* Hero visual — Product mockup with warm people element */}
+        <div style={{ borderRadius: R.xl, overflow: "hidden", position: "relative" }}>
+          <div style={{ background: `linear-gradient(145deg, ${C.priL}, ${C.pri})`, borderRadius: R.xl, padding: 32, position: "relative" }}>
+            {/* Excel-like mockup */}
+            <div style={{ background: "rgba(0,0,0,0.25)", borderRadius: R.lg, padding: 20, marginBottom: 20 }}>
+              <div style={{ display: "flex", gap: 6, marginBottom: 16, alignItems: "center" }}>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#EF4444" }}></div>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#F59E0B" }}></div>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#22C55E" }}></div>
+                <span style={{ fontFamily: F, fontSize: 10, color: "rgba(255,255,255,0.4)", marginLeft: 8 }}>3-Way Model.xlsx</span>
+              </div>
+              {/* Chart bars */}
+              <div style={{ display: "flex", alignItems: "flex-end", gap: 8, height: 100, padding: "0 8px" }}>
+                {[35, 52, 44, 68, 58, 82, 75, 95].map((h, i) =>
+              <div key={i} style={{ flex: 1, height: `${h}%`, background: `linear-gradient(to top, ${C.mint}90, ${C.mint})`, borderRadius: "4px 4px 0 0", opacity: 0.7 + i * 0.04, transition: "height 0.5s ease" }}></div>
+              )}
+              </div>
+              {/* KPI row */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginTop: 14 }}>
+                {[["Revenue", "$1.2M"], ["GP%", "65%"], ["FCF", "$340K"]].map(([l, v]) =>
+              <div key={l} style={{ background: "rgba(255,255,255,0.06)", borderRadius: R.sm, padding: "8px 10px", textAlign: "center" }}>
+                    <div style={{ fontFamily: F, fontSize: 8, color: "rgba(255,255,255,0.35)", letterSpacing: 0.5 }}>{l}</div>
+                    <div style={{ fontFamily: F, fontSize: 14, fontWeight: 700, color: C.w }}>{v}</div>
+                  </div>
+              )}
+              </div>
+            </div>
+            {/* Team faces */}
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <div style={{ display: "flex" }}>
+                {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) =>
+              <div key={i} style={{ width: 40, height: 40, borderRadius: "50%", border: "2.5px solid rgba(0,0,0,0.25)", marginLeft: i > 0 ? -10 : 0, position: "relative", zIndex: 3 - i, overflow: "hidden" }}>
+                    <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+                  </div>
+              )}
+              </div>
+              <div>
+                <div style={{ fontFamily: F, fontSize: 13, fontWeight: 600, color: C.w }}>Trusted by finance teams</div>
+                <div style={{ fontFamily: F, fontSize: 11, color: "rgba(255,255,255,0.5)" }}>across Australia & NZ</div>
+              </div>
+            </div>
+          </div>
+          {/* Video CTA overlay */}
+          <div style={{ position: "absolute", bottom: 20, left: 20, right: 20 }}>
+            <a href="#" onClick={(e) => {e.preventDefault(); window.__openExplainerVideo && window.__openExplainerVideo();}}
+          style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", background: "rgba(0,0,0,0.55)", backdropFilter: "blur(12px)", borderRadius: R.lg, padding: "12px 16px" }}>
+              <div style={{ display: "flex", flexShrink: 0 }}>
+                {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) =>
+              <div key={i} style={{ width: 36, height: 36, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)", marginLeft: i > 0 ? -8 : 0, position: "relative", zIndex: 3 - i, overflow: "hidden" }}>
+                    <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+                  </div>
+              )}
+              </div>
+              <div>
+                <div style={{ fontFamily: F, fontSize: 13, fontWeight: 600, color: C.w }}>Watch the 2-minute intro</div>
+                <div style={{ fontFamily: F, fontSize: 11, color: "rgba(255,255,255,0.5)" }}>See EXL Cloud in action →</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* AEO: Direct Answer Block */}
+    <Sec>
+      <DAB>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero with a cash flow model in 8 clicks.<br /><br />It pulls and pushes live accounting data including trial balance, profit and loss, balance sheet,<br />journals, invoices and account transactions.<br /><br />EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable<br />in Microsoft Excel on your desktop.<br /><br />We bring cloud accounting data from Xero to Excel, so you don't have to fetch it the hard way<br />by going to the cloud.</DAB>
+    </Sec>
+
+    {/* Product Carousel */}
+    <section style={{ background: `linear-gradient(180deg, ${C.pri}, ${C.dark})`, padding: "80px 24px 100px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+        <SectionHead tag="Product Suite" title="Swipe through the library" center light />
+        <ProductCarousel />
+      </div>
+    </section>
+
+    {/* Value Props */}
+    <Sec bg={C.warmBg}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
+        {[
+      ["eye", "No Black Magic", "See exactly where every calculation comes from. Full formula transparency in every Gen 2 workbook."],
+      ["bolt", "8 Clicks to Action", "Install — connect — pull. No training, no setup overhead. Start producing board-ready output immediately."],
+      ["grid", "Unlimited Customisation", "Your themes, fonts, logos. It's a spreadsheet — edit anything, extend everything."],
+      ["chart", "Power BI Ready", "Connect seamlessly with Power BI. Dynamic Arrays, LAMBDAs, Power Query — Modern Excel."]].
+      map(([ic, t, d], i) =>
+      <div key={i} style={{ background: C.w, borderRadius: R.xl, padding: 32, border: `1px solid ${C.gL}`, transition: "box-shadow 0.3s, transform 0.3s" }}>
+            <div style={{ width: 52, height: 52, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
+              <Icon name={ic} size={24} color={C.priL} />
+            </div>
+            <h3 style={{ fontFamily: F, fontSize: 18, fontWeight: 700, color: C.dark, margin: "0 0 10px" }}>{t}</h3>
+            <p style={{ fontFamily: F, fontSize: 15, color: C.g, margin: 0, lineHeight: 1.65 }}>{d}</p>
+          </div>
+      )}
+      </div>
+    </Sec>
+
+    {/* Board Pack Demo */}
+    <Sec>
+      <SectionHead tag="Interactive Demo" title="HTML Board Packs" desc="Single-file interactive reports with Chart.js charts, sticky navigation, and KPI tiles. Share a link instead of an attachment — no Excel needed for the reader." />
+      <BoardPackDemo />
+    </Sec>
+
+    {/* Video Section */}
+    <Sec bg={C.warmBg}>
+      <SectionHead tag="See It in Action" title="Watch how it works" />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+        <VideoLocal onOpen={() => window.__openExplainerVideo && window.__openExplainerVideo()} />
+        <Video id="qf1pEpPoYVg" title="3-Way Financial Model" />
+        <Video id="Apty2pmgtYk" title="Start Menu & Navigation" />
+        <Video id="fa22TR9MI-Y" title="Account Transactions Pull" />
+      </div>
+    </Sec>
+
+    {/* How It Works */}
+    <Sec>
+      <SectionHead tag="How It Works" title="From Xero to insight in three steps" desc="No training. No setup meetings. Just install and start pulling data." center />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
+        {[
+      { step: "1", title: "Install the add-in", desc: "Download the EXL Cloud Excel plugin from the Knowledge Base. One-click install, works on any Windows machine.", icon: "download" },
+      { step: "2", title: "Connect your Xero orgs", desc: "Authenticate with Xero and link your client organisations. Takes about 30 seconds per org.", icon: "plug" },
+      { step: "3", title: "Pull data & customise", desc: "Hit 'Pull' on any report, model, or dashboard. Edit formulas, add your branding, present to clients.", icon: "chart" }].
+      map((s) =>
+      <div key={s.step} style={{ textAlign: "center", padding: 36, background: C.w, borderRadius: R.xl, border: `1px solid ${C.gL}` }}>
+            <div style={{ width: 72, height: 72, borderRadius: R.xl, background: `linear-gradient(135deg, ${C.priL}, ${C.priA})`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", boxShadow: `0 10px 30px ${C.priL}25` }}>
+              <Icon name={s.icon} size={30} color={C.w} />
+            </div>
+            <div style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: C.priA, letterSpacing: 2, marginBottom: 8 }}>STEP {s.step}</div>
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, margin: "0 0 10px" }}>{s.title}</h3>
+            <p style={{ fontFamily: F, fontSize: 15, color: C.g, lineHeight: 1.65, margin: 0 }}>{s.desc}</p>
+          </div>
+      )}
+      </div>
+    </Sec>
+
+    {/* Who It's For */}
+    <Sec bg={C.warmBg}>
+      <SectionHead tag="Built For You" title="Used by finance teams who love Excel" desc="From sole practitioners to mid-tier firms — EXL Cloud fits wherever Excel is already the daily workhorse." center />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
+        {[
+      { role: "Practice Partners", desc: "Advisory services powered by real-time Xero data. Deliver cash flow models and performance reports that win clients.", gradient: `linear-gradient(135deg, #2D6A4F, #40916C)` },
+      { role: "CFOs & Controllers", desc: "Board-ready reports in minutes, not days. Full transparency — every number is traceable to source.", gradient: `linear-gradient(135deg, #1A3C2E, #2D6A4F)` },
+      { role: "Bookkeepers", desc: "Clean data pulls, reconciliation workbooks, and journal push — all without leaving Excel.", gradient: `linear-gradient(135deg, #40916C, #74C69D)` },
+      { role: "Analysts & Modellers", desc: "3-way driver-based models with scenarios, Dynamic Arrays, and Power BI integration out of the box.", gradient: `linear-gradient(135deg, #2563EB, #3B82F6)` }].
+      map((p) =>
+      <div key={p.role} style={{ background: C.w, borderRadius: R.xl, padding: 32, border: `1px solid ${C.gL}`, textAlign: "center" }}>
+            <PersonPlaceholder size={72} gradient={p.gradient} />
+            <div style={{ marginTop: 18 }}>
+              <h4 style={{ fontFamily: F, fontSize: 17, fontWeight: 700, color: C.dark, margin: "0 0 8px" }}>{p.role}</h4>
+              <p style={{ fontFamily: F, fontSize: 14, color: C.g, lineHeight: 1.6, margin: 0 }}>{p.desc}</p>
+            </div>
+          </div>
+      )}
+      </div>
+    </Sec>
+
+    {/* Testimonials */}
+    <Sec>
+      <SectionHead tag="What Users Say" title="Trusted by finance professionals" center />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+        {[
+      { q: "EXL Cloud is a game-changer! It delivers unparalleled efficiency gains, saving both time and money with insights across multiple entities that simply aren't available elsewhere.", name: "Advanced Content User", role: "Xero App Store Review", stars: 5 },
+      { q: "The reports are exactly what I need for board meetings. Being able to customise everything in Excel means I'm not fighting the software — it works the way I already think.", name: "Practice Partner", role: "Melbourne, VIC", stars: 5 },
+      { q: "We moved from a $2,000/month reporting tool to EXL Cloud. Better output, full formula transparency, and my team didn't need any training because it's just Excel.", name: "CFO, Mid-Market", role: "Sydney, NSW", stars: 5 }].
+      map((t, i) =>
+      <div key={i} style={{ background: C.warmBg, borderRadius: R.xl, padding: 32, position: "relative", border: `1px solid ${C.gL}` }}>
+            <div style={{ display: "flex", gap: 4, marginBottom: 16 }}>
+              {Array(t.stars).fill(0).map((_, j) => <span key={j} style={{ color: C.acc, fontSize: 16 }}>★</span>)}
+            </div>
+            <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.7, margin: "0 0 24px", fontStyle: "italic" }}>"{t.q}"</p>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <PersonPlaceholder size={44} gradient={`linear-gradient(135deg, ${C.priL}, ${C.mint})`} />
+              <div>
+                <div style={{ fontFamily: F, fontSize: 14, fontWeight: 600, color: C.dark }}>{t.name}</div>
+                <div style={{ fontFamily: F, fontSize: 12, color: C.g }}>{t.role}</div>
+              </div>
+            </div>
+          </div>
+      )}
+      </div>
+    </Sec>
+
+    {/* Integrations */}
+    <Sec bg={C.warmBg} style={{ padding: "56px 24px" }}>
+      <div style={{ textAlign: "center" }}>
+        <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.g, letterSpacing: 3, marginBottom: 24 }}>INTEGRATIONS & PARTNERSHIPS</div>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
+          {["Xero", "CPA Australia", "FMI", "Power BI", "CA ANZ", "Maven"].map((p) =>
+        <div key={p} style={{ fontFamily: F, fontSize: 14, fontWeight: 600, color: C.gD, padding: "10px 22px", border: `1px solid ${C.gL}`, borderRadius: R.full, background: C.w }}>{p}</div>
+        )}
+        </div>
+      </div>
+    </Sec>
+
+    {/* Gen 2 Banner */}
+    <section style={{ background: `linear-gradient(135deg, ${C.pri}, ${C.priL})`, padding: "72px 24px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 28 }}>
+        <div>
+          <span style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.mint, letterSpacing: 3 }}>2026 RELEASE</span>
+          <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.w, margin: "10px 0 0", lineHeight: 1.2 }}>Gen 2 + AI Skills Library + New Pricing</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.6)", margin: "8px 0 0" }}>Every workbook rebuilt. 15 Claude AI skills. Updated plans from 1 July 2026.</p>
+        </div>
+        <Btn onClick={() => go("gen2")}>See What's New →</Btn>
+      </div>
+    </section>
+
+    {/* AEO: Home FAQ */}
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "What is EXL Cloud?", a: "EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero accounting software. It pulls live data including trial balance, profit and loss, balance sheet, journals, and account transactions in 8 clicks. It also includes world-class financial models, reports, dashboards, and an AI skills library." },
+    { q: "How does EXL Cloud differ from other Xero-to-Excel tools?", a: "EXL Cloud provides full formula transparency — every calculation is visible and editable in Excel. Unlike CSV exports, it includes driver-based financial models, HTML board packs, Power BI integration, 15 AI-powered skills, and Dynamic Array formulas. Other tools export flat data; EXL Cloud delivers ready-made analysis." },
+    { q: "Does EXL Cloud work on Mac?", a: "EXL Cloud requires Microsoft Excel on Windows. Mac users can run it via Boot Camp or Parallels Desktop." },
+    { q: "How many Xero connections are included?", a: "Both plans include 5 Xero connections. Additional connections are available with volume discounts — from $6.00/connection/month at 21+ on the Data Pull plan." },
+    { q: "Is there a free trial?", a: "Yes. EXL Cloud offers a 7-day free trial with no credit card required. Cancel anytime during the trial period." }]
+    } />
+    </Sec>
+
+    {/* CTA */}
+    <Sec>
+      <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto" }}>
+        <h2 style={{ fontFamily: F, fontSize: 36, fontWeight: 800, color: C.dark, margin: "0 0 16px", lineHeight: 1.15 }}>Ready to keep Excel and leverage the cloud?</h2>
+        <p style={{ fontFamily: F, fontSize: 17, color: C.g, margin: "0 0 36px", lineHeight: 1.6 }}>7-day free trial. No credit card. Cancel anytime.</p>
+        <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Start Free Trial</Btn>
+      </div>
+    </Sec>
+  </>;
+
+
+/* ═══ ABOUT ═══ */
+const About = () =>
+<>
+    <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+        <SectionHead tag="Our Team" title="About EXL Cloud" desc="World-class experts with decades of Excel and data mastery. We believe every finance professional deserves transparent, customisable tools." light />
+      </div>
+    </section>
+    <Sec>
+      <DAB>EXL Cloud was founded by Lance Rubin, a Chartered Accountant who worked at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ financial modelling study guide co-author.</DAB>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
+        {[
+      { n: "Lance Rubin", r: "Chief Excel Officer", b: "Two decades across PwC, KPMG, Investec, NAB. FMI approved trainer. CA ANZ financial modelling study guide co-author. Founder of Model Citizn and the AI-Powered Accountant program.", c: C.priL, img: "uploads/Lance-2b191b48.webp" },
+      { n: "Marcus Small", r: "Chief Content Officer", b: "Founder of TheSmallman.com — one of the largest Excel resources on the web. Lead financial modelling trainer for CPA Australia. Design mastery behind every EXL Cloud workbook.", c: C.priA, img: "uploads/Marcus-d3c6cfff.webp" },
+      { n: "David Boyar", r: "Director", b: "Co-founded the Virtual CFO Association. Built and ran his own practice. Hosted From the Trenches — accounting's biggest podcast. CEO of Xero award-winning Change GPS.", c: C.mint, img: "uploads/David+Boyar-58a13e07.webp" },
+      { n: "Edwin Hartono Limbri", r: "Full-Stack Developer", b: "Data-driven solutions through statistics and coding. Lead developer of EXL Cloud's automation engine and the Excel Add-in powering the entire platform.", c: C.blue, img: "uploads/edwin-da0e3d1f.webp" }].
+      map((p) =>
+      <div key={p.n} style={{ background: C.w, borderRadius: R.xl, padding: 32, border: `1px solid ${C.gL}`, borderTop: `4px solid ${p.c}` }}>
+            <img src={p.img} alt={p.n} style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: `3px solid ${p.c}` }} />
+            <h3 style={{ fontFamily: F, fontSize: 19, fontWeight: 700, color: C.dark, margin: "18px 0 4px" }}>{p.n}</h3>
+            <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: p.c, letterSpacing: 1.5, marginBottom: 14, textTransform: "uppercase" }}>{p.r}</div>
+            <p style={{ fontFamily: F, fontSize: 14, color: C.g, lineHeight: 1.65, margin: 0 }}>{p.b}</p>
+          </div>
+      )}
+      </div>
+    </Sec>
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "Who founded EXL Cloud?", a: "EXL Cloud was founded by Lance Rubin, a Chartered Accountant with 20+ years of experience at PwC, KPMG, Investec Bank, and National Australia Bank. He is also the founder of Model Citizn and an FMI approved financial modelling trainer." },
+    { q: "Where is EXL Cloud based?", a: "EXL Cloud Pty Ltd is based at 80 Market Street, South Melbourne VIC 3205, Australia." },
+    { q: "What is the relationship between EXL Cloud and Model Citizn?", a: "Model Citizn is the parent consultancy founded by Lance Rubin. EXL Cloud is the technology product arm that delivers the Excel add-in and financial modelling content. The AI-Powered Accountant training program bridges both." }]
+    } />
+    </Sec>
+  </>;
+
+
+/* ═══ FEATURES ═══ */
+const Features = ({ go }) =>
+<>
+    <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+        <SectionHead tag="Capabilities" title="Features" desc="Transparent, customisable, Power BI-ready. Everything in the app you already know — Microsoft Excel." light />
+      </div>
+    </section>
+    <Sec>
+      <DAB>EXL Cloud offers two product tiers: Data Pull ($50 AUD/month) for Xero data extraction and push, and Advanced Content ($125 AUD/month) which adds world-class financial models, performance reports, HTML board packs, Power BI integration, and 15 AI-powered skills. Both include 5 Xero connections.</DAB>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
+        {[
+      ["eye", "Transparent Logic", "Full formula transparency. No black boxes."],
+      ["chart", "Power BI Integration", "Connect seamlessly with Power BI. No data warehouse."],
+      ["grid", "Unlimited Customisation", "Your brand, your layouts. Zero coding."],
+      ["bolt", "8 Clicks to Action", "Install, connect, pull. Instant value."],
+      ["shield", "Gen 2 Standard", "Instructions, validation checks, change logs in every workbook."],
+      ["ai", "AI Skills Library", "15 purpose-built Claude AI skills for EXL Cloud workbooks."]].
+      map(([ic, t, d], i) =>
+      <div key={i} style={{ background: C.warmBg, borderRadius: R.xl, padding: 28, border: `1px solid ${C.gL}` }}>
+            <div style={{ width: 48, height: 48, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
+              <Icon name={ic} size={22} color={C.priL} />
+            </div>
+            <h3 style={{ fontFamily: F, fontSize: 17, fontWeight: 700, color: C.dark, margin: "0 0 8px" }}>{t}</h3>
+            <p style={{ fontFamily: F, fontSize: 14, color: C.g, margin: 0, lineHeight: 1.65 }}>{d}</p>
+          </div>
+      )}
+      </div>
+    </Sec>
+    {/* Comparison Table */}
+    <Sec bg={C.warmBg}>
+      <SectionHead tag="Why EXL Cloud" title="See how we stack up." desc="Feeling overwhelmed by the number of 'apps' getting stacked in your tech-stack? Quit using apps that you only open a few times a year and utilise the one app you know, you love, and you actually use everyday — Microsoft Excel." center />
+      <div>
+          <div style={{ borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}`, background: C.w, boxShadow: "0 8px 40px rgba(0,0,0,0.04)" }}>
+            {(() => {
+          const competitors = ["EXL Cloud", "Spotlight", "Castaway", "Futrli", "Fathom HQ", "Modano"];
+          const features = [
+          { f: ["Fully ", { b: "integrated into Excel" }, " via an add-in — works inside the spreadsheet you already use, with no separate app or virtual machine required"], vals: ["✓", "✗", "✗", "✗", "✗", "✗"] },
+          { f: ["Fully ", { b: "transparent" }, " and ", { b: "customisable business logic" }, " — every formula is visible and editable, no proprietary black boxes or locked modules"], vals: ["✓", "✗", "✓", "✗", "✗", "Limited"] },
+          { f: ["Integrates seamlessly with ", { b: "Power BI" }, " for ", { b: "Data Analytics" }, " and ", { b: "insights" }, " — connect your Excel workbooks directly to Power BI dashboards without a data warehouse"], vals: ["✓", "✗", "✗", "✗", "✗", "✗"] },
+          { f: ["Less than ", { b: "8 clicks" }, " to a populated interactive and functional ", { b: "cash flow scenario model" }, " in Excel — install, connect, pull, done"], vals: ["✓", "✗", "✗", "✗", "✗", "✗"] },
+          { f: ["Can leverage ", { b: "scalable data analytics" }, " and cloud storage tools — Dynamic Arrays, LAMBDAs, Power Query, and OneDrive/SharePoint integration"], vals: ["✓", "✓", "✗", "✓", "✓", "✓"] },
+          { f: ["Fully ", { b: "customise" }, " your own dashboards, themes, fonts, styles, colours, logos — it's your spreadsheet, make it your own brand"], vals: ["✓", "Limited", "Limited", "Limited", "Limited", "Limited"] }];
+
+          const CellVal = ({ v, highlight }) => {
+            if (v === "✓") return <div style={{ width: 26, height: 26, borderRadius: "50%", background: C.priA, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto", boxShadow: highlight ? `0 2px 8px ${C.priA}40` : "none" }}><svg viewBox="0 0 24 24" width="15" height="15"><path d="M20 6L9 17l-5-5" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div>;
+            if (v === "✗") return <span style={{ fontFamily: F, fontSize: 16, color: "#d0d0d0", fontWeight: 500 }}>✗</span>;
+            return <span style={{ fontFamily: F, fontSize: 11, color: C.g, fontWeight: 600 }}>{v}</span>;
+          };
+          return (
+            <>
+                  <div style={{ display: "grid", gridTemplateColumns: `2.8fr repeat(${competitors.length}, 1fr)`, background: C.pri }}>
+                    <div style={{ padding: "16px 24px", fontFamily: F, fontSize: 13, fontWeight: 700, color: C.mint }}>Feature</div>
+                    {competitors.map((c, ci) => <div key={c} style={{ padding: "16px 8px", fontFamily: F, fontSize: 12, fontWeight: 700, color: ci === 0 ? C.mint : C.w, textAlign: "center", lineHeight: 1.25, background: ci === 0 ? "rgba(116,198,157,0.12)" : "transparent" }}>{c}</div>)}
+                  </div>
+                  {features.map((row, ri) =>
+              <div key={ri} style={{ display: "grid", gridTemplateColumns: `2.8fr repeat(${competitors.length}, 1fr)`, borderBottom: ri < features.length - 1 ? `1px solid ${C.gL}` : "none", background: ri % 2 === 0 ? C.warmBg : C.w, alignItems: "center" }}>
+                      <div style={{ padding: "18px 24px", fontFamily: F, fontSize: 13.5, color: C.gD, lineHeight: 1.55 }}>
+                        {row.f.map((seg, si) => typeof seg === "string" ? <span key={si}>{seg}</span> : <strong key={si}>{seg.b}</strong>)}
+                      </div>
+                      {row.vals.map((v, vi) => <div key={vi} style={{ padding: "18px 8px", textAlign: "center", background: vi === 0 ? "rgba(116,198,157,0.04)" : "transparent" }}><CellVal v={v} highlight={vi === 0} /></div>)}
+                    </div>
+              )}
+                </>);
+
+        })()}
+          </div>
+        </div>
+    </Sec>
+
+    {/* Gen 1 Workbook Downloads */}
+    <Sec>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }} className="prod-grid">
+        <div>
+          <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 12, textTransform: "uppercase" }}>FLAGSHIP</div>
+          <h2 style={{ fontFamily: F, fontSize: 36, fontWeight: 800, color: C.dark, margin: "0 0 24px", lineHeight: 1.1 }}>Try our flagship model.</h2>
+          <h3 style={{ fontFamily: F, fontSize: 24, fontWeight: 800, color: C.priL, margin: "0 0 16px", lineHeight: 1.2 }}>Download our 3-way Financial Model</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.priA, margin: "0 0 12px", fontWeight: 600 }}>Still not sure if EXL Cloud is for you?</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 28px" }}>Why not download our flagship 3-way financial model and take a closer look for yourself and compare?</p>
+          <Btn onClick={() => go("dl-3way")} variant="primary">Get It</Btn>
+        </div>
+        <div onClick={() => go("dl-3way")} style={{ borderRadius: R.xl, overflow: "hidden", boxShadow: "0 16px 48px rgba(0,0,0,0.12)", cursor: "pointer", transition: "transform 0.3s" }}>
+          <img src="images/3way-model.png" alt="3-Way Driver-Based Financial Model Dashboard" style={{ width: "100%", height: "auto", display: "block" }} />
+        </div>
+      </div>
+    </Sec>
+
+    <Sec bg={C.warmBg}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }} className="prod-grid">
+        <div onClick={() => go("dl-performance")} style={{ borderRadius: R.xl, overflow: "hidden", boxShadow: "0 16px 48px rgba(0,0,0,0.12)", cursor: "pointer", transition: "transform 0.3s" }}>
+          <img src="images/performance-report.png" alt="Performance Report Dashboard" style={{ width: "100%", height: "auto", display: "block" }} />
+        </div>
+        <div>
+          <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 12, textTransform: "uppercase" }}>STILL UNSURE?</div>
+          <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.dark, margin: "0 0 16px", lineHeight: 1.15 }}>Download our Performance Report</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.priA, margin: "0 0 12px", fontWeight: 600 }}>Still not sure if EXL Cloud is for you?</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 12px" }}>Why not download our Performance Report and take a closer look for yourself and compare?</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 28px" }}>Learn more by <a href="https://www.youtube.com/watch?v=qf1pEpPoYVg" target="_blank" rel="noopener noreferrer" style={{ color: C.priA, fontWeight: 600, textDecoration: "underline" }}>watching a video</a> on how easily this report is created.</p>
+          <Btn onClick={() => go("dl-performance")} variant="primary">Get It</Btn>
+        </div>
+      </div>
+    </Sec>
+
+    <Sec>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }} className="prod-grid">
+        <div>
+          <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 12, textTransform: "uppercase" }}>STILL NOT CONVINCED?</div>
+          <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.dark, margin: "0 0 16px", lineHeight: 1.15 }}>Download our 1-way Cash Flow Scenario Model</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.priA, margin: "0 0 12px", fontWeight: 600 }}>There is no better way to add valuable insight to decision-making than a financial model with scenarios.</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 12px" }}>Download our 1-way cash flow scenario model, you will be impressed.</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 28px" }}>Learn more by <a href="https://www.youtube.com/watch?v=fa22TR9MI-Y" target="_blank" rel="noopener noreferrer" style={{ color: C.priA, fontWeight: 600, textDecoration: "underline" }}>watching a video</a> on how easily this model is created.</p>
+          <Btn onClick={() => go("dl-cashflow")} variant="primary">Get It</Btn>
+        </div>
+        <div onClick={() => go("dl-cashflow")} style={{ borderRadius: R.xl, overflow: "hidden", boxShadow: "0 16px 48px rgba(0,0,0,0.12)", cursor: "pointer", transition: "transform 0.3s" }}>
+          <img src="images/cashflow-model.png" alt="1-Way Cash Flow Scenario Model Dashboard" style={{ width: "100%", height: "auto", display: "block" }} />
+        </div>
+      </div>
+    </Sec>
+
+    {/* Power BI Section */}
+    <Sec bg={C.warmBg}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }} className="prod-grid">
+        <div>
+          <SectionHead tag="Power BI Integration" title="Weel Expense Insights using EXL Cloud and Power BI" />
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 12px" }}><strong>Your spending data is trying to tell you something.</strong><br />But you need to unlock its full value with Excel and Power BI insights.</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: "0 0 12px" }}>Following a live advanced spend analysis masterclass, Lance helped finance teams put their Weel spend data to good use.</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.priA, lineHeight: 1.65, margin: "0 0 12px", fontWeight: 500 }}>The recording and content can be found <a href="https://maven.com/modelcitizn" target="_blank" rel="noopener noreferrer" style={{ color: C.priA, fontWeight: 600, textDecoration: "underline" }}>here</a> for you to watch.</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.65, margin: 0 }}>We have also embedded the Power BI analysis for you to have a play.</p>
+        </div>
+        <div style={{ borderRadius: R.xl, overflow: "hidden", boxShadow: "0 8px 30px rgba(0,0,0,0.06)", border: `1px solid ${C.gL}` }}>
+          <img src="images/powerbi-weel.png" alt="Weel Expense Insights Power BI Dashboard" style={{ width: "100%", height: "auto", display: "block" }} />
+        </div>
+      </div>
+    </Sec>
+
+    {/* Gen 2 — HTML Board Packs */}
+    <Sec>
+      <SectionHead tag="Gen 2" title="HTML Board Packs" desc="Single-file interactive HTML reports. Chart.js charts, KPI tiles, commentary blocks. Share a link — no Excel needed for the reader." />
+      <BoardPackDemo />
+    </Sec>
+    <Sec>
+      <SectionHead title="See it in action" desc="Watch how EXL Cloud workbooks are created and customised in minutes." />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+        <VideoLocal onOpen={() => window.__openExplainerVideo && window.__openExplainerVideo()} />
+        <Video id="qf1pEpPoYVg" title="3-Way Driver-Based Financial Model" />
+        <Video id="Apty2pmgtYk" title="Start Menu & Navigation" />
+      </div>
+    </Sec>
+    <Sec bg={C.warmBg} style={{ textAlign: "center", padding: "64px 24px" }}>
+      <h2 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.dark, margin: "0 0 14px" }}>Want to explore the scenario model?</h2>
+      <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 28px" }}>See what driver-based modelling looks like with our interactive 3-way scenario demo.</p>
+      <Btn onClick={() => go("future")}>Try the Interactive Model →</Btn>
+    </Sec>
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "What data can EXL Cloud pull from Xero?", a: "EXL Cloud pulls trial balance, profit and loss, balance sheet, account transactions, FX rates, named budgets, chart of accounts, journals, invoices, and bills." },
+    { q: "Can EXL Cloud push data back to Xero?", a: "Yes. With the Data Push feature, you can push manual journals, bank transactions, invoices, bills, and chart of accounts updates from Excel back to Xero." },
+    { q: "What financial models are included?", a: "The Advanced Content plan includes a 3-Way Driver-Based Financial Model, Performance Report, 1-Way Cash Flow Scenario Model, 1-Way Profit Performance Model, Positions & Returns, Human Capital Model, R&D Template, and more." },
+    { q: "Does EXL Cloud integrate with Power BI?", a: "Yes. EXL Cloud workbooks use Dynamic Arrays and structured tables that connect directly with Power BI for interactive dashboards and data visualisation." }]
+    } />
+    </Sec>
+  </>;
+
+
+/* ═══ GEN 2 ═══ */
+const Gen2 = () => {
+  const skills = [
+  { t: "Foundation", items: [["01", "EXL Cloud Foundations", "Quality benchmarking for skills and auditing."], ["02", "Best Practice Modelling", "Formatting, colour coding, formula standards."]] },
+  { t: "Data Infrastructure", items: [["03", "Clean & Validate Data", "Automated cleanup before reporting."], ["04", "TB Mapper", "Maps accounts to standardised categories."], ["05", "Period Table Builder", "Drives all time-series workbooks."]] },
+  { t: "Narrative", items: [["06", "Monthly Commentary", "Professional P&L and CF commentary."], ["07", "Board Paper Drafter", "Board-ready report assembly."], ["08", "Cash Flow Narrative", "Plain English cash explanations."]] },
+  { t: "Augmentation", items: [["09", "Assumption Register", "Extracts hardcoded assumptions."], ["10", "Anomaly Detection", "Automated PASS/FAIL checks."], ["11", "Model Docs Generator", "Auto-generates Instructions sheet."], ["12", "Variance Analysis", "Actuals vs budget structured comparison."], ["13", "KPI Dashboard", "Executive dashboard with traffic lights."], ["14", "Change Log", "Structured change tracking."], ["15", "Meeting Prep", "Preparation pack from workbook data."]] }];
+
+  return (
+    <>
+      <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}30, transparent), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div style={{ fontFamily: F, fontWeight: 700, color: C.mint, letterSpacing: 3, marginBottom: 16, fontSize: "25px" }}>2026 RELEASE</div>
+          <h1 style={{ fontFamily: F, fontSize: 48, fontWeight: 800, color: C.w, lineHeight: 1.08, margin: "0 0 20px", letterSpacing: -0.5 }}>
+            Smarter workbooks,<br />
+            <span style={{ background: `linear-gradient(90deg, ${C.mint}, #95D5B2)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>AI-powered skills,</span><br />
+            updated pricing.
+          </h1>
+          <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560, lineHeight: 1.65, margin: "0 0 32px" }}>Three major updates — Gen 2 workbook rebuild, 15 Claude AI skills, and new subscription pricing from 1 July 2026.</p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Get EXL Cloud</Btn>
+            <Btn href="https://maven.com/modelcitizn#lightning-lessons" variant="outline">Free Training</Btn>
+          </div>
+        </div>
+      </section>
+
+      {/* Gen 2 Workbook Upgrade */}
+      <Sec>
+        <DAB>The Gen 2 upgrade rebuilds every EXL Cloud workbook with dedicated Instructions sheets, improved navigation, consistent formatting, and plain-English formula notes. Combined with 15 purpose-built Claude AI skills and updated pricing from 1 July 2026.</DAB>
+        <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 6 }}>UPDATE 1 OF 3</div>
+        <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: "0 0 32px" }}>Gen 2 Workbook Upgrade</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
+          {[["doc", "Instructions Sheet", "Dedicated guidance in every workbook."], ["grid", "Improved Navigation", "Less time finding, more time analysing."], ["shield", "Consistent Formatting", "Uniform layout across all files."], ["eye", "Formula Transparency", "Plain-English notes on every formula."]].map(([ic, t, d], i) =>
+          <div key={i} style={{ background: C.warmBg, borderRadius: R.xl, padding: 28, border: `1px solid ${C.gL}` }}>
+              <div style={{ width: 48, height: 48, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
+                <Icon name={ic} size={22} color={C.priL} />
+              </div>
+              <h3 style={{ fontFamily: F, fontSize: 16, fontWeight: 700, color: C.dark, margin: "0 0 8px" }}>{t}</h3>
+              <p style={{ fontFamily: F, fontSize: 14, color: C.g, margin: 0, lineHeight: 1.6 }}>{d}</p>
+            </div>
+          )}
+        </div>
+      </Sec>
+
+      {/* Coverage */}
+      <Sec bg={C.warmBg}>
+        <h2 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.dark, margin: "0 0 28px" }}>Gen 2 Coverage</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+          <div style={{ background: C.w, borderRadius: R.xl, padding: 28, border: `1px solid ${C.gL}` }}>
+            <span style={{ display: "inline-block", padding: "4px 14px", borderRadius: R.full, background: C.priL, color: C.w, fontFamily: F, fontSize: 11, fontWeight: 700, marginBottom: 18 }}>FULL UPGRADE</span>
+            {["Performance Report", "Positions & Returns", "1-Way Cash Flow Scenario Model", "1-Way Profit Performance Scenario Model", "3-Way Driver-Based Financial Model", "Profit & Loss Insights", "Trial Balance Insights", "Human Capital Model", "R&D Template", "Advanced Rolling Property Dev Model"].map((w) =>
+            <div key={w} style={{ fontFamily: F, fontSize: 14, color: C.gD, padding: "7px 0", display: "flex", gap: 8, alignItems: "center" }}><Icon name="check" size={16} color={C.priA} />{w}</div>
+            )}
+          </div>
+          <div style={{ background: C.w, borderRadius: R.xl, padding: 28, border: `1px solid ${C.gL}` }}>
+            <span style={{ display: "inline-block", padding: "4px 14px", borderRadius: R.full, background: C.gL, color: C.gD, fontFamily: F, fontSize: 11, fontWeight: 700, marginBottom: 18 }}>INSTRUCTIONS UPDATE</span>
+            {["Manual Journal (Data Push)", "Bank Transactions (Data Push)", "Invoices & Bills (Data Push)", "Chart of Accounts (Data Push)", "P&L / BS / Budget (Data Pull)", "Trial Balance (Data Pull)", "Account Transactions (Data Pull)", "Consolidated Workbook", "Financial Control Master Toolkit"].map((w) =>
+            <div key={w} style={{ fontFamily: F, fontSize: 14, color: C.gD, padding: "7px 0", display: "flex", gap: 8, alignItems: "center" }}><span style={{ width: 16, height: 16, borderRadius: "50%", border: `1.5px solid ${C.gL}`, display: "inline-flex", flexShrink: 0 }}></span>{w}</div>
+            )}
+          </div>
+        </div>
+      </Sec>
+
+      {/* Skills Library */}
+      <Sec>
+        <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 6 }}>UPDATE 2 OF 3</div>
+        <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: "0 0 10px" }}>Skills Library — Claude AI for EXL Cloud</h2>
+        <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 36px", maxWidth: 560, lineHeight: 1.65 }}>15 purpose-built skills. Download from GitHub, load into Claude, instantly trained for that specific workbook.</p>
+        {skills.map((tier) =>
+        <div key={tier.t} style={{ marginBottom: 32 }}>
+            <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priL, letterSpacing: 2, marginBottom: 14, textTransform: "uppercase", borderBottom: `1px solid ${C.gL}`, paddingBottom: 8 }}>{tier.t}</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
+              {tier.items.map(([n, t, d]) =>
+            <div key={n} style={{ background: C.warmBg, borderRadius: R.lg, padding: 20, border: `1px solid ${C.gL}` }}>
+                  <span style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: C.priA }}>SKILL {n}</span>
+                  <h4 style={{ fontFamily: F, fontSize: 15, fontWeight: 700, color: C.dark, margin: "6px 0" }}>{t}</h4>
+                  <p style={{ fontFamily: F, fontSize: 13, color: C.g, margin: 0, lineHeight: 1.55 }}>{d}</p>
+                </div>
+            )}
+            </div>
+          </div>
+        )}
+      </Sec>
+
+      {/* Updated Pricing */}
+      <Sec bg={C.warmBg}>
+        <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 6 }}>UPDATE 3 OF 3</div>
+        <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: "0 0 10px" }}>Updated Pricing from 1 July 2026</h2>
+        <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 36px", maxWidth: 560, lineHeight: 1.65 }}>Current pricing applies until 30 June 2026. New pricing takes effect 1 July.</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+          {[{ p: "Data Pull", cur: "$50", next: "$70" }, { p: "Advanced Content", cur: "$125", next: "$170" }].map((x) =>
+          <div key={x.p} style={{ background: C.w, borderRadius: R.xl, padding: 36, border: `1px solid ${C.gL}`, textAlign: "center" }}>
+              <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, margin: "0 0 6px" }}>{x.p}</h3>
+              <div style={{ fontFamily: F, fontSize: 14, color: C.g, marginBottom: 16 }}>5 connections included</div>
+              <div style={{ fontFamily: F, fontSize: 12, fontWeight: 600, color: C.priA, marginBottom: 6 }}>Current</div>
+              <div style={{ fontFamily: F, fontSize: 36, fontWeight: 800, color: C.priL, marginBottom: 16 }}>{x.cur}<span style={{ fontSize: 15, fontWeight: 500, color: C.g }}>/mo</span></div>
+              <div style={{ borderTop: `1px solid ${C.gL}`, paddingTop: 16 }}>
+                <div style={{ fontFamily: F, fontSize: 12, fontWeight: 600, color: C.acc }}>From 1 July 2026</div>
+                <div style={{ fontFamily: F, fontSize: 22, fontWeight: 700, color: C.gD, marginTop: 4 }}>{x.next}<span style={{ fontSize: 13, fontWeight: 500, color: C.g }}>/mo</span></div>
+              </div>
+            </div>
+          )}
+        </div>
+      </Sec>
+
+      {/* AIPA Bonus */}
+      <Sec>
+        <div style={{ background: `linear-gradient(135deg, ${C.pri}, ${C.priL})`, borderRadius: R.xl, padding: 48, textAlign: "center" }}>
+          <span style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.mint, letterSpacing: 3 }}>BONUS</span>
+          <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 700, color: C.w, margin: "12px 0 14px" }}>45% off AI-Powered Accountant Program</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.65)", margin: "0 auto 28px", maxWidth: 480, lineHeight: 1.65 }}>Included with every subscription. Hosted on Maven. Stays active as long as your subscription remains.</p>
+          <Btn href="https://maven.com/modelcitizn#courses">Join the Next Cohort →</Btn>
+        </div>
+      </Sec>
+    </>);
+
+};
+
+/* ═══ PRICING ═══ */
+const Pricing = () =>
+<>
+    <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+        <h1 style={{ fontFamily: F, fontSize: 44, fontWeight: 800, color: C.w, margin: 0, letterSpacing: -0.5 }}>Pricing & Sign Up</h1>
+        <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", margin: "14px 0 0", maxWidth: 520, lineHeight: 1.6 }}>Choose the plan that fits. 7-day free trial included. Benefit from lower marginal cost as you add connections.</p>
+      </div>
+    </section>
+    <Sec>
+      <DAB>EXL Cloud offers two plans: Data Pull at $50 AUD per month and Advanced Content at $125 AUD per month. Both include 5 Xero connections with volume discounts for additional connections.<br />Pricing increases from 1 July 2026 to $70 and $170 respectively.</DAB>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 28 }}>
+        <div style={{ background: C.w, borderRadius: R.xl, padding: 36, border: `1px solid ${C.gL}` }}>
+          <h3 style={{ fontFamily: F, fontSize: 22, fontWeight: 700, margin: "0 0 6px" }}>Data Pull Plan</h3>
+          <p style={{ fontFamily: F, fontSize: 13, color: C.g, margin: "0 0 16px", lineHeight: 1.6 }}>Quick and easy way to pull and push data directly from Xero into Excel. Perfect if you've been impacted by deprecated data pull services.</p>
+          <div style={{ fontFamily: F, fontSize: 40, fontWeight: 800, color: C.priL, margin: "0 0 6px" }}>$50<span style={{ fontSize: 15, fontWeight: 500, color: C.g }}>/month</span></div>
+          <div style={{ fontFamily: F, fontSize: 14, color: C.g, marginBottom: 6 }}>Includes 5 connections</div>
+          <div style={{ fontFamily: F, fontSize: 12, color: C.acc, fontWeight: 600, marginBottom: 24, padding: "5px 14px", background: "#FEF3C7", borderRadius: R.full, display: "inline-block" }}>From 1 July: $70/mo</div>
+          <div><Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Data-Pull-Promotion-Starter-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1" style={{ width: "100%" }}>Sign Up</Btn></div>
+          <div style={{ marginTop: 24 }}>
+            {["Xero data pull & push", "Clean P&L, BS, TB data pulls", "Account transactions", "FX rates & named budgets", "Gen 2 workbooks"].map((f) =>
+          <div key={f} style={{ fontFamily: F, fontSize: 14, color: C.gD, padding: "9px 0", borderBottom: `1px solid ${C.gL}`, display: "flex", gap: 10, alignItems: "center" }}><Icon name="check" size={16} color={C.priA} />{f}</div>
+          )}
+          </div>
+          <div style={{ marginTop: 20, background: C.warmBg, borderRadius: R.lg, padding: 18 }}>
+            <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.gD, marginBottom: 10 }}>Additional connections/month:</div>
+            <table style={{ width: "100%", fontFamily: F, fontSize: 13, borderCollapse: "collapse" }}>
+              <tbody>
+                {[["6–10 connections", "$7.50/ea"], ["11–20 connections", "$6.80/ea"], ["21+ connections", "$6.00/ea"], ["Enterprise", "Price on application"]].map(([t, p]) =>
+              <tr key={t}><td style={{ padding: "5px 0", color: C.gD }}>{t}</td><td style={{ padding: "5px 0", textAlign: "right", fontWeight: 600, color: C.priL }}>{p}</td></tr>
+              )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {/* Advanced Content */}
+        <div style={{ background: C.w, borderRadius: R.xl, padding: 36, border: `2px solid ${C.priA}`, position: "relative" }}>
+          <div style={{ position: "absolute", top: -12, right: 24, background: `linear-gradient(135deg, ${C.priA}, ${C.mint})`, color: C.w, fontFamily: F, fontSize: 11, fontWeight: 700, padding: "5px 16px", borderRadius: R.full, letterSpacing: 1 }}>RECOMMENDED</div>
+          <h3 style={{ fontFamily: F, fontSize: 22, fontWeight: 700, margin: "0 0 6px" }}>Advanced Content Plan</h3>
+          <p style={{ fontFamily: F, fontSize: 13, color: C.g, margin: "0 0 16px", lineHeight: 1.6 }}>World-class expert financial models, dashboards, analytics and reports directly in Excel. Includes all Data Pull content.</p>
+          <div style={{ fontFamily: F, fontSize: 40, fontWeight: 800, color: C.priL, margin: "0 0 6px" }}>$125<span style={{ fontSize: 15, fontWeight: 500, color: C.g }}>/month</span></div>
+          <div style={{ fontFamily: F, fontSize: 14, color: C.g, marginBottom: 6 }}>Includes 5 connections</div>
+          <div style={{ fontFamily: F, fontSize: 12, color: C.acc, fontWeight: 600, marginBottom: 24, padding: "5px 14px", background: "#FEF3C7", borderRadius: R.full, display: "inline-block" }}>From 1 July: $170/mo</div>
+          <div><Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1" style={{ width: "100%" }}>Sign Up</Btn></div>
+          <div style={{ marginTop: 24 }}>
+            {["Everything in Data Pull", "Performance Reports", "3-Way Driver-Based Financial Model", "1-Way Cash Flow Scenario Model", "1-Way Profit Performance Model", "Positions & Returns", "Power BI integration", "15 AI skills included", "45% off AIPA program", "HTML Board Packs"].map((f) =>
+          <div key={f} style={{ fontFamily: F, fontSize: 14, color: C.gD, padding: "9px 0", borderBottom: `1px solid ${C.gL}`, display: "flex", gap: 10, alignItems: "center" }}><Icon name="check" size={16} color={C.priA} />{f}</div>
+          )}
+          </div>
+          <div style={{ marginTop: 20, background: C.warmBg, borderRadius: R.lg, padding: 18 }}>
+            <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.gD, marginBottom: 10 }}>Additional connections/month:</div>
+            <table style={{ width: "100%", fontFamily: F, fontSize: 13, borderCollapse: "collapse" }}>
+              <tbody>
+                {[["6–20 connections", "$16.25/ea"], ["21+ connections", "$12.70/ea"], ["Enterprise", "Price on application"]].map(([t, p]) =>
+              <tr key={t}><td style={{ padding: "5px 0", color: C.gD }}>{t}</td><td style={{ padding: "5px 0", textAlign: "right", fontWeight: 600, color: C.priL }}>{p}</td></tr>
+              )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      {/* Help CTA */}
+      <div style={{ marginTop: 36, background: `linear-gradient(135deg, ${C.pri}, ${C.priL})`, borderRadius: R.xl, padding: 40, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24 }}>
+        <div>
+          <h3 style={{ fontFamily: F, fontSize: 22, fontWeight: 700, color: C.w, margin: "0 0 10px" }}>Need help automating reporting?</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.65)", margin: 0, maxWidth: 460, lineHeight: 1.6 }}>We've automated many bookkeeping and reporting processes. Reach out to find out how we can save you hours every month end.</p>
+        </div>
+        <Btn href="https://share.hsforms.com/1Ghuax7wHQg6Bg22sJfVVSAcw2qe">Get in Touch</Btn>
+      </div>
+      <div style={{ textAlign: "center", marginTop: 28 }}>
+        <p style={{ fontFamily: F, fontSize: 12, color: C.g }}>Mac users: Parallels required to run EXL Cloud.</p>
+      </div>
+    </Sec>
+    <Sec bg={C.warmBg}>
+      <FAQSection items={[
+    { q: "What is the difference between Data Pull and Advanced Content?", a: "Data Pull ($50/month) covers Xero data extraction and push capabilities — P&L, BS, TB, transactions, journals. Advanced Content ($125/month) includes everything in Data Pull plus world-class financial models, performance reports, scenario models, HTML board packs, Power BI integration, 15 AI skills, and a 45% discount on the AI-Powered Accountant program." },
+    { q: "How much do additional Xero connections cost?", a: "Data Pull: 6-10 at $7.50/ea, 11-20 at $6.80/ea, 21+ at $6.00/ea. Advanced Content: 6-20 at $16.25/ea, 21+ at $12.70/ea. Enterprise pricing is available on application." },
+    { q: "Are prices in AUD or USD?", a: "All prices are in Australian Dollars (AUD)." },
+    { q: "When does the price increase take effect?", a: "Current pricing ($50 Data Pull, $125 Advanced Content) applies until 30 June 2026. From 1 July 2026, pricing increases to $70 and $170 respectively." }]
+    } />
+    </Sec>
+  </>;
+
+
+/* ═══ SUPPORT ═══ */
+const Support = () =>
+<>
+    <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+        <h1 style={{ fontFamily: F, fontSize: 44, fontWeight: 800, color: C.w, margin: 0 }}>Support & Training</h1>
+        <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", margin: "14px 0 0" }}>Knowledge base, video library, support tickets, and masterclasses.</p>
+      </div>
+    </section>
+    <Sec>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+        {[
+      ["doc", "Knowledge Base", "Tips, tricks, and developer docs.", ["http://docs.xlconnect.net", "Open"]],
+      ["mail", "Support Ticket", "Lodge a ticket with our team.", ["https://exlcloud.atlassian.net/servicedesk/customer/portal/1", "Lodge Ticket"]],
+      ["users", "AI & Modelling Training", "Free Lightning Lessons on Maven — AI and financial modelling skills.", ["https://maven.com/modelcitizn#lightning-lessons", "Browse Sessions"]]].
+      map(([ic, t, d, link], i) =>
+      <div key={i} style={{ background: C.warmBg, borderRadius: R.xl, padding: 32, border: `1px solid ${C.gL}` }}>
+            <div style={{ width: 52, height: 52, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
+              <Icon name={ic} size={24} color={C.priL} />
+            </div>
+            <h3 style={{ fontFamily: F, fontSize: 18, fontWeight: 700, color: C.dark, margin: "0 0 8px" }}>{t}</h3>
+            <p style={{ fontFamily: F, fontSize: 14, color: C.g, margin: "0 0 18px", lineHeight: 1.6 }}>{d}</p>
+            {link && <Btn href={link[0]} variant="dark" style={{ padding: "10px 20px", fontSize: 13 }}>{link[1]}</Btn>}
+          </div>
+      )}
+      </div>
+    </Sec>
+    <Sec bg={C.warmBg}>
+      <SectionHead title="Video Library" />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+        <VideoLocal onOpen={() => window.__openExplainerVideo && window.__openExplainerVideo()} />
+        <Video id="Apty2pmgtYk" title="Getting Setup" />
+        <Video id="Oz9KWoXE00c" title="Start Menu" />
+        <Video id="ElNEuovt7uw" title="Performance Report" />
+        <Video id="wJsM4He8SKs" title="1-Way Cash Flow Model" />
+        <Video id="fa22TR9MI-Y" title="Account Transactions Report" />
+        <Video id="lWo0M8wJw-U" title="Profit & Loss and Balance Sheet Pull" />
+        <Video id="qf1pEpPoYVg" title="3-Way Model with Power BI" />
+      </div>
+      <div style={{ marginTop: 48 }}>
+        <SectionHead title="Masterclass Series" />
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+        <Video id="nav1XWfOLMg" title="Financial Modelling & Expenses with Weel" />
+        <Video id="YlD3m-tfosY" title="Cash Flow Advisory Masterclass" />
+        <Video id="DXcQr9_tqIA" title="Advanced Expense Analysis with Weel" />
+        <Video id="1DSV5rXLfbY" title="Cash Flow Modelling Webinar" />
+      </div>
+    </Sec>
+  </>;
+
+
+/* ═══ CONTACT ═══ */
+const Contact = () => {
+  const hsUrl = "https://share.hsforms.com/1Ghuax7wHQg6Bg22sJfVVSAcw2qe";
+  return (
+    <>
+      <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <h1 style={{ fontFamily: F, fontSize: 44, fontWeight: 800, color: C.w, margin: 0 }}>Get in Touch</h1>
+          <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", margin: "14px 0 0" }}>Demos, enterprise pricing, or general enquiries.</p>
+        </div>
+      </section>
+      <Sec>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 32 }}>
+          <div>
+            <h3 style={{ fontFamily: F, fontSize: 22, fontWeight: 700, margin: "0 0 24px" }}>Contact Details</h3>
+            {[["📍", "80 Market Street, South Melbourne VIC 3205"], ["📞", "+61 405 329 098"], ["✉️", "info@exlcloud.io"]].map(([i, t]) =>
+            <div key={t} style={{ display: "flex", gap: 12, marginBottom: 18, alignItems: "center" }}><span style={{ fontSize: 18 }}>{i}</span><span style={{ fontFamily: F, fontSize: 15, color: C.gD }}>{t}</span></div>
+            )}
+            <div style={{ marginTop: 28 }}>
+              <a href="mailto:info@exlcloud.io?subject=EXL%20Cloud%20Enquiry" style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: F, fontSize: 15, fontWeight: 600, color: C.priL, textDecoration: "none", padding: "12px 24px", border: `1.5px solid ${C.priL}`, borderRadius: R.xl }}>
+                <Icon name="mail" size={18} color={C.priL} /> Email us directly
+              </a>
+            </div>
+            <div style={{ marginTop: 20, display: "flex", gap: 10, flexWrap: "wrap" }}>
+              {[["LinkedIn", "https://www.linkedin.com/company/exl-cloud"], ["Facebook", "https://www.facebook.com/EXLCloud"], ["X", "https://x.com/exl_cloud"]].map(([l, u]) =>
+              <a key={l} href={u} target="_blank" rel="noopener noreferrer" style={{ fontFamily: F, fontSize: 13, color: C.priA, textDecoration: "none", padding: "8px 18px", border: `1px solid ${C.gL}`, borderRadius: R.full }}>{l}</a>
+              )}
+            </div>
+          </div>
+          <div style={{ background: C.warmBg, borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}` }}>
+            <div style={{ padding: "20px 24px", borderBottom: `1px solid ${C.gL}` }}>
+              <h3 style={{ fontFamily: F, fontSize: 19, fontWeight: 700, margin: 0 }}>Send us a message</h3>
+              <p style={{ fontFamily: F, fontSize: 13, color: C.g, margin: "6px 0 0" }}>We'll get back to you within 24 hours</p>
+            </div>
+            <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+              <a href={hsUrl} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 14, padding: 20, background: C.w, borderRadius: R.lg, border: `1px solid ${C.gL}`, textDecoration: "none" }}>
+                <div style={{ width: 48, height: 48, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.priL}, ${C.priA})`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Icon name="doc" size={22} color={C.w} />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: F, fontSize: 15, fontWeight: 600, color: C.dark }}>Open enquiry form</div>
+                  <div style={{ fontFamily: F, fontSize: 12, color: C.g }}>Opens in a new tab — sends to our Slack</div>
+                </div>
+                <Icon name="arrow" size={18} color={C.priA} />
+              </a>
+              <a href="mailto:info@exlcloud.io?subject=EXL%20Cloud%20Enquiry" style={{ display: "flex", alignItems: "center", gap: 14, padding: 20, background: C.w, borderRadius: R.lg, border: `1px solid ${C.gL}`, textDecoration: "none" }}>
+                <div style={{ width: 48, height: 48, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.blue}, #3B82F6)`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Icon name="mail" size={22} color={C.w} />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: F, fontSize: 15, fontWeight: 600, color: C.dark }}>Email info@exlcloud.io</div>
+                  <div style={{ fontFamily: F, fontSize: 12, color: C.g }}>Opens your email client</div>
+                </div>
+                <Icon name="arrow" size={18} color={C.priA} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </Sec>
+    </>);
+
+};
+
+/* ═══ FUTURE — Interactive Scenario Model ═══ */
+const Future = () => {
+  const [sc, setSc] = React.useState("base");
+  const [rg, setRg] = React.useState(15);const [cp, setCp] = React.useState(35);
+  const [og, setOg] = React.useState(8);const [tr, setTr] = React.useState(30);const [ir, setIr] = React.useState(5);
+  const presets = { base: { rg: 15, cp: 35, og: 8, tr: 30, ir: 5 }, optimistic: { rg: 25, cp: 30, og: 5, tr: 25, ir: 4 }, conservative: { rg: 5, cp: 40, og: 12, tr: 30, ir: 7 } };
+  React.useEffect(() => {const s = presets[sc];setRg(s.rg);setCp(s.cp);setOg(s.og);setTr(s.tr);setIr(s.ir);}, [sc]);
+  const bR = 1000,bO = 300,bD = 500;const yrs = [];let cc = 200;
+  for (let y = 0; y < 6; y++) {const r = bR * Math.pow(1 + rg / 100, y);const c = r * (cp / 100);const gp = r - c;const o = bO * Math.pow(1 + og / 100, y);const eb = gp - o;const d = r * 0.03;const ei = eb - d;const int = bD * (ir / 100);const ebt = ei - int;const tx = Math.max(0, ebt * (tr / 100));const np = ebt - tx;const ocf = np + d;const cx = r * 0.05;const fcf = ocf - cx;cc += fcf;yrs.push({ yr: `FY${27 + y}`, r: Math.round(r), c: Math.round(c), gp: Math.round(gp), o: Math.round(o), eb: Math.round(eb), np: Math.round(np), ocf: Math.round(ocf), fcf: Math.round(fcf), cash: Math.round(cc), gpm: (gp / r * 100).toFixed(1), npm: (np / r * 100).toFixed(1) });}
+  const fy32 = yrs[5];
+
+  const Sl = ({ l, v, set, mn, mx }) =>
+  <div style={{ marginBottom: 18 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 5 }}>
+        <span style={{ fontFamily: F, fontSize: 13, fontWeight: 600, color: C.gD }}>{l}</span>
+        <span style={{ fontFamily: F, fontSize: 13, fontWeight: 700, color: C.priL }}>{v}%</span>
+      </div>
+      <input type="range" min={mn} max={mx} value={v} onChange={(e) => set(+e.target.value)} style={{ width: "100%", accentColor: C.priA }} />
+    </div>;
+
+  return (
+    <>
+      <section style={{ background: `radial-gradient(ellipse at 30% 0%, ${C.priL}25, transparent), linear-gradient(170deg, ${C.dark}, #0D2818, ${C.pri})`, padding: "100px 24px 70px" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div style={{ fontFamily: F, fontWeight: 700, color: C.mint, letterSpacing: 3, marginBottom: 16, fontSize: "25px" }}>INTERACTIVE MODEL</div>
+          <h1 style={{ fontFamily: F, fontSize: 44, fontWeight: 800, color: C.w, lineHeight: 1.1, margin: "0 0 18px", letterSpacing: -0.5 }}>The Future of Financial Modelling</h1>
+          <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560, lineHeight: 1.65 }}>Adjust the drivers. Watch the 3-way model respond in real time. This is driver-based modelling — the EXL Cloud way.</p>
+        </div>
+      </section>
+      <Sec bg={C.warmBg}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 32, flexWrap: "wrap" }}>
+          {[["base", "Base Case"], ["optimistic", "Optimistic"], ["conservative", "Conservative"]].map(([k, l]) =>
+          <button key={k} onClick={() => setSc(k)} style={{ fontFamily: F, fontSize: 13, fontWeight: 600, padding: "10px 26px", borderRadius: R.full, cursor: "pointer", border: "none", background: sc === k ? C.priL : C.w, color: sc === k ? C.w : C.gD, boxShadow: sc === k ? `0 4px 12px ${C.priL}30` : "0 1px 3px rgba(0,0,0,0.05)", transition: "all 0.2s" }}>{l}</button>
+          )}
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: 32, alignItems: "start" }} className="model-grid">
+          <div className="driver-panel" style={{ background: C.w, borderRadius: R.xl, padding: 28, border: `1px solid ${C.gL}` }}>
+            <h3 style={{ fontFamily: F, fontSize: 16, fontWeight: 700, margin: "0 0 22px", display: "flex", alignItems: "center", gap: 10 }}><Icon name="chart" size={20} />Drivers</h3>
+            <Sl l="Revenue Growth" v={rg} set={setRg} mn={-10} mx={50} />
+            <Sl l="COGS %" v={cp} set={setCp} mn={10} mx={80} />
+            <Sl l="OpEx Growth" v={og} set={setOg} mn={-5} mx={30} />
+            <Sl l="Tax Rate" v={tr} set={setTr} mn={0} mx={50} />
+            <Sl l="Interest Rate" v={ir} set={setIr} mn={0} mx={15} />
+            <div style={{ marginTop: 20, padding: 14, background: C.pale, borderRadius: R.lg, fontFamily: F, fontSize: 11, color: C.priL, lineHeight: 1.6 }}>All inputs → P&L → BS → CF. Zero hardcoding. EXL Cloud standard.</div>
+          </div>
+          <div>
+            {/* KPI tiles */}
+            <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.g, marginBottom: 8, letterSpacing: 0.5 }}>FY32 KEY METRICS</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 12, marginBottom: 28 }}>
+              {[["Revenue", `$${(fy32.r / 1000).toFixed(1)}M`], ["GP Margin", `${fy32.gpm}%`], ["NPAT", `$${fy32.np}K`], ["FCF", `$${fy32.fcf}K`], ["Cash", `$${(fy32.cash / 1000).toFixed(1)}M`]].map(([l, v]) =>
+              <div key={l} style={{ background: C.w, borderRadius: R.lg, padding: 18, border: `1px solid ${C.gL}`, textAlign: "center" }}>
+                  <div style={{ fontFamily: F, fontSize: 10, color: C.g, fontWeight: 600, letterSpacing: 0.5 }}>{l}</div>
+                  <div style={{ fontFamily: F, fontSize: 22, fontWeight: 800, color: C.priL, marginTop: 4 }}>{v}</div>
+                </div>
+              )}
+            </div>
+            {/* Charts */}
+            <div style={{ background: C.w, borderRadius: R.xl, padding: 24, border: `1px solid ${C.gL}`, marginBottom: 24 }}>
+              <h4 style={{ fontFamily: F, fontSize: 14, fontWeight: 700, margin: "0 0 16px" }}>P&L Waterfall ($K)</h4>
+              <SBarChart data={yrs} keys={["r", "gp", "eb", "np"]} colors={[C.priL, C.priA, C.mint, C.blue]} height={250} labelKey="yr" />
+              <div style={{ display: "flex", gap: 16, justifyContent: "center", marginTop: 8 }}>
+                {[["Revenue", C.priL], ["GP", C.priA], ["EBITDA", C.mint], ["NPAT", C.blue]].map(([n, c]) => <div key={n} style={{ display: "flex", alignItems: "center", gap: 5 }}><div style={{ width: 12, height: 12, borderRadius: 3, background: c }} /><span style={{ fontFamily: F, fontSize: 11, color: "#666" }}>{n}</span></div>)}
+              </div>
+            </div>
+            <div style={{ background: C.w, borderRadius: R.xl, padding: 24, border: `1px solid ${C.gL}`, marginBottom: 24 }}>
+              <h4 style={{ fontFamily: F, fontSize: 14, fontWeight: 700, margin: "0 0 16px" }}>Cash Flow ($K)</h4>
+              <SAreaChart data={yrs} dataKey="cash" fill={C.pale} stroke={C.priL} height={210} labelKey="yr" />
+            </div>
+            <div style={{ background: C.w, borderRadius: R.xl, padding: 24, border: `1px solid ${C.gL}`, marginBottom: 24 }}>
+              <h4 style={{ fontFamily: F, fontSize: 14, fontWeight: 700, margin: "0 0 16px" }}>Margins (%)</h4>
+              <SLineChart data={yrs} lines={[{ key: "gpm", name: "GP %", color: C.priA }, { key: "npm", name: "NPAT %", color: C.blue }]} height={190} labelKey="yr" domain={[-20, 80]} />
+            </div>
+            {/* Table */}
+            <div style={{ background: C.w, borderRadius: R.xl, padding: 24, border: `1px solid ${C.gL}`, overflow: "auto" }}>
+              <h4 style={{ fontFamily: F, fontSize: 14, fontWeight: 700, margin: "0 0 16px" }}>P&L Summary ($K)</h4>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: F, fontSize: 13 }}>
+                <thead><tr style={{ borderBottom: `2px solid ${C.priL}` }}>
+                  {["", "FY27", "FY28", "FY29", "FY30", "FY31", "FY32"].map((h) =>
+                    <th key={h} style={{ textAlign: h ? "right" : "left", padding: "8px 6px", color: C.gD, fontWeight: 700, fontSize: 12 }}>{h}</th>
+                    )}
+                </tr></thead>
+                <tbody>
+                  {[["Revenue", "r"], ["COGS", "c"], ["Gross Profit", "gp"], ["OpEx", "o"], ["EBITDA", "eb"], ["NPAT", "np"], ["Operating CF", "ocf"], ["Free CF", "fcf"]].map(([l, k]) =>
+                  <tr key={l} style={{ borderBottom: `1px solid ${C.gL}`, background: ["Gross Profit", "EBITDA", "NPAT"].includes(l) ? C.pale : "transparent" }}>
+                      <td style={{ padding: "7px 6px", fontWeight: ["Gross Profit", "EBITDA", "NPAT"].includes(l) ? 700 : 400, fontSize: 13 }}>{l}</td>
+                      {yrs.map((y) =>
+                    <td key={y.yr} style={{ textAlign: "right", padding: "7px 6px", color: y[k] < 0 ? C.red : C.gD, fontWeight: ["Gross Profit", "EBITDA", "NPAT"].includes(l) ? 700 : 400 }}>{y[k].toLocaleString()}</td>
+                    )}
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </Sec>
+      <Sec style={{ textAlign: "center" }}>
+        <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, margin: "0 0 14px" }}>This is the EXL Cloud Standard</h2>
+        <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 32px" }}>Driver-based. Formula-driven. Scenario-enabled. Fully transparent.</p>
+        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+          <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Get EXL Cloud</Btn>
+          <Btn href="https://maven.com/modelcitizn#courses" variant="dark">AI-Powered Accountant</Btn>
+        </div>
+      </Sec>
+    </>);
+
+};
+
+/* ═══ DOWNLOAD FORM ═══ */
+const downloadItems = {
+  "3way": { title: "Download the 3-way Financial Scenario and Simulation Model", link: "https://drive.google.com/file/d/11fVtpMofFewANVJYwoRb9bvCxanPApnE/view?usp=sharing", label: "3-way Financial Model" },
+  "performance": { title: "Download the multi entity and currency Performance Report", link: "https://drive.google.com/file/d/1mMWxdZ3oAeps6IzBVFKK1Wksp8bQSdee/view?usp=sharing", label: "Performance Report" },
+  "cashflow": { title: "Download the Multi Entity and Currency One-Way Cash Flow Scenario Model", link: "https://drive.google.com/file/d/1qE2ot_OZpXGVDmU-IYdhsqsC6lK602vE/view?usp=sharing", label: "1-way Cash Flow Scenario Model" }
+};
+
+const DownloadForm = ({ item = "3way" }) => {
+  const [submitted, setSubmitted] = React.useState(false);
+  const [form, setForm] = React.useState({ firstName: "", lastName: "", email: "", country: "Australia", phone: "+61" });
+  const dl = downloadItems[item] || downloadItems["3way"];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const entry = { ...form, model: dl.label, timestamp: new Date().toISOString() };
+    const existing = JSON.parse(localStorage.getItem("exl_submissions") || "[]");
+    existing.push(entry);
+    localStorage.setItem("exl_submissions", JSON.stringify(existing));
+    setSubmitted(true);
+  };
+  return (
+    <Sec>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }} className="prod-grid">
+        <div>
+          <h1 style={{ fontFamily: F, fontSize: 36, fontWeight: 800, color: C.priL, lineHeight: 1.15, margin: "0 0 32px" }}>{dl.title}</h1>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.gD, margin: "0 0 32px" }}>info@exlcloud.io</p>
+          <div style={{ fontFamily: F, fontSize: 15, color: C.dark, fontWeight: 700, lineHeight: 1.7 }}>80 Market Street<br />South Melbourne VIC<br />+61 405 329 098</div>
+          <div style={{ display: "flex", gap: 14, marginTop: 24 }}>
+            {[["f", "https://www.facebook.com/EXLCloud"], ["𝕏", "https://x.com/exl_cloud"], ["in", "https://www.linkedin.com/company/exl-cloud"]].map(([icon, url]) =>
+            <a key={icon} href={url} target="_blank" rel="noopener noreferrer" style={{ width: 36, height: 36, borderRadius: "50%", background: C.priL, color: C.w, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 14, fontWeight: 700, textDecoration: "none" }}>{icon}</a>
+            )}
+          </div>
+        </div>
+        <div>
+          {!submitted ?
+          <form onSubmit={handleSubmit}>
+              <div style={{ fontFamily: F, fontSize: 14, fontWeight: 700, color: C.dark, marginBottom: 8 }}>Name</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
+                <div>
+                  <label style={{ fontFamily: F, fontSize: 12, color: C.priL, fontWeight: 600 }}>First Name <span style={{ color: C.g, fontWeight: 400 }}>(required)</span></label>
+                  <input required value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} style={{ width: "100%", padding: "12px 14px", border: `1px solid ${C.gL}`, borderRadius: R.sm, fontFamily: F, fontSize: 14, marginTop: 4, outline: "none" }} />
+                </div>
+                <div>
+                  <label style={{ fontFamily: F, fontSize: 12, color: C.priL, fontWeight: 600 }}>Last Name <span style={{ color: C.g, fontWeight: 400 }}>(required)</span></label>
+                  <input required value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} style={{ width: "100%", padding: "12px 14px", border: `1px solid ${C.gL}`, borderRadius: R.sm, fontFamily: F, fontSize: 14, marginTop: 4, outline: "none" }} />
+                </div>
+              </div>
+              <div style={{ marginBottom: 20 }}>
+                <label style={{ fontFamily: F, fontSize: 12, color: C.priL, fontWeight: 600 }}>Email <span style={{ color: C.g, fontWeight: 400 }}>(required)</span></label>
+                <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} style={{ width: "100%", padding: "12px 14px", border: `1px solid ${C.gL}`, borderRadius: R.sm, fontFamily: F, fontSize: 14, marginTop: 4, outline: "none" }} />
+              </div>
+              <div style={{ fontFamily: F, fontSize: 14, fontWeight: 700, color: C.dark, marginBottom: 8 }}>Phone contact</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>
+                <div>
+                  <label style={{ fontFamily: F, fontSize: 12, color: C.priL, fontWeight: 600 }}>Country</label>
+                  <select value={form.country} onChange={(e) => setForm({ ...form, country: e.target.value })} style={{ width: "100%", padding: "12px 14px", border: `1px solid ${C.gL}`, borderRadius: R.sm, fontFamily: F, fontSize: 14, marginTop: 4, outline: "none", background: C.w }}>
+                    <option>Australia</option><option>New Zealand</option><option>United Kingdom</option><option>United States</option><option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label style={{ fontFamily: F, fontSize: 12, color: C.priL, fontWeight: 600 }}>Number</label>
+                  <input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} style={{ width: "100%", padding: "12px 14px", border: `1px solid ${C.gL}`, borderRadius: R.sm, fontFamily: F, fontSize: 14, marginTop: 4, outline: "none" }} />
+                </div>
+              </div>
+              <button type="submit" style={{ background: C.priA, color: C.w, fontFamily: F, fontSize: 16, fontWeight: 700, padding: "16px 48px", border: "none", borderRadius: R.sm, cursor: "pointer", letterSpacing: 1 }}>SEND</button>
+            </form> :
+
+          <div>
+              <h2 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.priL, margin: "0 0 16px" }}>Thank you!</h2>
+              <p style={{ fontFamily: F, fontSize: 18, color: C.dark, margin: "0 0 20px", fontWeight: 600 }}>Click the link to download.</p>
+              <a href={dl.link} target="_blank" rel="noopener noreferrer" style={{ fontFamily: F, fontSize: 20, fontWeight: 800, color: C.priL, textDecoration: "underline" }}>{dl.label}</a>
+            </div>
+          }
+        </div>
+      </div>
+    </Sec>);
+
+};
+
+/* ═══ SUBMISSIONS ADMIN ═══ */
+const SubmissionsAdmin = () => {
+  const [subs, setSubs] = React.useState([]);
+  React.useEffect(() => {setSubs(JSON.parse(localStorage.getItem("exl_submissions") || "[]"));}, []);
+  const exportCSV = () => {
+    if (subs.length === 0) return;
+    const headers = ["Timestamp", "Model", "First Name", "Last Name", "Email", "Country", "Phone"];
+    const rows = subs.map((s) => [s.timestamp, s.model, s.firstName, s.lastName, s.email, s.country, s.phone].map((v) => `"${(v || "").replace(/"/g, '""')}"`).join(","));
+    const csv = [headers.join(","), ...rows].join("\n");
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");a.href = url;a.download = `exl-submissions-${new Date().toISOString().slice(0, 10)}.csv`;a.click();
+    URL.revokeObjectURL(url);
+  };
+  const clearAll = () => {if (confirm("Clear all submissions?")) {localStorage.removeItem("exl_submissions");setSubs([]);}};
+  return (
+    <Sec>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
+        <div>
+          <h1 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: 0 }}>Form Submissions</h1>
+          <p style={{ fontFamily: F, fontSize: 15, color: C.g, margin: "8px 0 0" }}>{subs.length} submission{subs.length !== 1 ? "s" : ""} stored locally</p>
+        </div>
+        <div style={{ display: "flex", gap: 12 }}>
+          <Btn onClick={exportCSV} variant="primary" style={{ padding: "10px 24px", fontSize: 13 }}>Export CSV</Btn>
+          <Btn onClick={clearAll} variant="dark" style={{ padding: "10px 24px", fontSize: 13, background: C.red }}>Clear All</Btn>
+        </div>
+      </div>
+      {subs.length === 0 ?
+      <div style={{ textAlign: "center", padding: 60, background: C.warmBg, borderRadius: R.xl }}>
+          <p style={{ fontFamily: F, fontSize: 16, color: C.g }}>No submissions yet. Submissions will appear here when users fill out download forms.</p>
+        </div> :
+
+      <div style={{ borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}` }}>
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: F, fontSize: 13 }}>
+              <thead>
+                <tr style={{ background: C.pri }}>
+                  {["#", "Date", "Model", "First Name", "Last Name", "Email", "Country", "Phone"].map((h) =>
+                <th key={h} style={{ padding: "14px 12px", color: C.w, fontWeight: 600, fontSize: 12, textAlign: "left", whiteSpace: "nowrap" }}>{h}</th>
+                )}
+                </tr>
+              </thead>
+              <tbody>
+                {subs.map((s, i) =>
+              <tr key={i} style={{ borderBottom: `1px solid ${C.gL}`, background: i % 2 === 0 ? C.w : C.warmBg }}>
+                    <td style={{ padding: "12px", color: C.g, fontSize: 12 }}>{i + 1}</td>
+                    <td style={{ padding: "12px", whiteSpace: "nowrap" }}>{new Date(s.timestamp).toLocaleDateString()} {new Date(s.timestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</td>
+                    <td style={{ padding: "12px" }}><span style={{ background: C.pale, color: C.priL, padding: "3px 10px", borderRadius: R.full, fontSize: 11, fontWeight: 600 }}>{s.model}</span></td>
+                    <td style={{ padding: "12px" }}>{s.firstName}</td>
+                    <td style={{ padding: "12px" }}>{s.lastName}</td>
+                    <td style={{ padding: "12px", color: C.priA }}>{s.email}</td>
+                    <td style={{ padding: "12px" }}>{s.country}</td>
+                    <td style={{ padding: "12px" }}>{s.phone}</td>
+                  </tr>
+              )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      }
+    </Sec>);
+
+};
+
+/* ═══ PRIVACY / EULA ═══ */
+const Legal = ({ type }) =>
+<>
+    <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 50px" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+        <h1 style={{ fontFamily: F, fontSize: 40, fontWeight: 800, color: C.w }}>{type === "privacy" ? "Privacy Policy" : "End User Licence Agreement"}</h1>
+      </div>
+    </section>
+    <Sec>
+      <div style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.85, maxWidth: 720 }}>
+        {type === "privacy" ?
+      <>
+            <p>EXL Cloud Holdings Pty Ltd is committed to providing quality services to you and this policy outlines our ongoing obligations to you in respect of how we manage your Personal Information.</p>
+            <p style={{ marginTop: 18 }}>We have adopted the Australian Privacy Principles (APPs) contained in the Privacy Act 1988 (Cth) (the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of your Personal Information.</p>
+            <p style={{ marginTop: 18 }}>A copy of the Australian Privacy Principles may be obtained from the website of The Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer" style={{ color: C.priA }}>www.oaic.gov.au</a></p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>What is Personal Information and why do we collect it?</h3>
+            <p>Personal Information is information or an opinion that identifies an individual. Examples of Personal Information we collect include names, addresses, email addresses and phone numbers.</p>
+            <p style={{ marginTop: 18 }}>This Personal Information is obtained in many ways including interviews, correspondence, by telephone, by email, via our website exlcloud.io, from your website, from media and publications, from other publicly available sources, from cookies and from third parties. We do not guarantee website links or policy of authorised third parties.</p>
+            <p style={{ marginTop: 18 }}>We collect your Personal Information for the primary purpose of providing our services to you, providing information to our clients and marketing. We may also use your Personal Information for secondary purposes closely related to the primary purpose, in circumstances where you would reasonably expect such use or disclosure. You may unsubscribe from our mailing/marketing lists at any time by contacting us in writing.</p>
+            <p style={{ marginTop: 18 }}>When we collect Personal Information, we will, where appropriate and where possible, explain to you why we are collecting the information and how we plan to use it.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Sensitive Information</h3>
+            <p>Sensitive information is defined in the Privacy Act to include information or opinion about such things as an individual's racial or ethnic origin, political opinions, membership of a political association, religious or philosophical beliefs, membership of a trade union or other professional body, criminal record, or health information.</p>
+            <p style={{ marginTop: 18 }}>Sensitive information will be used by us only:</p>
+            <ul style={{ marginTop: 12, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 8 }}>
+              <li>For the primary purpose for which it was obtained</li>
+              <li>For a secondary purpose that is related to the primary purpose</li>
+              <li>With your consent; or where required or authorised by law.</li>
+            </ul>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Third Parties</h3>
+            <p>Where reasonable and practicable to do so, we will collect your Personal Information only from you. However, in some circumstances we may be provided with information by third parties. In such a case we will take reasonable steps to ensure that you are made aware of the information provided to us by the third party.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Disclosure of Personal Information</h3>
+            <ul style={{ marginTop: 12, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 8 }}>
+              <li>Third parties where you consent to the use or disclosure; and</li>
+              <li>Where required or authorised by law.</li>
+            </ul>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Security of Personal Information</h3>
+            <p>Your Personal Information is stored in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification, or disclosure.</p>
+            <p style={{ marginTop: 18 }}>When your Personal Information is no longer needed for the purpose for which it was obtained, we will take reasonable steps to destroy or permanently de-identify your Personal Information. However, most of the Personal Information is or will be stored in client files which will be kept by us for a minimum of 7 years.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Access to your Personal Information</h3>
+            <p>You may access the Personal Information we hold about you and to update and/or correct it, subject to certain exceptions. If you wish to access your Personal Information, please contact us in writing.</p>
+            <p style={{ marginTop: 18 }}>EXL Cloud Holdings Pty Ltd will not charge any fee for your access request but may charge an administrative fee for providing a copy of your Personal Information.</p>
+            <p style={{ marginTop: 18 }}>To protect your Personal Information, we may require identification from you before releasing the requested information.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Maintaining the Quality of your Personal Information</h3>
+            <p>It is important to us that your Personal Information is up to date. We will take reasonable steps to make sure that your Personal Information is accurate, complete, and up to date. If you find that the information we have is not up to date or is inaccurate, please advise us as soon as practicable so we can update our records and ensure we can continue to provide quality services to you.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Policy Updates</h3>
+            <p>This Policy may change from time to time and is available on our website.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Privacy Policy Complaints and Enquiries</h3>
+            <p>If you have any queries or complaints about our Privacy Policy, please contact us.</p>
+            <p style={{ marginTop: 18 }}>80 Market Street, South Melbourne VIC 3205<br />+61 405 329 098<br />info@exlcloud.io</p>
+          </> :
+
+      <>
+            <p style={{ fontStyle: "italic", color: C.g }}>Last updated: 14 August 2022</p>
+            <p style={{ marginTop: 18 }}>Please read this End-User License Agreement carefully before clicking the "I Agree" button, downloading or using EXL Cloud.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Interpretation and Definitions</h3>
+            <p>The words of which the initial letter is capitalised have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+            <h4 style={{ fontFamily: F, fontSize: 17, fontWeight: 700, color: C.dark, marginTop: 24, marginBottom: 10 }}>Definitions</h4>
+            <ul style={{ marginTop: 12, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 10 }}>
+              <li><strong>"Agreement"</strong> means this End-User License Agreement that forms the entire agreement between You and the Company regarding the use of the Application.</li>
+              <li><strong>"Application"</strong> means the software program provided by the Company downloaded by You through our website or the Applications Store account to a Device, named EXL Cloud.</li>
+              <li><strong>"Application Store"</strong> means the digital distribution service operated and developed by Xero Limited or any other Company approved third-party marketplace.</li>
+              <li><strong>"Company"</strong> (referred to as either "the Company", "We", "Us" or "Our") refers to EXL Cloud Holdings Pty Limited registered in Australia.</li>
+              <li><strong>"Content"</strong> refers to content such as text, calculation logic, formulas, Excel workbooks, Power BI files, spreadsheets, data preparation processes, dashboards, reports, graphs, images, or other information.</li>
+              <li><strong>"Country"</strong> refers to: Australia.</li>
+              <li><strong>"Device"</strong> means any device that can access the Application or its Content such as a computer, a mobile device or similar hardware devices.</li>
+              <li><strong>"Third-Party Services"</strong> means any services or content provided by a third-party that may be displayed, included or made available by the Application.</li>
+              <li><strong>"You"</strong> means the individual or legal entity accessing or using the Application.</li>
+            </ul>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Acknowledgment</h3>
+            <p>By clicking the "I Agree" button, downloading or using the Application, You are agreeing to be bound by the terms and conditions of this Agreement. If You do not agree to the terms of this Agreement, do not click on the "I Agree" button, do not download, or do not use the Application.</p>
+            <p style={{ marginTop: 18 }}>This Agreement is a legal document between You and the Company and it governs your use of the Application made available to You by the Company.</p>
+            <p style={{ marginTop: 18 }}>The Application is licensed, not sold, to You by the Company for use strictly in accordance with the terms of this Agreement.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Scope of License</h3>
+            <p>The Company grants You a revocable, non-exclusive, non-transferable, limited license to download, install and use the Application and Content strictly in accordance with the terms of this Agreement.</p>
+            <p style={{ marginTop: 18 }}>The license is granted by downloading the Application either directly from the Company or from an approved Application Store under the Data Pull Plan or the Advanced Content Plan.</p>
+            <p style={{ marginTop: 18 }}>The Application and Content are protected by intellectual property laws and treaties and are licensed not sold to You.</p>
+            <p style={{ marginTop: 18 }}>The license that is granted to You by the Company is solely for your commercial or business purposes. The license granted provides you with the right to download, use, amend, extend or adjust the Content provided within your Application subscription.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>License Restrictions</h3>
+            <p>You agree not to, and You will not permit others to:</p>
+            <ul style={{ marginTop: 12, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 10 }}>
+              <li>License, sell, rent, lease, assign, distribute, transmit, transfer, host, outsource, disclose or otherwise commercially exploit the Application and Content or make the Application and Content available to any third party.</li>
+              <li>Remove, alter or obscure any proprietary notice (including any notice of copyright or trademark) of the Company or its affiliates, partners, suppliers or the licensors of the Application.</li>
+              <li>You may not remove any protections including but not limited to VBA or Java protections used by the Application to prevent, limit or control access to this content.</li>
+            </ul>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Intellectual Property</h3>
+            <p>The Application and the associated Content, including without limitation all copyrights, patents, trademarks, trade secrets and other intellectual property rights are, and shall remain, the sole and exclusive property of the Company.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Modifications and Updates</h3>
+            <p>The Company reserves the right to modify, suspend or discontinue, temporarily or permanently, the Application or any service to which it connects, with or without notice and without liability to You.</p>
+            <p style={{ marginTop: 18 }}>The Company may from time to time provide enhancements or improvements to the features/functionality of the Application, which may include patches, bug fixes, updates, upgrades and other modifications.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Third-Party Services</h3>
+            <p>The Application may display, include or make available third-party content or provide links to third-party websites or services. You acknowledge and agree that the Company shall not be responsible for any Third-party Services.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Term and Termination</h3>
+            <p>This Agreement shall remain in effect until terminated by You or the Company. The Company may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.</p>
+            <p style={{ marginTop: 18 }}>Upon termination of this Agreement, You shall cease all use of the Application and delete all copies of the Application from your Device.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>No Warranties</h3>
+            <p>The Application is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Application.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Limitation of Liability</h3>
+            <p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Agreement and your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You for the Application or 50 AUD if You haven't purchased anything through the Application.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Governing Law</h3>
+            <p>The laws of the Country, excluding its conflicts of law rules, shall govern this Agreement and your use of the Application.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Changes to this Agreement</h3>
+            <p>The Company reserves the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.</p>
+
+            <h3 style={{ fontFamily: F, fontSize: 20, fontWeight: 700, color: C.dark, marginTop: 36, marginBottom: 12 }}>Contact Us</h3>
+            <p>If you have any questions about this Agreement, You can contact Us:</p>
+            <ul style={{ marginTop: 12, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 8 }}>
+              <li>By visiting: <a href="https://exlcloud.io" target="_blank" rel="noopener noreferrer" style={{ color: C.priA }}>exlcloud.io</a></li>
+              <li>By email: <a href="mailto:info@exlcloud.io" style={{ color: C.priA }}>info@exlcloud.io</a></li>
+            </ul>
+          </>
+      }
+      </div>
+    </Sec>
+  </>;
+
+
+/* ═══ ARTICLE HERO (SVG) ═══ */
+const ArticleHero = ({ slug }) => {
+  const colors = {
+    "excel-is-dead": "#74C69D", "error-checks-for-excel-and-financial-modelling": "#60A5FA",
+    "saas-financial-modelling": "#52B788", "fundamentals-of-3-way-cashflow-modelling": "#22D3EE",
+    "how-dynamic-arrays-are-revolutionising-financial-modelling": "#818CF8",
+    "virtual-cfo-the-good-bad-and-the-ugly": "#FBBF24", "financial-modelling-diamonds-in-the-rough": "#A78BFA",
+    "forecasting-skills-doesnt-guarantee-modelling-skills": "#F472B6",
+    "inside-the-mind-of-a-spreadsheeter-vs-a-financial-modeler": "#34D399",
+    "need-help-searching": "#38BDF8", "not-all-datadear-replacements-are-created-equally": "#74C69D",
+    "the-demand-for-financial-modelling-skills-reaches-new-heights": "#52B788",
+    "why-being-a-1-manwomen-vcfo-business-is-a-really-bad-idea": "#F59E0B",
+    "why-financial-modelling-skills-will-be-a-career-door-opener": "#74C69D",
+    "why-vlookup-vs-indexmatch-shows-your-lack-of-embracing-change-innovation-and-better-excel-skills": "#60A5FA"
+  };
+  const accent = colors[slug] || "#74C69D";
+  const hasImg = typeof document !== "undefined";
+  return (
+    <div style={{ width: "100%", aspectRatio: "16/9", background: `linear-gradient(135deg, #1A3C2E, #0F1F17)`, borderRadius: R.lg, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(circle at 1px 1px, ${accent}08 1px, transparent 0)`, backgroundSize: "24px 24px" }} />
+      <img src={`images/articles/${slug}.png`} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} onError={(e) => {e.target.style.display = "none";}} />
+    </div>);
+
+};
+
+/* ═══ ARTICLES INDEX ═══ */
+const ArticlesIndex = ({ go }) => {
+  const [filter, setFilter] = React.useState("All");
+  const articles = window.ARTICLES || [];
+  const allTags = ["All", ...new Set(articles.flatMap((a) => a.tags))];
+  const filtered = filter === "All" ? articles : articles.filter((a) => a.tags.includes(filter));
+  const fmtDate = (d) => new Date(d).toLocaleDateString("en-AU", { year: "numeric", month: "long", day: "numeric" });
+  return (
+    <>
+      <section style={{ background: `radial-gradient(ellipse at 20% 0%, ${C.priL}25, transparent 50%), linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "100px 24px 70px" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <SectionHead tag="Knowledge Hub" title="Articles" desc="Expert articles on financial modelling, Excel best practices, advisory tools, and the future of finance — by practitioners, for practitioners." light />
+        </div>
+      </section>
+      <Sec>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 40 }}>
+          {allTags.map((tag) =>
+          <button key={tag} onClick={() => setFilter(tag)} style={{
+            fontFamily: F, fontSize: 13, fontWeight: 500, padding: "8px 20px", borderRadius: R.full,
+            cursor: "pointer", border: "none", transition: "all 0.2s",
+            background: filter === tag ? C.priL : C.warmBg, color: filter === tag ? C.w : C.gD,
+            boxShadow: filter === tag ? `0 2px 10px ${C.priL}30` : "none"
+          }}>{tag}</button>
+          )}
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: 24 }} className="prod-grid">
+          {filtered.map((article) =>
+          <button key={article.slug} onClick={() => go("article:" + article.slug)}
+          style={{ background: C.w, borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}`, cursor: "pointer", textAlign: "left", transition: "box-shadow 0.3s, transform 0.3s", display: "flex", flexDirection: "column" }}
+          onMouseEnter={(e) => {e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.08)";e.currentTarget.style.transform = "translateY(-2px)";}}
+          onMouseLeave={(e) => {e.currentTarget.style.boxShadow = "none";e.currentTarget.style.transform = "none";}}>
+              <ArticleHero slug={article.slug} />
+              <div style={{ padding: "24px 24px 28px", flex: 1, display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 12 }}>
+                  {article.tags.map((tag) =>
+                <span key={tag} style={{ fontFamily: F, fontSize: 10, fontWeight: 600, color: C.priA, letterSpacing: 0.5, padding: "3px 10px", borderRadius: R.full, background: C.pale }}>{tag}</span>
+                )}
+                </div>
+                <h3 style={{ fontFamily: F, fontSize: 18, fontWeight: 700, color: C.dark, margin: "0 0 10px", lineHeight: 1.3 }}>{article.title}</h3>
+                <p style={{ fontFamily: F, fontSize: 14, color: C.g, lineHeight: 1.65, margin: "0 0 16px", flex: 1 }}>{article.excerpt.substring(0, 160)}...</p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: 14, borderTop: `1px solid ${C.gL}` }}>
+                  <span style={{ fontFamily: F, fontSize: 12, color: C.g }}>{article.author}{article.coauthor ? ` & ${article.coauthor}` : ""}</span>
+                  <span style={{ fontFamily: F, fontSize: 12, color: C.g }}>{fmtDate(article.date)}</span>
+                </div>
+              </div>
+            </button>
+          )}
+        </div>
+      </Sec>
+    </>);
+
+};
+
+/* ═══ ARTICLE PAGE ═══ */
+const ArticlePage = ({ slug, go }) => {
+  const article = (window.ARTICLES || []).find((a) => a.slug === slug);
+  if (!article) return <Sec><p>Article not found.</p></Sec>;
+  const fmtDate = (d) => new Date(d).toLocaleDateString("en-AU", { year: "numeric", month: "long", day: "numeric" });
+  const related = (window.ARTICLES || []).filter((a) => a.slug !== slug && a.tags.some((t) => article.tags.includes(t))).slice(0, 3);
+  return (
+    <>
+      <section style={{ background: `linear-gradient(170deg, ${C.dark}, ${C.pri})`, padding: "80px 24px 50px" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <button onClick={() => go("articles")} style={{ background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, color: C.mint, display: "flex", alignItems: "center", gap: 8, marginBottom: 28, padding: 0 }}>← Back to Articles</button>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+            {article.tags.map((tag) => <span key={tag} style={{ fontFamily: F, fontSize: 11, fontWeight: 600, color: C.mint, padding: "4px 12px", borderRadius: R.full, background: "rgba(116,198,157,0.15)" }}>{tag}</span>)}
+          </div>
+          <h1 style={{ fontFamily: F, fontSize: 40, fontWeight: 800, color: C.w, lineHeight: 1.15, margin: "0 0 20px" }}>{article.title}</h1>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <PersonPlaceholder size={44} gradient={`linear-gradient(135deg, ${C.priL}, ${C.mint})`} />
+            <div>
+              <div style={{ fontFamily: F, fontSize: 15, fontWeight: 600, color: C.w }}>{article.author}{article.coauthor ? ` & ${article.coauthor}` : ""}</div>
+              <div style={{ fontFamily: F, fontSize: 13, color: "rgba(255,255,255,0.5)" }}>{fmtDate(article.date)}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Sec>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ background: C.pale, borderLeft: `4px solid ${C.priA}`, borderRadius: "0 12px 12px 0", padding: "20px 24px", marginBottom: 36 }}>
+            <div style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: C.priA, letterSpacing: 2, marginBottom: 6, textTransform: "uppercase" }}>Key Takeaway</div>
+            <p style={{ fontFamily: F, fontSize: 15, color: C.gD, lineHeight: 1.7, margin: 0 }}>{article.excerpt}</p>
+          </div>
+          <div className="article-body" dangerouslySetInnerHTML={{ __html: article.content }} />
+        </div>
+      </Sec>
+      {related.length > 0 &&
+      <Sec bg={C.warmBg}>
+          <SectionHead tag="Related Reading" title="More articles you might enjoy" />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 24 }}>
+            {related.map((rel) =>
+          <button key={rel.slug} onClick={() => go("article:" + rel.slug)} style={{ background: C.w, borderRadius: R.xl, overflow: "hidden", border: `1px solid ${C.gL}`, cursor: "pointer", textAlign: "left", padding: 24 }}>
+                <h4 style={{ fontFamily: F, fontSize: 17, fontWeight: 700, color: C.dark, margin: "0 0 8px", lineHeight: 1.3 }}>{rel.title}</h4>
+                <div style={{ fontFamily: F, fontSize: 12, color: C.g }}>{rel.author} · {fmtDate(rel.date)}</div>
+              </button>
+          )}
+          </div>
+        </Sec>
+      }
+      <Sec>
+        <div style={{ background: `linear-gradient(135deg, ${C.pri}, ${C.priL})`, borderRadius: R.xl, padding: 48, textAlign: "center" }}>
+          <h3 style={{ fontFamily: F, fontSize: 24, fontWeight: 700, color: C.w, margin: "0 0 14px" }}>Put these insights into practice</h3>
+          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.65)", margin: "0 auto 28px", maxWidth: 480, lineHeight: 1.65 }}>EXL Cloud gives you the financial models, reports, and tools discussed in these articles — directly in Excel, connected to Xero.</p>
+          <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Start Free Trial</Btn>
+        </div>
+      </Sec>
+    </>);
+
+};
+
+/* ═══ MAIN APP ═══ */
+const App = () => {
+  const [page, setPage] = React.useState("home");
+  const [videoOpen, setVideoOpen] = React.useState(false);
+  const go = React.useCallback((p) => {setPage(p);window.scrollTo({ top: 0, behavior: "smooth" });}, []);
+  React.useEffect(() => { window.__openExplainerVideo = () => setVideoOpen(true); return () => { delete window.__openExplainerVideo; }; }, []);
+  const isArticle = page.startsWith("article:");
+  const articleSlug = isArticle ? page.split(":")[1] : null;
+  const pages = {
+    home: <Home go={go} />, about: <About />, features: <Features go={go} />,
+    articles: <ArticlesIndex go={go} />,
+    gen2: <Gen2 />, pricing: <Pricing />, support: <Support />,
+    contact: <Contact />, future: <Future />,
+    privacy: <Legal type="privacy" />, eula: <Legal type="eula" />,
+    admin: <SubmissionsAdmin />,
+    "dl-3way": <DownloadForm item="3way" />,
+    "dl-performance": <DownloadForm item="performance" />,
+    "dl-cashflow": <DownloadForm item="cashflow" />
+  };
+  return (
+    <div style={{ fontFamily: F, background: C.w, minHeight: "100vh" }}>
+      <Nav page={isArticle ? "articles" : page} go={go} />
+      {isArticle ? <ArticlePage slug={articleSlug} go={go} /> : pages[page] || pages.home}
+      <Footer go={go} />
+      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
+    </div>);
+
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+</script>
+</body>
+</html>
