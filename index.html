@@ -103,10 +103,10 @@
     <p>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. It pulls live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions. EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable in Microsoft Excel.</p>
     <p>EXL Cloud offers two plans: Data Pull at $50 AUD per month and Advanced Content at $125 AUD per month. Both include 5 Xero connections. The Advanced Content plan includes 3-Way Financial Models, Performance Reports, Cash Flow Scenario Models, Power BI integration, 15 AI-powered skills, and HTML Board Packs.</p>
     <p>Founded by Lance Rubin, a Chartered Accountant with experience at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ study guide co-author.</p>
-    <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: info@exlcloud.io. Phone: +61 405 329 098.</p>
+    <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b52555d547b5e43575857544e5f155254">[email&#160;protected]</a>. Phone: +61 405 329 098.</p>
   </div>
   <div id="root"></div>
-  <script type="text/babel" src="articles-data.jsx"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/babel" src="articles-data.jsx"></script>
   <script type="text/babel">
 
 
@@ -346,6 +346,84 @@ style={{ display: "block", borderRadius: R.lg, overflow: "hidden", background: C
     </div>
   </a>;
 
+
+/* ═══ VIDEO MODAL (LOCAL MP4) ═══ */
+const EXPLAINER_SRC = "uploads/exlcloud-2min-intro.mp4";
+const VideoModal = ({ open, onClose }) => {
+  const vRef = React.useRef(null);
+  const [muted, setMuted] = React.useState(true);
+  const [err, setErr] = React.useState(null);
+  // When the modal opens: reset state, start playback muted (so autoplay always succeeds).
+  // We do NOT touch currentTime until metadata has loaded — that previously threw
+  // InvalidStateError on cold opens and silently killed playback.
+  React.useEffect(() => {
+    if (!open) return;
+    setErr(null);
+    setMuted(true);
+    const v = vRef.current;
+    if (!v) return;
+    const tryPlay = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+    if (v.readyState >= 1) { try { v.currentTime = 0; } catch (_) {} tryPlay(); }
+    else { v.addEventListener("loadedmetadata", function once() { v.removeEventListener("loadedmetadata", once); try { v.currentTime = 0; } catch (_) {} tryPlay(); }); }
+    return () => { try { v.pause(); } catch (_) {} };
+  }, [open]);
+  React.useEffect(() => {
+    const h = (e) => { if (e.key === "Escape") onClose(); };
+    if (open) document.addEventListener("keydown", h);
+    return () => document.removeEventListener("keydown", h);
+  }, [open, onClose]);
+  if (!open) return null;
+  return (
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.9)", display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", maxWidth: 960, position: "relative" }}>
+        <button onClick={onClose} style={{ position: "absolute", top: -44, right: 0, background: "none", border: "none", color: "white", fontSize: 32, cursor: "pointer", lineHeight: 1, opacity: 0.8, fontFamily: "system-ui" }}>✕</button>
+        <div style={{ position: "relative", borderRadius: 12, overflow: "hidden", background: "#000" }}>
+          <video
+            ref={vRef}
+            src={EXPLAINER_SRC}
+            controls
+            autoPlay
+            muted={muted}
+            playsInline
+            preload="auto"
+            onError={() => setErr("Sorry — the video failed to load. Please check your connection or try again.")}
+            style={{ width: "100%", display: "block", background: "#000" }} />
+          {muted && !err &&
+            <button
+              onClick={() => { const v = vRef.current; if (!v) return; v.muted = false; setMuted(false); const p = v.play(); if (p && p.catch) p.catch(() => {}); }}
+              style={{ position: "absolute", left: 16, bottom: 56, background: "rgba(255,255,255,0.95)", color: "#0B1F17", border: "none", borderRadius: 999, padding: "8px 14px", fontFamily: F, fontSize: 13, fontWeight: 600, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.3)", display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ fontSize: 14 }}>🔊</span> Tap for sound
+            </button>}
+          {err &&
+            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", padding: 24, textAlign: "center", color: "white", fontFamily: F, fontSize: 15, background: "rgba(0,0,0,0.7)" }}>
+              <div>
+                <div style={{ marginBottom: 12 }}>{err}</div>
+                <a href={EXPLAINER_SRC} target="_blank" rel="noopener noreferrer" style={{ color: "#74C69D", fontWeight: 600 }}>Open video directly ↗</a>
+              </div>
+            </div>}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ═══ LOCAL VIDEO CARD ═══ */
+const VideoLocal = ({ title = "2-Minute Introduction", onOpen }) =>
+  <button onClick={onOpen}
+    style={{ display: "block", borderRadius: R.lg, overflow: "hidden", background: C.dark, position: "relative", aspectRatio: "16/9", border: "none", cursor: "pointer", boxShadow: "0 8px 30px rgba(0,0,0,0.12)", width: "100%", padding: 0 }}>
+    <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg,${C.pri} 0%,${C.priA} 100%)`, position: "relative" }}>
+      <div style={{ width: 72, height: 72, borderRadius: "50%", background: "rgba(255,255,255,0.15)", backdropFilter: "blur(12px)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(255,255,255,0.35)", zIndex: 1 }}>
+        <Icon name="play" size={24} color={C.w} />
+      </div>
+      <div style={{ position: "absolute", top: 12, left: 14, zIndex: 1 }}>
+        <span style={{ fontFamily: F, fontSize: 10, fontWeight: 700, color: C.mint, letterSpacing: 2, background: "rgba(0,0,0,0.4)", padding: "3px 8px", borderRadius: R.full }}>EXPLAINER</span>
+      </div>
+      <div style={{ position: "absolute", bottom: 16, left: 18, right: 18, zIndex: 1, textAlign: "left" }}>
+        <div style={{ fontFamily: F, fontSize: 14, color: C.w, fontWeight: 600 }}>{title}</div>
+        <div style={{ fontFamily: F, fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 3 }}>2 min · Play now ▶</div>
+      </div>
+    </div>
+  </button>;
 
 /* ═══ PERSON PLACEHOLDER ═══ */
 const PersonPlaceholder = ({ initials, name, size = 72, gradient }) =>
@@ -623,20 +701,25 @@ const ProductCarousel = () => {
 const HeroVideo = () => {
   const [loaded, setLoaded] = React.useState(false);
   const videoRef = React.useRef(null);
+  // Skip the background video on data-saver / reduced-motion / mobile-data — it's decorative
+  // and a 5MB request on a slow connection hurts the page far more than it helps.
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoaded(true);
-    }, 1500);
+    if (typeof window === "undefined") return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (conn && (conn.saveData || /(2g|slow-2g)/.test(conn.effectiveType || ""))) return;
+    const timer = setTimeout(() => setLoaded(true), 1500);
     return () => clearTimeout(timer);
   }, []);
   React.useEffect(() => {
     if (loaded && videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      const p = videoRef.current.play();
+      if (p && p.catch) p.catch(() => {});
     }
   }, [loaded]);
   if (!loaded) return null;
   return (
-    <video ref={videoRef} muted loop playsInline
+    <video ref={videoRef} muted loop playsInline autoPlay preload="auto"
       style={{
         position: "absolute", inset: 0, width: "100%", height: "100%",
         objectFit: "cover", opacity: 0.2, zIndex: 0,
@@ -726,7 +809,7 @@ const Home = ({ go }) =>
           </div>
           {/* Video CTA overlay */}
           <div style={{ position: "absolute", bottom: 20, left: 20, right: 20 }}>
-            <a href="#" onClick={(e) => {e.preventDefault();go("support");}}
+            <a href="#" onClick={(e) => {e.preventDefault(); window.__openExplainerVideo && window.__openExplainerVideo();}}
           style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", background: "rgba(0,0,0,0.55)", backdropFilter: "blur(12px)", borderRadius: R.lg, padding: "12px 16px" }}>
               <div style={{ display: "flex", flexShrink: 0 }}>
                 {["uploads/pasted-1780829731547-0.png", "uploads/pasted-1780829749363-0.png", "uploads/pasted-1780829763836-0.png"].map((src, i) =>
@@ -788,6 +871,7 @@ const Home = ({ go }) =>
     <Sec bg={C.warmBg}>
       <SectionHead tag="See It in Action" title="Watch how it works" />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+        <VideoLocal onOpen={() => window.__openExplainerVideo && window.__openExplainerVideo()} />
         <Video id="qf1pEpPoYVg" title="3-Way Financial Model" />
         <Video id="Apty2pmgtYk" title="Start Menu & Navigation" />
         <Video id="fa22TR9MI-Y" title="Account Transactions Pull" />
@@ -1087,6 +1171,7 @@ const Features = ({ go }) =>
     <Sec>
       <SectionHead title="See it in action" desc="Watch how EXL Cloud workbooks are created and customised in minutes." />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+        <VideoLocal onOpen={() => window.__openExplainerVideo && window.__openExplainerVideo()} />
         <Video id="qf1pEpPoYVg" title="3-Way Driver-Based Financial Model" />
         <Video id="Apty2pmgtYk" title="Start Menu & Navigation" />
       </div>
@@ -1339,6 +1424,7 @@ const Support = () =>
     <Sec bg={C.warmBg}>
       <SectionHead title="Video Library" />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+        <VideoLocal onOpen={() => window.__openExplainerVideo && window.__openExplainerVideo()} />
         <Video id="Apty2pmgtYk" title="Getting Setup" />
         <Video id="Oz9KWoXE00c" title="Start Menu" />
         <Video id="ElNEuovt7uw" title="Performance Report" />
@@ -1948,7 +2034,9 @@ const ArticlePage = ({ slug, go }) => {
 /* ═══ MAIN APP ═══ */
 const App = () => {
   const [page, setPage] = React.useState("home");
+  const [videoOpen, setVideoOpen] = React.useState(false);
   const go = React.useCallback((p) => {setPage(p);window.scrollTo({ top: 0, behavior: "smooth" });}, []);
+  React.useEffect(() => { window.__openExplainerVideo = () => setVideoOpen(true); return () => { delete window.__openExplainerVideo; }; }, []);
   const isArticle = page.startsWith("article:");
   const articleSlug = isArticle ? page.split(":")[1] : null;
   const pages = {
@@ -1967,6 +2055,7 @@ const App = () => {
       <Nav page={isArticle ? "articles" : page} go={go} />
       {isArticle ? <ArticlePage slug={articleSlug} go={go} /> : pages[page] || pages.home}
       <Footer go={go} />
+      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
     </div>);
 
 };
