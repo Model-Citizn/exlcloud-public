@@ -3,10 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- ═══ SECURITY HARDENING (see skills/website-security.md) ═══ -->
+  <script>
+  (function () {
+    "use strict";
+    var LIVE = /(^|\.)exlcloud\.io$/.test(location.hostname);
+    if (LIVE) {
+      /* Content-Security-Policy — injected only on the live domain so design previews keep working.
+         GitHub Pages can't send HTTP security headers, so this meta tag is the enforcement point. */
+      var csp = document.createElement("meta");
+      csp.httpEquiv = "Content-Security-Policy";
+      csp.content = "default-src 'self'; script-src 'self' https://unpkg.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'";
+      document.head.appendChild(csp);
+      /* Clickjacking protection — frame-buster (GitHub Pages can't send X-Frame-Options) */
+      if (window.top !== window.self) {
+        try { window.top.location = window.location; }
+        catch (e) { document.documentElement.style.display = "none"; }
+      }
+    }
+    /* Disable right-click context menu + drag-out of images/video (content protection) */
+    document.addEventListener("contextmenu", function (e) { e.preventDefault(); }, true);
+    document.addEventListener("dragstart", function (e) {
+      var t = e.target;
+      if (t && (t.tagName === "IMG" || t.tagName === "VIDEO")) e.preventDefault();
+    }, true);
+  })();
+  </script>
   <meta name="description" content="EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. Pull live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions." />
   <meta name="keywords" content="EXL Cloud, Excel add-in, Xero to Excel, financial modelling, 3-way model, Power BI, accounting software, board pack, financial reporting" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <title>EXL Cloud — Keep Excel, Leverage the Cloud | Xero to Excel in 8 Clicks</title>
+  <link rel="icon" type="image/png" href="images/logo-exlcloud250.png" />
+  <link rel="apple-touch-icon" href="images/logo-exlcloud500.png" />
 
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
@@ -103,7 +132,7 @@
     <p>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. It pulls live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions. EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable in Microsoft Excel.</p>
     <p>EXL Cloud offers two plans: Data Pull at $70 AUD per month and Advanced Content at $170 AUD per month. Both include 5 Xero connections. The Advanced Content plan includes 3-Way Financial Models, Performance Reports, Cash Flow Scenario Models, Power BI integration, 19 AI-powered skills, and HTML Board Packs.</p>
     <p>Founded by Lance Rubin, a Chartered Accountant with experience at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ study guide co-author.</p>
-    <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7ded9d1d8f7d2cfdbd4dbd8c2d399ded8">[email&#160;protected]</a>. Phone: +61 405 329 098.</p>
+    <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92fbfcf4fdd2f7eafef1fefde7f6bcfbfd">[email&#160;protected]</a>. Phone: +61 405 329 098.</p>
   </div>
   <div id="root"></div>
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/babel" src="articles-data.jsx"></script>
@@ -461,9 +490,7 @@ const Nav = ({ page, go }) => {
     }}>
       <div style={{ maxWidth: 1120, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
         <button onClick={() => go("home")} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }}>
-          <div style={{ width: 36, height: 36, borderRadius: R.md, background: `linear-gradient(135deg, ${C.mint}, ${C.priL})`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(116,198,157,0.3)" }}>
-            <span style={{ color: C.w, fontWeight: 800, fontSize: 12, fontFamily: F, letterSpacing: 0.5 }}>EXL</span>
-          </div>
+          <img src="images/logo-exlcloud250.png" alt="EXL Cloud" width="36" height="36" style={{ borderRadius: R.md, boxShadow: "0 2px 8px rgba(116,198,157,0.3)" }} />
           <span style={{ color: C.w, fontFamily: F, fontWeight: 700, fontSize: 18, letterSpacing: -0.3 }}>EXL Cloud</span>
         </button>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }} className="dnav">
@@ -507,9 +534,7 @@ const Footer = ({ go }) =>
     <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 40 }}>
       <div>
         <div onClick={(e) => {if (e.ctrlKey && e.shiftKey) go("admin");}} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18, cursor: "default" }}>
-          <div style={{ width: 32, height: 32, borderRadius: R.sm, background: `linear-gradient(135deg, ${C.mint}, ${C.priL})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ color: C.w, fontWeight: 800, fontSize: 10, fontFamily: F }}>EXL</span>
-          </div>
+          <img src="images/logo-exlcloud250.png" alt="EXL Cloud" width="32" height="32" style={{ borderRadius: R.sm }} />
           <span style={{ color: C.w, fontFamily: F, fontWeight: 700, fontSize: 17 }}>EXL Cloud</span>
         </div>
         <p style={{ fontFamily: F, fontSize: 13, lineHeight: 1.9, margin: 0, color: "rgba(255,255,255,0.45)" }}>
@@ -524,7 +549,7 @@ const Footer = ({ go }) =>
       </div>
       <div>
         <div style={{ color: C.w, fontFamily: F, fontWeight: 600, fontSize: 13, marginBottom: 18, letterSpacing: 0.3 }}>Resources</div>
-        {[["Knowledge Base", "http://docs.xlconnect.net"], ["Support Ticket", "https://exlcloud.atlassian.net/servicedesk/customer/portal/1"], ["Member Login", "https://account.xlconnect.net"], ["Maven Courses", "https://maven.com/modelcitizn"], ["Podcast", "https://open.spotify.com/show/0WRSzeb3Z0UbHmXLz5qgpQ"], ["Knowledge Hub", "https://www.modelcitizn.com/knowledge-hub/"]].map(([l, u]) =>
+        {[["Knowledge Base", "https://docs.xlconnect.net"], ["Support Ticket", "https://exlcloud.atlassian.net/servicedesk/customer/portal/1"], ["Member Login", "https://account.xlconnect.net"], ["Maven Courses", "https://maven.com/modelcitizn"], ["Podcast", "https://open.spotify.com/show/0WRSzeb3Z0UbHmXLz5qgpQ"], ["Knowledge Hub", "https://www.modelcitizn.com/knowledge-hub/"]].map(([l, u]) =>
       <div key={l}><a href={u} target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.45)", fontFamily: F, fontSize: 13, textDecoration: "none", display: "block", padding: "5px 0" }}>{l}</a></div>
       )}
       </div>
@@ -1399,7 +1424,7 @@ const Support = () =>
     <Sec>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
         {[
-      ["doc", "Knowledge Base", "Tips, tricks, and developer docs.", ["http://docs.xlconnect.net", "Open"]],
+      ["doc", "Knowledge Base", "Tips, tricks, and developer docs.", ["https://docs.xlconnect.net", "Open"]],
       ["mail", "Support Ticket", "Lodge a ticket with our team.", ["https://exlcloud.atlassian.net/servicedesk/customer/portal/1", "Lodge Ticket"]],
       ["users", "AI & Modelling Training", "Free Lightning Lessons on Maven — AI and financial modelling skills.", ["https://maven.com/modelcitizn#lightning-lessons", "Browse Sessions"]]].
       map(([ic, t, d, link], i) =>
@@ -1624,7 +1649,9 @@ const DownloadForm = ({ item = "3way" }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const entry = { ...form, model: dl.label, timestamp: new Date().toISOString() };
-    const existing = JSON.parse(localStorage.getItem("exl_submissions") || "[]");
+    let existing = [];
+    try { existing = JSON.parse(localStorage.getItem("exl_submissions") || "[]"); } catch (err) {}
+    if (!Array.isArray(existing)) existing = [];
     existing.push(entry);
     localStorage.setItem("exl_submissions", JSON.stringify(existing));
     setSubmitted(true);
@@ -1691,11 +1718,20 @@ const DownloadForm = ({ item = "3way" }) => {
 /* ═══ SUBMISSIONS ADMIN ═══ */
 const SubmissionsAdmin = () => {
   const [subs, setSubs] = React.useState([]);
-  React.useEffect(() => {setSubs(JSON.parse(localStorage.getItem("exl_submissions") || "[]"));}, []);
+  React.useEffect(() => {
+    let stored = [];
+    try { stored = JSON.parse(localStorage.getItem("exl_submissions") || "[]"); } catch (err) {}
+    setSubs(Array.isArray(stored) ? stored : []);
+  }, []);
   const exportCSV = () => {
     if (subs.length === 0) return;
     const headers = ["Timestamp", "Model", "First Name", "Last Name", "Email", "Country", "Phone"];
-    const rows = subs.map((s) => [s.timestamp, s.model, s.firstName, s.lastName, s.email, s.country, s.phone].map((v) => `"${(v || "").replace(/"/g, '""')}"`).join(","));
+    const rows = subs.map((s) => [s.timestamp, s.model, s.firstName, s.lastName, s.email, s.country, s.phone].map((v) => {
+      let s = String(v || "");
+      /* Guard against CSV/Excel formula injection */
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return `"${s.replace(/"/g, '""')}"`;
+    }).join(","));
     const csv = [headers.join(","), ...rows].join("\n");
     const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
