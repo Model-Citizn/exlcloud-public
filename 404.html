@@ -16,13 +16,14 @@
     a:hover { opacity: 0.88; }
   </style>
   <script>
-    // SPA fallback — redirect to hash-based routing
+    // SPA fallback for GitHub Pages — bounce recognised deep links into the app as /#/path;
+    // the app routes to the right page and restores the clean URL via history.replaceState.
+    // Unrecognised paths fall through to this 404 page.
     (function() {
-      var path = window.location.pathname;
-      if (path !== '/' && path !== '/index.html' && path !== '/404.html') {
-        var page = path.replace(/^\//, '').replace(/\.html$/, '').replace(/\//g, ':');
-        window.location.replace('/#' + page);
-      }
+      var path = window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+      var seg = path.replace(/^\//, '').split('/')[0];
+      var known = ['about','features','articles','gen2','pricing','support','future','contact','privacy','eula','admin','dl-3way','dl-performance','dl-cashflow'];
+      if (known.indexOf(seg) !== -1) window.location.replace('/#' + path);
     })();
   </script>
 </head>
