@@ -132,7 +132,7 @@
   <div id="aeo-content" style="display:none" aria-hidden="true">
     <h1>EXL Cloud — Keep Excel, Leverage the Cloud</h1>
     <p>EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. It pulls live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions. EXL Cloud includes world-class financial models, dashboards, and reports — all fully customisable in Microsoft Excel.</p>
-    <p>EXL Cloud offers two plans: Data Pull at $70 AUD per month and Advanced Content at $170 AUD per month. Both include 5 Xero connections. The Advanced Content plan includes 3-Way Financial Models, Performance Reports, Cash Flow Scenario Models, Power BI integration, 19 AI-powered skills, and HTML Board Packs.</p>
+    <p>EXL Cloud offers two plans: Data Pull at $70 AUD per month and Advanced Content at $170 AUD per month. Both include 5 Xero connections. The Advanced Content plan includes 3-Way Financial Models, Performance Reports, Cash Flow Scenario Models, Power BI integration, 20+ Claude AI-powered skills, and HTML Board Packs.</p>
     <p>Founded by Lance Rubin, a Chartered Accountant with experience at PwC, KPMG, Investec Bank, and National Australia Bank. Lance is an FMI approved financial modelling trainer and CA ANZ study guide co-author.</p>
     <p>EXL Cloud Pty Ltd, 80 Market Street, South Melbourne VIC 3205, Australia. Email: info@exlcloud.io. Phone: +61 405 329 098.</p>
   </div>
@@ -496,7 +496,7 @@ const pageFromLocation = () => {
 const PAGE_META = {
   home: ["EXL Cloud — Keep Excel, Leverage the Cloud | Xero to Excel in 8 Clicks", "EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero in 8 clicks. Pull live accounting data including trial balance, profit and loss, balance sheet, journals, and account transactions."],
   about: ["About EXL Cloud — The Team Behind the Excel Add-in for Xero", "Meet the team behind EXL Cloud, the Excel add-in that connects Microsoft Excel to Xero. Founded by Lance Rubin, Chartered Accountant with 20+ years in financial modelling."],
-  features: ["EXL Cloud Features — Xero Data Pulls, Financial Models, Reports & AI Skills", "Explore EXL Cloud features: live Xero data pulls and pushes, 3-way financial models, performance reports, Power BI integration, HTML board packs, and 19 AI skills."],
+  features: ["EXL Cloud Features — Xero Data Pulls, Financial Models, Reports & AI Skills", "Explore EXL Cloud features: live Xero data pulls and pushes, 3-way financial models, performance reports, Power BI integration, HTML board packs, and Claude AI skills."],
   articles: ["Articles — Financial Modelling & Excel Insights | EXL Cloud", "Expert articles on financial modelling, Excel best practices, advisory tools, and the future of finance — by practitioners, for practitioners."],
   gen2: ["What's New — EXL Cloud Generation 2", "See what's new in EXL Cloud Generation 2: dynamic arrays, LAMBDAs, AI skills, and next-generation Excel workbooks connected to Xero."],
   pricing: ["EXL Cloud Pricing — Plans from $70 AUD per Month", "EXL Cloud pricing: Data Pull plan from $70 AUD/month and Advanced Content plan from $170 AUD/month. Both include 5 Xero connections and a 7-day free trial."],
@@ -837,7 +837,7 @@ const Home = ({ go }) =>
             <Btn onClick={() => go("features")} variant="outline">Explore Features</Btn>
           </div>
           <div style={{ display: "flex", gap: 48, flexWrap: "wrap" }}>
-            {[["20+", "Years of Excel mastery"], ["19", "AI-powered skills"], ["8", "Clicks to action"]].map(([n, l]) =>
+            {[["20+", "Years of Excel mastery"], ["20+", "AI-powered skills"], ["8", "Clicks to action"]].map(([n, l]) =>
           <div key={l}>
                 <div style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.mint, lineHeight: 1 }}><Counter end={parseInt(n)} suffix={n.includes("+") ? "+" : ""} /></div>
                 <div style={{ fontFamily: F, fontSize: 13, color: "rgba(255,255,255,0.45)", marginTop: 6 }}>{l}</div>
@@ -1044,7 +1044,7 @@ const Home = ({ go }) =>
         <div>
           <span style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.mint, letterSpacing: 3 }}>2026 RELEASE</span>
           <h3 style={{ fontFamily: F, fontSize: 28, fontWeight: 800, color: C.w, margin: "10px 0 0", lineHeight: 1.2 }}>Gen 2 + AI Skills Library + New Pricing</h3>
-          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.6)", margin: "8px 0 0" }}>Every workbook rebuilt. 19 Claude AI skills. Updated pricing now in effect.</p>
+          <p style={{ fontFamily: F, fontSize: 15, color: "rgba(255,255,255,0.6)", margin: "8px 0 0" }}>Every workbook rebuilt. 20+ Claude AI skills. Updated pricing now in effect.</p>
         </div>
         <Btn onClick={() => go("gen2")}>See What's New →</Btn>
       </div>
@@ -1054,7 +1054,7 @@ const Home = ({ go }) =>
     <Sec bg={C.warmBg}>
       <FAQSection items={[
     { q: "What is EXL Cloud?", a: "EXL Cloud is an Excel add-in that connects Microsoft Excel to Xero accounting software. It pulls live data including trial balance, profit and loss, balance sheet, journals, and account transactions in 8 clicks. It also includes world-class financial models, reports, dashboards, and an AI skills library." },
-    { q: "How does EXL Cloud differ from other Xero-to-Excel tools?", a: "EXL Cloud provides full formula transparency — every calculation is visible and editable in Excel. Unlike CSV exports, it includes driver-based financial models, HTML board packs, Power BI integration, 19 AI-powered skills, and Dynamic Array formulas. Other tools export flat data; EXL Cloud delivers ready-made analysis." },
+    { q: "How does EXL Cloud differ from other Xero-to-Excel tools?", a: "EXL Cloud provides full formula transparency — every calculation is visible and editable in Excel. Unlike CSV exports, it includes driver-based financial models, HTML board packs, Power BI integration, 20+ Claude AI-powered skills, and Dynamic Array formulas. Other tools export flat data; EXL Cloud delivers ready-made analysis." },
     { q: "Does EXL Cloud work on Mac?", a: "EXL Cloud requires Microsoft Excel on Windows. Mac users can run it via Boot Camp or Parallels Desktop." },
     { q: "How many Xero connections are included?", a: "Both plans include 5 Xero connections. Additional connections are available with volume discounts — from $6.00/connection/month at 21+ on the Data Pull plan." },
     { q: "Is there a free trial?", a: "Yes. EXL Cloud offers a 7-day free trial with no credit card required. Cancel anytime during the trial period." }]
@@ -1117,7 +1117,7 @@ const Features = ({ go }) =>
       </div>
     </section>
     <Sec>
-      <DAB>EXL Cloud offers two product tiers: Data Pull ($70 AUD/month) for Xero data extraction and push, and Advanced Content ($170 AUD/month) which adds world-class financial models, performance reports, HTML board packs, Power BI integration, and 19 AI-powered skills. Both include 5 Xero connections.</DAB>
+      <DAB>EXL Cloud offers two product tiers: Data Pull ($70 AUD/month) for Xero data extraction and push, and Advanced Content ($170 AUD/month) which adds world-class financial models, performance reports, HTML board packs, Power BI integration, and 20+ Claude AI-powered skills. Both include 5 Xero connections.</DAB>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
         {[
       ["eye", "Transparent Logic", "Full formula transparency. No black boxes."],
@@ -1125,7 +1125,7 @@ const Features = ({ go }) =>
       ["grid", "Unlimited Customisation", "Your brand, your layouts. Zero coding."],
       ["bolt", "8 Clicks to Action", "Install, connect, pull. Instant value."],
       ["shield", "Gen 2 Standard", "Instructions, validation checks, change logs in every workbook."],
-      ["ai", "AI Skills Library", "19 purpose-built Claude AI skills for EXL Cloud workbooks."]].
+      ["ai", "AI Skills Library", "20+ purpose-built Claude AI skills for EXL Cloud workbooks."]].
       map(([ic, t, d], i) =>
       <div key={i} style={{ background: C.warmBg, borderRadius: R.xl, padding: 28, border: `1px solid ${C.gL}` }}>
             <div style={{ width: 48, height: 48, borderRadius: R.lg, background: `linear-gradient(135deg, ${C.pale}, ${C.warmBg})`, border: `1px solid ${C.mint}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
@@ -1279,7 +1279,7 @@ const Gen2 = () => {
   { t: "Data Infrastructure", items: [["03", "Clean & Validate Data", "Automated data cleanup before any reporting or modelling work begins."], ["04", "Trial Balance Mapper", "Maps accounts from any accounting system into standardised categories."], ["05", "Period Table Builder", "Builds the Period date structure that drives all time-series workbooks."]] },
   { t: "Narrative", items: [["06", "Monthly Commentary Generator", "Generates professional management commentary from P&L and cash flow data."], ["07", "Board Paper Drafter", "Assembles a complete board-ready report from commentary and financial data."], ["08", "Cash Flow Narrative", "Explains cash movements in plain English across operating, investing, and financing activities."]] },
   { t: "Augmentation", items: [["09", "Assumption Register Builder", "Scans a workbook and extracts all hardcoded assumptions into a structured register."], ["10", "Anomaly Detection", "Adds automated PASS/FAIL validation checks to any workbook."], ["11", "Model Documentation Generator", "Auto-generates an Instructions sheet covering model structure and usage."], ["12", "Variance Analysis Reporter", "Builds a structured sheet comparing actuals to budget, forecast, or prior period."], ["13", "KPI Dashboard Formatter", "Builds a one-page executive dashboard with tiles and traffic light indicators."], ["14", "Change Log & Audit Trail", "Creates structured change tracking sheets for every workbook."], ["15", "Meeting Prep Pack", "Generates a meeting preparation pack directly from workbook data."]] },
-  { t: "Advanced Workflows", items: [["16", "Weekly Cash Flow Scenario Overlay Builder", "Scenario overlay builder for EXL Cloud Weekly Cash Flow models."], ["17", "Human Capital Report Commentary", "Workforce cost analysis and CFO-ready commentary from payroll data."], ["18", "Invoice & Bill Pull Analysis", "Invoice and bill data analysis suite from Xero data pulls."], ["19", "Performance Report Dashboard Commentary", "Dashboard commentary writer for EXL Cloud Performance Reports."]] }];
+  { t: "Advanced Workflows", items: [["16", "Weekly Cash Flow Scenario Overlay Builder", "Scenario overlay builder for EXL Cloud Weekly Cash Flow models."], ["17", "Human Capital Report Commentary", "Workforce cost analysis and CFO-ready commentary from payroll data."], ["18", "Invoice & Bill Pull Analysis", "Invoice and bill data analysis suite from Xero data pulls."], ["20+", "Performance Report Dashboard Commentary", "Dashboard commentary writer for EXL Cloud Performance Reports."]] }];
 
   return (
     <>
@@ -1291,7 +1291,7 @@ const Gen2 = () => {
             <span style={{ background: `linear-gradient(90deg, ${C.mint}, #95D5B2)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>AI-powered skills,</span><br />
             updated pricing.
           </h1>
-          <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560, lineHeight: 1.65, margin: "0 0 32px" }}>Three major updates — Gen 2 workbook rebuild, 19 Claude AI skills, and updated subscription pricing.</p>
+          <p style={{ fontFamily: F, fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560, lineHeight: 1.65, margin: "0 0 32px" }}>Three major updates — Gen 2 workbook rebuild, 20+ Claude AI skills, and updated subscription pricing.</p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1">Get EXL Cloud</Btn>
             <Btn href="https://maven.com/modelcitizn#lightning-lessons" variant="outline">Free Training</Btn>
@@ -1301,7 +1301,7 @@ const Gen2 = () => {
 
       {/* Gen 2 Workbook Upgrade */}
       <Sec>
-        <DAB>The Gen 2 upgrade rebuilds every EXL Cloud workbook with dedicated Instructions sheets, improved navigation, consistent formatting, and plain-English formula notes. Combined with 19 purpose-built Claude AI skills and updated pricing.</DAB>
+        <DAB>The Gen 2 upgrade rebuilds every EXL Cloud workbook with dedicated Instructions sheets, improved navigation, consistent formatting, and plain-English formula notes. Combined with 20+ purpose-built Claude AI skills and updated pricing.</DAB>
         <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 6 }}>UPDATE 1 OF 3</div>
         <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: "0 0 32px" }}>Gen 2 Workbook Upgrade</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
@@ -1340,7 +1340,7 @@ const Gen2 = () => {
       <Sec>
         <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priA, letterSpacing: 3, marginBottom: 6 }}>UPDATE 2 OF 3</div>
         <h2 style={{ fontFamily: F, fontSize: 32, fontWeight: 800, color: C.dark, margin: "0 0 10px" }}>Skills Library — Claude AI for EXL Cloud</h2>
-        <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 36px", maxWidth: 560, lineHeight: 1.65 }}>19 purpose-built skills. Download from GitHub, load into Claude, instantly trained for that specific workbook.</p>
+        <p style={{ fontFamily: F, fontSize: 16, color: C.g, margin: "0 0 36px", maxWidth: 560, lineHeight: 1.65 }}>20+ Claude purpose-built skills. Download from GitHub, load into Claude, instantly trained for that specific workbook.</p>
         {skills.map((tier) =>
         <div key={tier.t} style={{ marginBottom: 32 }}>
             <div style={{ fontFamily: F, fontSize: 12, fontWeight: 700, color: C.priL, letterSpacing: 2, marginBottom: 14, textTransform: "uppercase", borderBottom: `1px solid ${C.gL}`, paddingBottom: 8 }}>{tier.t}</div>
@@ -1429,7 +1429,7 @@ const Pricing = () =>
           <div style={{ fontFamily: F, fontSize: 14, color: C.g, marginBottom: 24 }}>Includes 5 connections</div>
           <div><Btn href="https://exlcloud.chargebee.com/hosted_pages/checkout?subscription_items%5Bitem_price_id%5D%5B0%5D=Xero-Advanced-Content-Plan-AUD-Monthly&subscription_items%5Bquantity%5D%5B0%5D=1" style={{ width: "100%" }}>Sign Up</Btn></div>
           <div style={{ marginTop: 24 }}>
-            {["Everything in Data Pull", "Performance Reports", "3-Way Driver-Based Financial Model", "1-Way Cash Flow Scenario Model", "1-Way Profit Performance Model", "Positions & Returns", "Power BI integration", "19 AI skills included", "45% off AIPA program", "HTML Board Packs"].map((f) =>
+            {["Everything in Data Pull", "Performance Reports", "3-Way Driver-Based Financial Model", "1-Way Cash Flow Scenario Model", "1-Way Profit Performance Model", "Positions & Returns", "Power BI integration", "20+ Claude AI skills included", "45% off AIPA program", "HTML Board Packs"].map((f) =>
           <div key={f} style={{ fontFamily: F, fontSize: 14, color: C.gD, padding: "9px 0", borderBottom: `1px solid ${C.gL}`, display: "flex", gap: 10, alignItems: "center" }}><Icon name="check" size={16} color={C.priA} />{f}</div>
           )}
           </div>
@@ -1459,7 +1459,7 @@ const Pricing = () =>
     </Sec>
     <Sec bg={C.warmBg}>
       <FAQSection items={[
-    { q: "What is the difference between Data Pull and Advanced Content?", a: "Data Pull ($70/month) covers Xero data extraction and push capabilities — P&L, BS, TB, transactions, journals. Advanced Content ($170/month) includes everything in Data Pull plus world-class financial models, performance reports, scenario models, HTML board packs, Power BI integration, 19 AI skills, and a 45% discount on the AI-Powered Accountant program." },
+    { q: "What is the difference between Data Pull and Advanced Content?", a: "Data Pull ($70/month) covers Xero data extraction and push capabilities — P&L, BS, TB, transactions, journals. Advanced Content ($170/month) includes everything in Data Pull plus world-class financial models, performance reports, scenario models, HTML board packs, Power BI integration, 20+ Claude AI skills, and a 45% discount on the AI-Powered Accountant program." },
     { q: "How much do additional Xero connections cost?", a: "Data Pull: 6-10 at $7.50/ea, 11-20 at $6.80/ea, 21+ at $6.00/ea. Advanced Content: 6-20 at $16.25/ea, 21+ at $12.70/ea. Enterprise pricing is available on application." },
     { q: "Are prices in AUD or USD?", a: "All prices are in Australian Dollars (AUD)." }]
     } />
